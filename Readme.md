@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Евгений Ильин](https://up.htmlacademy.ru/adaptive/21/user/454233).
-* Наставник: `Неизвестно`.
+* Наставник: `Максим Иванов`.
 
 ---
 
