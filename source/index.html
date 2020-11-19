@@ -8,7 +8,7 @@
 
 <body class="page__body">
   <header class="page-header container">
-    <a class="page-header__logo">
+    <a class="page-header__logo logo">
       <img src="" alt="Логотип Погнали?" width="100" height="15">
     </a>
 
@@ -45,10 +45,18 @@
     <section class="promo">
       <h1 class="hidden">Как найти попутчика</h1>
       <p class="promo__slogan">В&nbsp;путешествие<br> с&nbsp;крутыми<br> попутчиками!</p>
+
+      <div class="authorization">
+        <a class="authorization__phone" href="#"><img src="" alt=""></a>
+        <a class="authorization__mail" href="#"><img src="" alt=""></a>
+        <a class="authorization__login" href="#">авторизация</a>
+      </div>
+
       <blockquote>
         <p>&laquo;Лучшее приложение,<br>что я&nbsp;видел в&nbsp;жизни!&raquo;</p>
         <cite>Мурат Эльтазин<br>главный редактор<br>газеты &laquo;гаджетлайф&raquo;</cite>
       </blockquote>
+
       <ul class="instructions">
         <li class="instructions__item">
           <p class="instructions__description">Выберите<br>направление</p>
@@ -116,9 +124,9 @@
           <div class="level">99</div>
           <img class="foto" src="" alt="Фото попутчика">
           <ul class="country-list">
-            <li class="country__item"><img class="flag flag--czech-republic" src="" alt="Флаг Чехии"></li>
-            <li class="country__item"><img class="flag flag--tailand" src="" alt="Флаг Таиланда"></li>
-            <li class="country__item"><img class="flag flag--czech-republic" src="" alt="Флаг Чехии"></li>
+            <li class="country-item"><img class="flag flag--czech-republic" src="" alt="Флаг Чехии"></li>
+            <li class="country-item"><img class="flag flag--tailand" src="" alt="Флаг Таиланда"></li>
+            <li class="country-item"><img class="flag flag--czech-republic" src="" alt="Флаг Чехии"></li>
           </ul>
           <div class="user-name">Таня Фирсова</div>
           <p class="user-tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
@@ -133,8 +141,8 @@
           <div class="level">80</div>
           <img class="foto" src="" alt="Фото попутчика">
           <ul class="country-list">
-            <li class="country__item"><img class="flag flag--czech-republic" src="" alt="Флаг Чехии"></li>
-            <li class="country__item"><img class="flag flag--tailand" src="" alt="Флаг Таиланда"></li>
+            <li class="country-item"><img class="flag flag--czech-republic" src="" alt="Флаг Чехии"></li>
+            <li class="country-item"><img class="flag flag--tailand" src="" alt="Флаг Таиланда"></li>
           </ul>
           <div class="user-name">Петя Демин</div>
           <p class="user-tags">#бургер #бар #футбол #концерт #крафт</p>
@@ -154,16 +162,16 @@
     <section class="tariff">
       <h2 class="hidden">Тарифы</h2>
       <p class="title">Добавьте свой профиль</p>
-      <ol class="tariff__list">
-        <li class="tariff__item">
+      <ol class="tariff__list tariffs">
+        <li class="tariffs__item">
           <p class="tariff-name">Базовое размещение</p>
           <p class="tariff-price">Бесплатно</p>
         </li>
-        <li class="tariff__item">
+        <li class="tariffs__item">
           <p class="tariff-name">Вывод на первых позициях</p>
           <p class="tariff-price">99 руб./мес</p>
         </li>
-        <li class="tariff__item">
+        <li class="tariffs__item">
           <p class="tariff-name">Кастомный цвет карточки</p>
           <p class="tariff-price">59 руб./мес</p>
         </li>
@@ -224,20 +232,20 @@
     <!-- Модальные окна -->
     <section class="hidden modal modal--business-tariff">
       <h2 class="title">Бизнес-тарифы</h2>
-      <ol class="tariff__list tariff__list--business">
-        <li class="tariff__item">
+      <ol class="tariffs tariffs--business">
+        <li class="tariffs__item">
           <p class="tariff-name">Реклама у блоггера</p>
           <p class="tariff-price">300 000 руб./пост</p>
         </li>
-        <li class="tariff__item">
+        <li class="tariffs__item">
           <p class="tariff-name">Накрутка подписчиков</p>
           <p class="tariff-price">от 1 руб./шт.</p>
         </li>
-        <li class="tariff__item">
+        <li class="tariffs__item">
           <p class="tariff-name">Лайки от ботов</p>
           <p class="tariff-price">от 20 коп./лайк</p>
         </li>
-        <li class="tariff__item">
+        <li class="tariffs__item">
           <p class="tariff-name">Ваш продакт-плейсмент</p>
           <p class="tariff-price">Индивидуально</p>
         </li>
