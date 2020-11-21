@@ -1,0 +1,24 @@
+.tariff{
+  outline: 2px solid green;
+  outline-offset: -2px;
+
+  background-color: $gray;
+}
+.tariffs{
+  list-style: none;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  color: $special_grey;
+}
+.tariffs--business{
+  line-height: 22px;
+}
+.close-tariff{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: $basic_blue_light;
+  text-transform: uppercase;
+}
+

@@ -1,0 +1,16 @@
+.route{
+  outline: 2px solid crimson;
+  outline-offset: -2px;
+
+  background-color: $basic_yellow;
+}
+
+.address{
+  margin: 0;
+  padding: 0;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: $basic_blue_light;
+}

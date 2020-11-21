@@ -1,0 +1,41 @@
+.destination{
+  outline: 2px solid green;
+  outline-offset: -2px;
+
+  background-color: $gray_light;
+}
+
+.destination__description{
+  color: $special_grey;
+}
+.destination__list-country{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.destination__country{
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: $black;
+}
+.destination__country-description{
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: $special_grey;
+  opacity: 0.3;
+}
+.destination__user-count{
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $basic_blue;
+  opacity: 0.3;
+}
