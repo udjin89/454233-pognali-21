@@ -1,14 +1,15 @@
 *,
 *::before,
-*::after{
+*::after {
   box-sizing: border-box;
 }
-img{
+
+img {
   max-width: 100%;
   height: auto;
 }
 
-.hidden{
+.hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -21,12 +22,13 @@ img{
   overflow: hidden;
 }
 
-.container{
+.container {
   // min-width: 270px;
   width: 270px;
   margin: 0 auto;
 }
-.title{
+
+.title {
   padding: 0;
   margin: 0;
   font-weight: bold;

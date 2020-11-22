@@ -1,14 +1,16 @@
-.about-service{
+.about-service {
   background-color: $special_dark_blue;
 
   outline: 2px solid pink;
   outline-offset: -2px;
 }
-.about-service__description{
+
+.about-service__description {
   padding: 0;
   margin: 0;
 }
-.about-service__appeal{
+
+.about-service__appeal {
   padding: 0;
   margin: 0;
   font-weight: bold;

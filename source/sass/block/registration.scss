@@ -1,4 +1,4 @@
-.registration{
+.registration {
   outline: 2px solid green;
   outline-offset: -2px;
 
@@ -8,12 +8,13 @@
   background-color: $special_dark_blue;
 }
 
-.registration__description{
+.registration__description {
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
   // letter-spacing: 0.01em;
 }
-.link-autorization{
+
+.link-autorization {
   color: $basic_yellow;
 }

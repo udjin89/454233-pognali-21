@@ -1,38 +1,45 @@
-.companions{
+.companions {
   outline: 2px solid olive;
   outline-offset: -2px;
 
   background-color: $special_dark_blue;
 }
-.companions__description{
+
+.companions__description {
   margin: 0;
   padding: 0;
 }
-.companions__appeal{
+
+.companions__appeal {
   margin: 0;
   padding: 0;
   font-weight: bold;
 }
-.companions__list{
+
+.companions__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.companions__item{
+
+.companions__item {
   background-color: $white;
 }
-.level{
+
+.level {
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
 }
-.companions__user-name{
+
+.companions__user-name {
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
   color: $basic_blue_light;
 }
-.companions__user-tags{
+
+.companions__user-tags {
   font-size: 16px;
   line-height: 18px;
   color: $special_grey;

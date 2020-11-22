@@ -1,9 +1,10 @@
-.promo{
+.promo {
   outline: 2px solid red;
   outline-offset: -2px;
   background-color: $special_dark_blue;
 }
-.promo__slogan{
+
+.promo__slogan {
   padding: 0;
   margin: 0;
   font-weight: bold;
@@ -11,29 +12,34 @@
   line-height: 40px;
   text-align: center;
 }
-.promo__blockquote{
+
+.promo__blockquote {
   // font-size: 40px;
 }
+
 .promo__blockquote {
   padding: 0;
   margin: 0;
   font-style: normal;
   font-size: 16px;
   line-height: 22px;
-   p{
+
+  p {
     font-weight: 300;
-   }
-  cite{
+  }
+
+  cite {
     font-weight: bold;
   }
 }
 
-.instructions{
+.instructions {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.instructions__description{
+
+.instructions__description {
   margin: 0;
   padding: 0;
   font-weight: bold;

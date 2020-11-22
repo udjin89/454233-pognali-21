@@ -1,8 +1,7 @@
-.contacts{
+.contacts {}
 
-}
 .phone,
-.mail{
+.mail {
   display: block;
   font-weight: bold;
   font-size: 16px;
@@ -13,6 +12,6 @@
 }
 
 .registration__phone,
-.registration__mail{
+.registration__mail {
   color: $basic_yellow;
 }
