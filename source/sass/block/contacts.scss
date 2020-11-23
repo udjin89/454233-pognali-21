@@ -1,0 +1,17 @@
+.contacts {}
+
+.phone,
+.mail {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $special_dark_blue;
+}
+
+.registration__phone,
+.registration__mail {
+  color: $basic_yellow;
+}

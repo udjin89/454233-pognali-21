@@ -1,1 +1,31 @@
 // Начните писать стили здесь
+
+// переменные, цвета
+@import "variables.scss";
+// глобальные стили
+@import "global.scss";
+// подключение шрифтов
+@import "fonts.scss";
+//++++++++ Блоки +++++++++++
+@import "block/page.scss";
+// Header
+@import "block/page-header.scss";
+@import "block/main-nav.scss";
+// Buttons
+@import "block/buttons.scss";
+//
+
+@import "block/social.scss";
+@import "block/authorization.scss";
+@import "block/contacts.scss";
+@import "block/promo.scss";
+@import "block/about-service.scss";
+@import "block/destination.scss";
+@import "block/companions.scss";
+@import "block/user-transport.scss";
+@import "block/tariff.scss";
+@import "block/registration.scss";
+@import "block/route.scss";
+@import "block/our-map.scss";
+@import "block/page-footer.scss";
+@import "block/modal.scss";
