@@ -4,7 +4,13 @@
 
   background-color: $gray_light;
 }
-
+.destination__grid{
+  @include desktop{
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .destination__description {
   color: $special_grey;
 }
@@ -13,6 +19,13 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @include desktop{
+    grid-row-start: 1;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }
 
 .destination__country {

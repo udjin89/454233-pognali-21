@@ -1,7 +1,10 @@
 .promo {
   outline: 2px solid red;
   outline-offset: -2px;
-  background-color: $special_dark_blue;
+  background-color: $basic_blue;
+  background-image: url(../img/traveller.svg),
+                    url(../img/promo-background.png);
+  background-repeat: no-repeat, no-repeat;
 }
 
 .promo__slogan {
@@ -37,6 +40,16 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include tablet{
+    grid-template-columns: 1fr 1fr;
+  }
+  @include desktop{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .instructions__description {

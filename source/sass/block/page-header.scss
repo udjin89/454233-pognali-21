@@ -3,4 +3,11 @@
   outline-offset: -2px;
 
   margin: 0;
+  background-color: $basic_blue;
+}
+.page-header__grid{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

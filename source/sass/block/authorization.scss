@@ -1,28 +1,41 @@
-.authorization {}
-
-.authorization--header {}
-
-.authorization__phone {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
+.authorization {
+  display: flex;
 }
 
+.authorization__phone,
 .authorization__mail {
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.authorization__phone {
+  background-color: $special_orange;
+}
+.authorization__mail {
+  background-color: $special_yellow_dark;
 }
 
 .authorization__login {
-  padding-top: 12px;
-  padding-bottom: 8px;
-  display: block;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
+  flex-grow: 1;
+  align-self: center;
   // text-decoration: none;
   border-radius: 25px 25px 25px 25px;
+}
+.authorization--header .authorization__login{
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+.authorization--header .authorization__phone,
+.authorization--header .authorization__mail{
+  display: none;
 }
