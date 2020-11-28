@@ -1,5 +1,7 @@
 .authorization {
   display: flex;
+  outline: 2px solid lightgreen;
+  outline-offset: -2px;
 }
 
 .authorization__phone,
@@ -20,9 +22,10 @@
 }
 
 .authorization__login {
+  height: 40px;
   font-weight: bold;
   font-size: 17px;
-  line-height: 30px;
+  line-height: 40px;
   text-align: center;
   text-transform: uppercase;
   flex-grow: 1;

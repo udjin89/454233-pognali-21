@@ -11,3 +11,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.page-header__mobile-menu{
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: $white;
+}

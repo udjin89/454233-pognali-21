@@ -2,12 +2,13 @@
 
 // переменные, цвета
 @import "variables.scss";
+//
+@import "mixins.scss";
 // глобальные стили
 @import "global.scss";
 // подключение шрифтов
 @import "fonts.scss";
 //
-@import "mixins.scss";
 //++++++++ Блоки +++++++++++
 @import "block/page.scss";
 // Header
