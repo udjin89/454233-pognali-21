@@ -1,6 +1,7 @@
 .promo {
   outline: 2px solid red;
   outline-offset: -2px;
+  padding-bottom: 39px;
   background-color: $basic_blue;
   background-image: url(../img/traveller.svg),
                     url(../img/promo-background.png);
@@ -53,6 +54,7 @@
 .instructions {
   margin: 0;
   margin-top: 30px;
+  // margin-bottom: 39px;
   padding: 0;
   list-style: none;
 
@@ -66,25 +68,6 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-.instructions__item{
-  border-radius: 10px;
-}
-.instructions__item:not(:nth-child(1)){
-  margin-top: -20px;
-}
-.instructions__item:nth-of-type(1){
-  background-color: $special_orange;
-  // FF8D30
- }
- .instructions__item:nth-of-type(2){
-  background-color: $special_orange + #001800;
- }
- .instructions__item:nth-of-type(3){
-  background-color:  $special_orange + #003000;
- }
- .instructions__item:nth-of-type(4){
-  background-color: $special_orange + #004A1B;
- }
 
 .instructions__description {
   margin: 0;
@@ -95,4 +78,27 @@
   color: $basic_blue;
   // background-color: $basic_yellow;
 }
-
+.instructions__item:not(:nth-child(1)){
+  margin-top: -20px;
+}
+.instructions__item:not(:nth-child(4)){
+  .instructions__description{
+    padding-bottom: 42px;
+    // color: red;
+  }
+}
+.instructions__item{
+  border-radius: 10px;
+}
+.instructions__item:nth-of-type(1){
+  background-color: $special_orange;
+ }
+ .instructions__item:nth-of-type(2){
+  background-color: $special_orange + #001800;
+ }
+ .instructions__item:nth-of-type(3){
+  background-color:  $special_orange + #003000;
+ }
+ .instructions__item:nth-of-type(4){
+  background-color: $special_orange + #004A1B;
+ }

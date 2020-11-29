@@ -2,6 +2,7 @@
   outline: 2px solid green;
   outline-offset: -2px;
 
+  padding-top: 71px;
   background-color: $gray_light;
 }
 .destination__grid{
@@ -12,11 +13,15 @@
   }
 }
 .destination__description {
+  margin: 0;
+  margin-top: 19px;
+  padding: 0;
   color: $special_grey;
 }
 
 .destination__list-country {
   margin: 0;
+  margin-top: 60px;
   padding: 0;
   list-style: none;
 
@@ -27,7 +32,13 @@
     grid-column-end: 2;
   }
 }
+.destination__img{
+  width: 270px;
+  height: 110px;
+  // &--tailand{
 
+  // }
+}
 .destination__country {
   padding: 0;
   margin: 0;
