@@ -17,3 +17,37 @@
   line-height: 16px;
   color: $special_blue;
 }
+
+.toogle {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  margin-top: 32px;
+  padding: 0;
+  width: 25px;
+  height: 11px;
+  font-size: 0;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid brown;
+}
+
+.toogle::before,
+.toogle::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 3px;
+  background-color: $white;
+  content: "";
+}
+
+.toogle::after {
+  top: 100%;
+  transform: translateY(-3px);
+}

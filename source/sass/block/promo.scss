@@ -1,12 +1,23 @@
 .promo {
   outline: 2px solid red;
   outline-offset: -2px;
-  background-color: $special_dark_blue;
+  padding-bottom: 39px;
+  background-color: $basic_blue;
+  background-image: url(../img/traveller.svg),
+                    url(../img/promo-background.png);
+  background-repeat: no-repeat, no-repeat;
+  // background-position: bottom, 1%;
+  background-position-y: 37%, -130px;
+  background-position-x: 60%, center;
+  background-size: auto, auto;
+
 }
 
 .promo__slogan {
   padding: 0;
   margin: 0;
+  padding-top: 50px;
+  padding-bottom: 245px;
   font-weight: bold;
   font-size: 36px;
   line-height: 40px;
@@ -20,31 +31,74 @@
 .promo__blockquote {
   padding: 0;
   margin: 0;
+  margin-left: 25px;
   font-style: normal;
   font-size: 16px;
   line-height: 22px;
 
   p {
     font-weight: 300;
+    margin: 0;
+    padding: 0;
+    margin-top: 28px;
+    margin-bottom: 18px;
   }
 
   cite {
+    margin: 0;
+    padding: 0;
     font-weight: bold;
   }
 }
 
 .instructions {
   margin: 0;
+  margin-top: 30px;
+  // margin-bottom: 39px;
   padding: 0;
   list-style: none;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include tablet{
+    grid-template-columns: 1fr 1fr;
+  }
+  @include desktop{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .instructions__description {
   margin: 0;
-  padding: 0;
+  padding: 22px 0 22px 24px;
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
   color: $basic_blue;
-  background-color: $basic_yellow;
+  // background-color: $basic_yellow;
 }
+.instructions__item:not(:nth-child(1)){
+  margin-top: -20px;
+}
+.instructions__item:not(:nth-child(4)){
+  .instructions__description{
+    padding-bottom: 42px;
+    // color: red;
+  }
+}
+.instructions__item{
+  border-radius: 10px;
+}
+.instructions__item:nth-of-type(1){
+  background-color: $special_orange;
+ }
+ .instructions__item:nth-of-type(2){
+  background-color: $special_orange + #001800;
+ }
+ .instructions__item:nth-of-type(3){
+  background-color:  $special_orange + #003000;
+ }
+ .instructions__item:nth-of-type(4){
+  background-color: $special_orange + #004A1B;
+ }

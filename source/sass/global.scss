@@ -23,9 +23,14 @@ img {
 }
 
 .container {
-  // min-width: 270px;
-  width: 270px;
+  width: $mobile - 2*$mobilePaddind;
   margin: 0 auto;
+  @include tablet{
+    width: $tablet - 2*$tabletPaddind;
+  }
+  @include desktop{
+    width: $desktop - 2*$desktopPaddind;
+  }
 }
 
 .title {
