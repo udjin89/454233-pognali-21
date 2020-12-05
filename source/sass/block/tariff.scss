@@ -2,27 +2,96 @@
   outline: 2px solid green;
   outline-offset: -2px;
 
+  padding-top: 37px;
+  padding-bottom: 38px;
   background-color: $gray;
 }
-
+.tariff__padding-left{
+  padding-left: 24px;
+}
 .tariffs {
   margin: 0;
+  margin-top: 31px;
   padding: 0;
+  max-width: 200px;
   list-style: none;
   font-weight: 300;
   font-size: 16px;
   line-height: 16px;
   color: $special_grey;
+
+
+  counter-reset: my-awesome-counter;
+}
+.tariff__pic{
+  float: right;
+}
+.tariffs__item{
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-top: 1px solid $special_grey_light;
+  &:last-of-type{
+    border-bottom: 1px solid $special_grey_light;
+  }
+  counter-increment: my-awesome-counter;
+ &::before {
+    content: counter(my-awesome-counter);
+    background: $special_orange;
+    width: 2rem;
+    height: 2rem;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    color: $white;
+    text-align: center;
+
+    position: absolute;
+    right: -46px;
+    top: 0;
+  }
+  &:nth-child(2)::before{
+    background: $special_yellow_dark;
+  }
+  &:nth-child(3)::before{
+    background: $basic_yellow;
+  }
 }
 
+.tariff-name{
+  margin: 0;
+  padding: 0;
+}
+.tariff-price{
+  margin: 0;
+  margin-top: 6px;
+  padding: 0;
+}
+.modal--business-tariff{
+  padding-top: 34px;
+  text-align: center;
+}
 .tariffs--business {
+  text-align: left;
   line-height: 22px;
+  margin-left: 24px;
+  .tariffs__item::before{
+    content: none;
+  }
 }
 
 .close-tariff {
+  margin-top: 34px;
+  padding: 21px 0;
+  width: 100%;
+  font-family: "Blogger Sans";
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   color: $basic_blue_light;
+  background-color: #F3F4F8;
+  border: none;
   text-transform: uppercase;
 }

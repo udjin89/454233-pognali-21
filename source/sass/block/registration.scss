@@ -2,9 +2,9 @@
   outline: 2px solid green;
   outline-offset: -2px;
 
-
-
-
+  padding-top: 72px;
+  padding-bottom: 50px;
+  text-align: center;
   background-color: $special_dark_blue;
 }
 
@@ -14,7 +14,30 @@
   line-height: 22px;
   // letter-spacing: 0.01em;
 }
-
+.registration-form{
+  display: flex;
+}
+.field-email{
+  min-width: 230px;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  padding-left: 25px;
+}
 .link-autorization {
   color: $basic_yellow;
+}
+
+.button-registration{
+  // padding: 0;
+  &::after{
+    right: 18px;
+  }
+  margin: 0;
+  margin-left: -10px;
+  border: none;
+  width: 60px;
+}
+.registration__contacts{
+  margin-top: 30px;
+  color:$basic_yellow;
 }

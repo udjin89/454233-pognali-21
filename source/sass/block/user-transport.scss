@@ -1,10 +1,12 @@
 .user-transport {
+  padding: 0;
   list-style: none;
   display: flex;
 }
 .user-transport-item{
   width: 25px;
   height: 25px;
+  margin-left: 10px;
   background-color: transparent;
 }
 .user-transport-item svg{

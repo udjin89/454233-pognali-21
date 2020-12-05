@@ -4,13 +4,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 16px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
   background-color: $basic_blue_dark;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  // outline: 2px solid red;
+  // outline-offset: -2px;
 }
 .contacts__icon svg{
   fill: $basic_yellow;
@@ -25,8 +26,14 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $special_dark_blue;
+  &-reg{
+    color: $basic_yellow;
+  }
 }
-
+// .phone-reg,
+// .mail-reg{
+//     color: $basic_yellow;
+// }
 .registration__phone,
 .registration__mail {
   color: $basic_yellow;

@@ -50,3 +50,12 @@ img {
 .radius-section{
   border-radius: 0 0 25px 25px;
 }
+.radius-section-up{
+  border-radius: 25px 25px 0 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
