@@ -11,13 +11,15 @@
 
 <body class="page__body">
   <header class="page-header">
-    <div class="container page-header__grid">
+
+    <div class="container page-header-head">
       <a class="page-header__logo logo">
         <img src="../img/logo_mobile.svg" alt="Логотип Погнали?" width="100" height="15">
       </a>
-      <button class="toogle" type="button"><span class="hidden hamburger">Открыть меню</span>&#215;</button>
-
-      <div class="page-header__mobile-menu hidden">
+      <button class="toogle toggle--close" type="button"><span class="hidden">Открыть меню</span></button>
+    </div>
+    <div class="page-header__mobile-menu hidden">
+      <div class="container">
         <nav class="main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link" href="#">О сервисе</a></li>
@@ -66,17 +68,21 @@
         </ul>
       </div>
     </div>
+
+
   </header>
 
   <main class="page-main">
-    <section class="promo">
+    <section class="promo ">
       <div class="container">
         <h1 class="hidden">Как найти попутчика</h1>
         <p class="promo__slogan">В&nbsp;путешествие<br> с&nbsp;крутыми<br>попутчиками!</p>
 
         <div class="authorization">
-          <a class="authorization__phone" href="#"><img src="" alt=""></a>
-          <a class="authorization__mail" href="#"><img src="" alt=""></a>
+          <a class="authorization__phone" href="#"><img src="../img/icon_call.svg" alt="Позвонить" width="16"
+              height="16"></a>
+          <a class="authorization__mail" href="#"><img src="../img/icon_mail_small.svg" alt="Написать" width="16"
+              height="16"></a>
           <a class="authorization__login button" href="#">авторизация</a>
         </div>
 
@@ -105,7 +111,7 @@
         </ul>
       </div>
     </section>
-    <section class="about-service">
+    <section class="about-service radius-section">
       <div class="container">
         <h2 class="title about-service__title">О сервисе</h2>
         <p class="about-service__description">Любое путешествие веселее с&nbsp;попутчиками, которые на&nbsp;одной волне
@@ -118,19 +124,20 @@
         <a class="button button-arrow hidden" href="#">Подробнее</a>
       </div>
     </section>
-    <section class="destination">
+    <section class="destination radius-section">
       <div class="container destination__grid">
 
-        <h2 class="title">Направления</h2>
+        <h2 class="title destination__title">Направления</h2>
         <p class="destination__description">Мы&nbsp;не&nbsp;продаем туры и&nbsp;ничего не&nbsp;рекламируем. Люди сами
           пишут о&nbsp;странах, куда хотели&nbsp;бы отправиться и&nbsp;чем можно там заняться.</p>
         <ul class="destination__list-country">
           <li class="destination__item">
             <img class="destination__img destination__img--tailand" src="../img/thailand-mobile 1.jpg" width="270"
               height="110" alt="Море с островом">
-            <img class="destination__flag flag flag--tailand" src="../img/Thailand-flag.svg" width="35" height="24"
-              alt="Флаг Таиланда">
+
             <div class="destination__union-description">
+              <img class="destination__flag flag flag--tailand" src="../img/Thailand-flag.svg" width="35" height="24"
+                alt="Флаг Таиланда">
               <h3 class="destination__country">Таиланд</h3>
               <p class="destination__country-description">Джунгли зовут!</p>
               <p class="destination__user-count">18321</p>
@@ -139,73 +146,109 @@
           <li class="destination__item">
             <img class="destination__img destination__img--france" src="../img/france-mobile 1.jpg" width="270"
               height="110" alt="Здание на улице">
-            <img class="destination__flag flag flag--france" src="../img/france-flag.svg" width="35" height="24"
-              alt="Флаг Франции">
-            <div class="destination__union-description"></div>
-            <h3 class="destination__country">Франция</h3>
-            <p class="destination__country-description">Трэ бьен, манифик!</p>
-            <p class="destination__user-count">12518</p>
+
+            <div class="destination__union-description">
+              <img class="destination__flag flag flag--france" src="../img/france-flag.svg" width="35" height="24"
+                alt="Флаг Франции">
+              <h3 class="destination__country">Франция</h3>
+              <p class="destination__country-description">Трэ бьен, манифик!</p>
+              <p class="destination__user-count">12518</p>
+            </div>
           </li>
           <li class="destination__item">
             <img class="destination__img destination__img--czech-republic" src="../img/czech-mobile 1.jpg" width="270"
               height="110" alt="Теплоход на фоне Карлова моста">
-            <img class="destination__flag flag flag--czech-republic" src="../img/Czechia.svg" width="35" height="24"
-              alt="Флаг Чехии">
-            <div class="destination__union-description"></div>
-            <h3 class="destination__country">Чехия</h3>
-            <p class="destination__country-description">Закоулки старой Европы</p>
-            <p class="destination__user-count">5326</p>
+
+            <div class="destination__union-description">
+              <img class="destination__flag flag flag--czech-republic" src="../img/Czechia.svg" width="35" height="24"
+                alt="Флаг Чехии">
+              <h3 class="destination__country">Чехия</h3>
+              <p class="destination__country-description">Закоулки старой<br> Европы</p>
+              <p class="destination__user-count">5326</p>
+            </div>
           </li>
         </ul>
 
         <a class="button button-arrow button--show-all-destination" href="form.html">Показать все</a>
       </div>
     </section>
-    <section class="companions">
-      <div class="container">
-        <h2 class="title">Попутчики</h2>
-        <p class="companions__description">Все мы&nbsp;индивидуальны и&nbsp;у&nbsp;каждого свой взгляд на&nbsp;идеальный
-          отдых. Одному
-          нужен пляж и&nbsp;коктейль, а&nbsp;другому маршрут для хайкинга.</p>
-        <p class="companions__appeal">Теперь можно легко найти единомышленников!</p>
-
+    <section class="companions radius-section">
+      <div class="container companions__grid">
+        <div class="companions__description-block">
+          <h2 class="title">Попутчики</h2>
+          <p class="companions__description">Все мы&nbsp;индивидуальны и&nbsp;у&nbsp;каждого свой взгляд
+            на&nbsp;идеальный
+            отдых. Одному
+            нужен пляж и&nbsp;коктейль, а&nbsp;другому маршрут для хайкинга.</p>
+          <p class="companions__appeal">Теперь можно легко найти единомышленников!</p>
+        </div>
         <ul class="companions__list">
           <li class="companions__item">
-            <div class="level">99</div>
-            <img class="foto" src="" alt="Фото попутчика">
-            <ul class="country-list">
-              <li class="country-item"><img class="flag flag--czech-republic" src="" alt="Флаг Чехии"></li>
-              <li class="country-item"><img class="flag flag--tailand" src="" alt="Флаг Таиланда"></li>
-              <li class="country-item"><img class="flag flag--czech-republic" src="" alt="Флаг Чехии"></li>
-            </ul>
-            <div class="companions__user-name">Таня Фирсова</div>
-            <p class="companions__user-tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <ul class="user-transport">
-              <li class="user-transport-item"><svg class="icon-plane icon-on"></svg></li>
-              <li class="user-transport-item"><svg class="icon-bus"></svg></li>
-              <li class="user-transport-item"><svg class="icon-bicycle "></svg></li>
-              <li class="user-transport-item"><svg class="icon-afoot"></svg></li>
-            </ul>
+            <div class="level">99<br><span class="level__word">level</span></div>
+            <img class="foto" src="../img/foto_tanya.jpg" alt="Фото попутчика" width="270" height="270">
+            <div class="companions__union-description">
+              <ul class="country-list">
+                <li class="country-item"><img class="flag flag--czech-republic" src="../img/Thailand-flag.svg"
+                    alt="Флаг Чехии" width="35" height="24"></li>
+                <li class="country-item"><img class="flag flag--tailand" src="../img/Thailand-flag.svg"
+                    alt="Флаг Таиланда" width="35" height="24"></li>
+                <li class="country-item"><img class="flag flag--czech-republic" src="../img/Thailand-flag.svg"
+                    alt="Флаг Чехии" width="35" height="24"></li>
+              </ul>
+              <div class="companions__user-name">Таня Фирсова</div>
+              <p class="companions__user-tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              <ul class="user-transport">
+                <li class="user-transport-item"> <svg class="icon-plane icon-on" width="21" height="23" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path
+                        d="M16.783 2.093c-.728.173-1.46.347-1.733.824l-2.107 4.199L1.63 9.806l-.458 1.341 8.658.82-1.47 3.634-3.283.78-.824 1.43 2.369.256.27 1.169c.12.414.545.69.908.604l1.095-.26 1.268 2.163.825-1.428-.81-3.505 2.377-3.03 4.536 7.961.914-1.038L15.213 8.63l2.563-3.895c.276-.477.096-1.255-.085-2.036-.09-.387-.545-.691-.908-.605z" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <path transform="translate(0 .96)" d="M0 0h20.826v21.12H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg></li>
+                <li class="user-transport-item"><svg class="icon-bus" widht="25" height="25"></svg></li>
+                <li class="user-transport-item"><svg class="icon-bicycle " widht="25" height="25"></svg></li>
+                <li class="user-transport-item"><svg class="icon-afoot" widht="25" height="25"></svg></li>
+              </ul>
+            </div>
           </li>
           <li class="companions__item">
             <div class="level">80</div>
-            <img class="foto" src="" alt="Фото попутчика">
+            <img class="foto" src="" alt="Фото попутчика" width="270" height="270">
             <ul class="country-list">
-              <li class="country-item"><img class="flag flag--czech-republic" src="" alt="Флаг Чехии"></li>
-              <li class="country-item"><img class="flag flag--tailand" src="" alt="Флаг Таиланда"></li>
+              <li class="country-item"><img class="flag flag--czech-republic" src="" alt="Флаг Чехии" width="35"
+                  height="24"></li>
+              <li class="country-item"><img class="flag flag--tailand" src="" alt="Флаг Таиланда" width="35"
+                  height="24"></li>
             </ul>
             <div class="companions__user-name">Петя Демин</div>
             <p class="companions__user-tags">#бургер #бар #футбол #концерт #крафт</p>
             <ul class="user-transport">
-              <li class="user-transport-item"><svg class="icon-plane icon-on"></svg></li>
-              <li class="user-transport-item"><svg class="icon-bus icon-on"></svg></li>
-              <li class="user-transport-item"><svg class="icon-bicycle "></svg></li>
-              <li class="user-transport-item"><svg class="icon-afoot icon-on"></svg></li>
+              <li class="user-transport-item">
+                <svg class="icon-plane icon-on" width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M16.783 2.093c-.728.173-1.46.347-1.733.824l-2.107 4.199L1.63 9.806l-.458 1.341 8.658.82-1.47 3.634-3.283.78-.824 1.43 2.369.256.27 1.169c.12.414.545.69.908.604l1.095-.26 1.268 2.163.825-1.428-.81-3.505 2.377-3.03 4.536 7.961.914-1.038L15.213 8.63l2.563-3.895c.276-.477.096-1.255-.085-2.036-.09-.387-.545-.691-.908-.605z" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <path transform="translate(0 .96)" d="M0 0h20.826v21.12H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </li>
+              <li class="user-transport-item"><svg class="icon-bus icon-on" widht="25" height="25"></svg></li>
+              <li class="user-transport-item"><svg class="icon-bicycle " widht="25" height="25"></svg></li>
+              <li class="user-transport-item"><svg class="icon-afoot icon-on" widht="25" height="25"></svg></li>
             </ul>
           </li>
         </ul>
 
-        <a class="button button-arrow button--show-all-user" href="catalog.html">Показать всех</a>
+        <a class="button button-arrow button--show-all-companions" href="catalog.html">Показать всех</a>
       </div>
     </section>
 
@@ -257,7 +300,7 @@
     </section>
 
     <section class="route">
-      <div class="container">
+      <div class="container route__grid">
         <h2 class="hidden">Наш адрес</h2>
         <p class="address">ул. Большая Конюшенная, 19/8</p>
         <a class="button button-arrow " href="#">Проложить маршрут</a>
@@ -269,9 +312,9 @@
   </main>
 
   <footer class="page-footer">
-    <div class="container">
+    <div class="container page-footer__grid">
       <a class="page-footer__logo">
-        <img src="" alt="Логотип Погнали?" width="100" height="15">
+        <img src="../img/logo_mobile_footer.svg" alt="Логотип Погнали?" width="100" height="15">
       </a>
       <ul class="page-footer__social social">
         <li class="social__item"><a class="social__link social__link--page-footer" href="#" aria-label="фейсбук"><img

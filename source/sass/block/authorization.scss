@@ -13,6 +13,9 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .authorization__phone {
   background-color: $special_orange;
@@ -32,11 +35,14 @@
   align-self: center;
   // text-decoration: none;
   border-radius: 25px 25px 25px 25px;
+  @include tablet{
+    display: block;
+  }
 }
 .authorization--header .authorization__login{
   display: block;
-  padding-top: 12px;
-  padding-bottom: 8px;
+  // padding-top: 12px;
+  // padding-bottom: 8px;
 }
 .authorization--header .authorization__phone,
 .authorization--header .authorization__mail{

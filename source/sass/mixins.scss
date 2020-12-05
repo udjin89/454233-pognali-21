@@ -8,3 +8,7 @@
     @content;
   }
 }
+
+@mixin shift-section {
+  margin-top: $section_shift;
+}

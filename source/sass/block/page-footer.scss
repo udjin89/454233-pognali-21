@@ -3,3 +3,13 @@
   outline: 3px solid black;
   outline-offset: -2px;
 }
+.page-footer__grid{
+  @include tablet{
+    display: flex;
+  }
+}
+.page-footer__copy{
+  font-size: 16px;
+  line-height: 16px;
+  color: $special_grey;
+}

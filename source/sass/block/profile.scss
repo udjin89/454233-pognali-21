@@ -1,0 +1,75 @@
+.profile{
+  background-color: $basic_blue_lightest;
+}
+.profile__grid{
+  display: grid;
+  grid-template-rows: min-content min-content min-content min-content;
+  grid-template-columns: 1fr 1fr;
+  @include tablet{
+    grid-template-rows: min-content min-content min-content;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  @include desktop{
+    grid-template-columns: 60% 40%;
+  }
+}
+.level--form{
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.foto--form{
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  @include tablet{
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  @include desktop{
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+.change-foto{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  @include desktop{
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+.tags--form{
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  @include desktop{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+.select-transpo--form{
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  @include tablet{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  @include desktop{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}

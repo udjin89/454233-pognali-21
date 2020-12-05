@@ -2,8 +2,14 @@
   outline: 2px solid pink;
   outline-offset: -2px;
 
+  position: relative;
   margin: 0;
   background-color: $basic_blue;
+}
+.page-header-head{
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
 }
 .page-header__grid{
   position: relative;
@@ -16,4 +22,5 @@
   top: 100%;
   width: 100%;
   background-color: $white;
+  padding-bottom: 40px;
 }

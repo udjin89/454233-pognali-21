@@ -1,9 +1,15 @@
 .about-service {
-  background-color: $special_dark_blue;
+  padding-top: 33px;
   padding-bottom: 82px;
+  background-color: $special_dark_blue;
+  background-image: url(../img/about-mobile.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+
 
   outline: 2px solid pink;
   outline-offset: -2px;
+
 }
 .about-service__title{
   padding: 0;

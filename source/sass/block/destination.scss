@@ -1,8 +1,10 @@
 .destination {
+  // @include shift-section;
   outline: 2px solid green;
   outline-offset: -2px;
 
   padding-top: 71px;
+  padding-bottom: 34px;
   background-color: $gray_light;
 }
 .destination__grid{
@@ -12,11 +14,26 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+.destination__title{
+  @include desktop{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
 .destination__description {
   margin: 0;
   margin-top: 19px;
   padding: 0;
   color: $special_grey;
+
+  @include desktop{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
 }
 
 .destination__list-country {
@@ -32,17 +49,30 @@
     grid-column-end: 2;
   }
 }
+.destination__item{
+  margin-bottom: 9px;
+}
 .destination__img{
   width: 270px;
   height: 110px;
-  // &--tailand{
-
-  // }
+  border-radius: 10px 10px 0 0;
 }
 .destination__union-description{
+  width: 100%;
+  max-height: 89px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: $white;
+  border-radius: 10px;
+  margin-top: -15px;
+  padding-top: 26px;
+  padding-bottom: 24px;
+  padding-left: 24px;
 }
 .destination__country {
+  order: 1;
   padding: 0;
   margin: 0;
   font-weight: bold;
@@ -52,6 +82,7 @@
 }
 
 .destination__country-description {
+  order: 3;
   padding: 0;
   margin: 0;
   font-weight: 500;
@@ -62,11 +93,31 @@
 }
 
 .destination__user-count {
+  position: relative;
+  display: block;
+  order: 2;
   padding: 0;
+  padding-left: 19px;
   margin: 0;
+  margin-right: 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  color: $basic_blue;
-  opacity: 0.3;
+  // color: $basic_blue;
+  color: transparentize($basic_blue, 0);
+  // opacity: 0;
+  // background-color: green;
+  background-image: url(../img/icon_user.svg);
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  background-position-y: center;
+}
+.destination__flag{
+  position: absolute;
+  top: -12px;
+}
+
+.button--show-all-destination{
+  margin-top: 25px;
+  // margin-bottom: 34px;
 }

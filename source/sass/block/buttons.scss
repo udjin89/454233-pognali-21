@@ -9,6 +9,26 @@
   font-size: 18px;
   line-height: 18px;
   border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 23px;
+
+  &::after{
+    display: inline-block;
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    content: " ";
+    background-image: url(../img/arrow_button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .show-business-tariff {
@@ -26,17 +46,16 @@
   margin-top: 32px;
   padding: 0;
   width: 25px;
-  height: 11px;
+  height: 25px;
   font-size: 0;
   box-shadow: none;
   border: none;
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid brown;
+  // border: 1px solid brown;
 }
 
-.toogle::before,
-.toogle::after {
+.toggle--close::before {
   position: absolute;
   display: block;
   left: 0;
@@ -45,9 +64,44 @@
   height: 3px;
   background-color: $white;
   content: "";
+  border-radius: 1.5px;
 }
 
-.toogle::after {
-  top: 100%;
-  transform: translateY(-3px);
+.toggle--close::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 3px;
+  background-color: $white;
+  content: "";
+  border-radius: 1.5px;
+  // top: 100%;
+  transform: translateY(6px);
+}
+.toggle--open::before{
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+  width: 24px;
+  height: 3px;
+  background-color: $grey;
+  content: "";
+  border-radius: 1.5px;
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+.toggle--open::after{
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+  width: 24px;
+  height: 3px;
+  background-color: $grey;
+  content: "";
+  border-radius: 1.5px;
+  transform: rotate(-45deg);
 }

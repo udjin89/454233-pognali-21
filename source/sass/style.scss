@@ -4,8 +4,7 @@
 @import "variables.scss";
 //
 @import "mixins.scss";
-// глобальные стили
-@import "global.scss";
+
 // подключение шрифтов
 @import "fonts.scss";
 //
@@ -17,7 +16,9 @@
 // Buttons
 @import "block/buttons.scss";
 //
-
+@import "block/logo.scss";
+@import "block/country-list.scss";
+@import "block/level.scss";
 @import "block/social.scss";
 @import "block/authorization.scss";
 @import "block/contacts.scss";
@@ -33,3 +34,14 @@
 @import "block/our-map.scss";
 @import "block/page-footer.scss";
 @import "block/modal.scss";
+
+//form
+@import "block/profile.scss";
+@import "block/my-plans.scss";
+@import "block/add-plan.scss";
+
+//catalog
+@import "block/find-companion.scss";
+
+// глобальные стили
+@import "global.scss";

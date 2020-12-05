@@ -43,27 +43,32 @@
   </header>
   <main class="page-main">
     <section class="find-companion">
-      <h1 class="hidden">Поиск попутчика</h1>
-      <p class="main-title">Попутчики</p>
+      <div class="find-companion__head">
+        <h1 class="hidden">Поиск попутчика</h1>
+        <p class="main-title">Попутчики</p>
+        <a href="index.html">на главную</a>
+      </div>
       <div class="filter">
-        <h2>Фильтрация по странам:</h2>
-        <button type="button" aria-label="">показать все</button>
-        <ul class="filter__continent-list">
-          <li>
-            <a class="filter__continent-link continent-link--active" href="#">Европа</a>
-          </li>
-          <li>
-            <a class="filter__continent-link" href="#">Азия</a>
-          </li>
-          <li>
-            <a class="filter__continent-link" href="#">Америка</a>
-          </li>
-          <li>
-            <a class="filter__continent-link" href="#">Острова</a>
-          </li>
-        </ul>
 
-        <div class="select-country">
+        <h2>Фильтрация по странам:</h2>
+        <div class="filter__wrap-head">
+          <ul class="filter__continent-list">
+            <li>
+              <a class="filter__continent-link continent-link--active" href="#">Европа</a>
+            </li>
+            <li>
+              <a class="filter__continent-link" href="#">Азия</a>
+            </li>
+            <li>
+              <a class="filter__continent-link" href="#">Америка</a>
+            </li>
+            <li>
+              <a class="filter__continent-link" href="#">Острова</a>
+            </li>
+          </ul>
+          <button type="button" aria-label="">показать все</button>
+        </div>
+        <div class="select-country select-country--catalog">
 
           <table class="select-country__table">
             <tr class="">
@@ -122,7 +127,7 @@
       <h2 class="hidden">Форма поиска</h2>
 
       <form class="search" action="https://echo.htmlacademy.ru" method="get">
-        <p>Подберите идеального попутчика</p>
+        <p class="search__title ">Подберите идеального попутчика</p>
         <ul class="options-list">
           <li></li>
         </ul>
@@ -146,6 +151,7 @@
             <li class="user-transport-item"><svg class="icon-afoot icon-on"></svg></li>
           </ul>
           <div class="level">80</div>
+          <button class="" type="button">Позвать!</button>
         </li>
 
       </ul>
