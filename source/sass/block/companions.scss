@@ -7,8 +7,16 @@
 
   background-color: $special_dark_blue;
 
+  @include tablet{
+    padding-bottom: 87px;
+  }
+
 }
 .companions__grid{
+  @include tablet{
+    padding-left: 34px;
+    padding-right: 34px;
+  }
   @include desktop{
     display: grid;
     grid-template-rows: min-content min-content min-content;
@@ -51,6 +59,7 @@
   list-style: none;
   @include tablet{
     display: flex;
+    justify-content: space-between;
   }
   @include desktop{
     grid-row-start: 1;
@@ -123,4 +132,8 @@
 }
 .button--show-all-companions{
   margin-top: 20px;
+  @include tablet{
+    // margin: 81px 34px 0 34px;
+
+  }
 }

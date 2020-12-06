@@ -2,6 +2,10 @@
   text-decoration: none;
   color: $basic_blue_light;
   background-color: $basic_yellow;
+  @include tablet{
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .button-arrow {
@@ -29,19 +33,6 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-}
-
-.show-business-tariff {
-  padding: 0;
-  padding-top: 31px;
-  font-family: "Blogger Sans";
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 16px;
-  color: $special_blue;
-  border: none;
-  background-color: transparent;
-  // white-space: nowrap;
 }
 
 .toogle {

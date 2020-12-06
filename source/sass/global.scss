@@ -40,6 +40,10 @@ img {
   font-size: 24px;
   line-height: 24px;
   color: $special_orange;
+  @include tablet{
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 .main-title{
   font-weight: bold;

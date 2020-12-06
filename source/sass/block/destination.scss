@@ -28,6 +28,10 @@
   padding: 0;
   color: $special_grey;
 
+  @include tablet{
+    font-size: 28px;
+    line-height: 33px;
+  }
   @include desktop{
     grid-row-start: 2;
     grid-row-end: 3;

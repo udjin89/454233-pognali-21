@@ -18,10 +18,10 @@
       </a>
       <button class="toogle toggle--close" type="button"><span class="hidden">Открыть меню</span></button>
     </div>
-    <div class="page-header__mobile-menu ">
+    <div class="page-header__mobile-menu hidden">
       <div class="container">
         <nav class="main-nav">
-          <ul class="main-nav__list">
+          <ul class="main-nav__list ">
             <li class="main-nav__item"><a class="main-nav__link" href="#">О сервисе</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="#">Направления</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="#">Попутчики</a></li>
@@ -78,7 +78,7 @@
         <h1 class="hidden">Как найти попутчика</h1>
         <p class="promo__slogan">В&nbsp;путешествие<br> с&nbsp;крутыми<br>попутчиками!</p>
 
-        <div class="authorization">
+        <div class="authorization hidden">
           <a class="authorization__phone" href="#"><img src="../img/icon_call.svg" alt="Позвонить" width="16"
               height="16"></a>
           <a class="authorization__mail" href="#"><img src="../img/icon_mail_small.svg" alt="Написать" width="16"
@@ -91,7 +91,7 @@
           <cite>Мурат Эльтазин<br>главный редактор<br>газеты &laquo;гаджетлайф&raquo;</cite>
         </blockquote>
 
-        <ul class="instructions">
+        <ol class="instructions">
           <li class="instructions__item">
             <p class="instructions__description">Выберите<br>направление</p>
             <!-- <p class="instructions__step">1</p> -->
@@ -108,11 +108,11 @@
             <p class="instructions__description">Путешествуйте<br>вместе!</p>
             <!-- <p class="instructions__step">4</p> -->
           </li>
-        </ul>
+        </ol>
       </div>
     </section>
     <section class="about-service radius-section">
-      <div class="container">
+      <div class="container about-service-grid">
         <h2 class="title about-service__title">О сервисе</h2>
         <p class="about-service__description">Любое путешествие веселее с&nbsp;попутчиками, которые на&nbsp;одной волне
           с&nbsp;тобой!
@@ -121,7 +121,7 @@
           в&nbsp;совместный
           трип!
         </p>
-        <a class="button button-arrow hidden" href="#">Подробнее</a>
+        <a class="button button-arrow about-service--button" href="#">Подробнее</a>
       </div>
     </section>
     <section class="destination radius-section">
@@ -300,7 +300,7 @@
       <div class="container tariff__padding-left">
         <h2 class="hidden">Тарифы</h2>
         <img class="tariff__pic" src="../img/tariff.svg" alt="">
-        <p class="title clearfix">Добавьте<br> свой<br> профиль</p>
+        <p class="title title_tariff">Добавьте<br> свой<br> профиль</p>
         <ol class="tariff__list tariffs">
           <li class="tariffs__item">
             <p class="tariff-name">Базовое размещение</p>
@@ -315,7 +315,12 @@
             <p class="tariff-price">59 руб./мес</p>
           </li>
         </ol>
-        <button type="button" class="show-business-tariff">Показать тарифы для бизнеса</button>
+        <button type="button" class="show-business-tariff">
+          <div class="icon-busnes">
+            <img src="../img/icon_businessman.svg" alt="" width="25" height="25">
+          </div>
+          Показать тарифы для бизнеса
+        </button>
       </div>
     </section>
 
