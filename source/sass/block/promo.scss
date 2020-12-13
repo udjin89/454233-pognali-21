@@ -1,18 +1,39 @@
 .promo {
-  outline: 2px solid red;
-  outline-offset: -2px;
+
   padding-bottom: 39px;
   background-color: $basic_blue;
   background-image: url(../img/traveller.svg),
                     url(../img/promo-background.png);
   background-repeat: no-repeat, no-repeat;
-  // background-position: bottom, 1%;
   background-position-y: 24%, -130px;
   background-position-x: 60%, center;
   background-size: auto, auto;
 
-}
+  @include retina{
+    background-image: url(../img/traveller.svg),
+                      url(../img/promo-background@2x.png);
+  }
 
+  @include tablet{
+    background-image: url(../img/traveller.svg),
+                      url(../img/promo-background-tablet.jpg);
+    background-position-y: 50%, 300px;
+    background-position-x: 60%, center;
+    background-size: 372px 451px, auto;
+  }
+  @include desktop{
+    background-image: url(../img/traveller.svg),
+                      url(../img/promo-background-desktop.jpg);
+    padding-bottom: 123px;
+  }
+}
+.promo__grid{
+  @include desktop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .promo__slogan {
   padding: 0;
   margin: 0;
@@ -26,10 +47,10 @@
   font-size: 60px;
   line-height: 70px;
   }
-}
-
-.promo__blockquote {
-  // font-size: 40px;
+  @include desktop{
+    margin: 110px 0 101px 72px;
+    padding: 0;
+  }
 }
 
 .promo__blockquote {
@@ -61,12 +82,14 @@
       line-height: 25px;
     }
   }
+  @include desktop{
+    margin: 122px 23px 0 0;
+  }
 }
 
 .instructions {
   margin: 0;
   margin-top: 30px;
-  // margin-bottom: 39px;
   padding: 0;
   list-style: none;
 
@@ -79,6 +102,8 @@
   }
   @include desktop{
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    margin: 0;
   }
 
   counter-reset: counter;
@@ -97,18 +122,7 @@
   line-height: 24px;
   }
 }
-.instructions__item:not(:nth-child(1)){
-  margin-top: -20px;
-  @include tablet{
-    margin-top: 0;
-  }
-}
-.instructions__item:not(:nth-child(4)){
-  .instructions__description{
-    padding-bottom: 42px;
 
-  }
-}
 .instructions__item{
   border-radius: 10px;
   position: relative;
@@ -116,7 +130,9 @@
   @include tablet{
     min-height: 140px;
   }
-
+  @include desktop{
+    min-height: 107px;
+  }
   &::before {
      content: counter(counter);
      font-weight: bold;
@@ -135,14 +151,45 @@
       right:290px;
       font-size: 30px;
       line-height: 30px;
-
     }
+    @include desktop{
+      font-size: 24px;
+      line-height: 24px;
+      top: 28px;
+      right: 38px;
+    }
+  }
+}
+.instructions__item:not(:nth-child(1)){
+  margin-top: -20px;
+  @include tablet{
+    margin-top: 0;
+  }
+}
+.instructions__item:not(:nth-child(4)){
+  .instructions__description{
+    padding-bottom: 42px;
+
   }
 }
 .instructions__item:nth-of-type(1){
   background-color: $special_orange;
   @include tablet{
     border-radius: 10px 0 0 0px ;
+    &::after{
+      display: inline-block;
+      width: 40px;
+
+      background-color: inherit;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -20px;
+    }
+  }
+  @include desktop{
+    border-radius: 20px;
   }
  }
  .instructions__item:nth-of-type(2){
@@ -150,16 +197,47 @@
   @include tablet{
     border-radius: 10px 10px 0 0 ;
   }
+  @include desktop{
+    border-radius: 20px;
+    &::after{
+      display: inline-block;
+      width: 40px;
+
+      background-color: inherit;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -20px;
+    }
+  }
  }
  .instructions__item:nth-of-type(3){
   background-color:  $special_orange + #003000;
   @include tablet{
     border-radius: 0 0 0 10px ;
+    &::after{
+      display: inline-block;
+      width: 40px;
+
+      background-color: inherit;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -20px;
+    }
+  }
+  @include desktop{
+    border-radius: 20px;
   }
  }
  .instructions__item:nth-of-type(4){
   background-color: $special_orange + #004A1B;
   @include tablet{
     border-radius: 0 0 10px 10px ;
+  }
+  @include desktop{
+    border-radius: 20px;
   }
  }

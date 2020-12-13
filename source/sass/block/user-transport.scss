@@ -1,14 +1,22 @@
 .user-transport {
   padding: 0;
+  margin: 0 auto;
+  width: min-content;
   list-style: none;
   display: flex;
+
 }
 .user-transport-item{
   width: 25px;
   height: 25px;
   margin-left: 10px;
   background-color: transparent;
+
 }
-.user-transport-item svg{
+.user-transport-icon{
   fill: $special_darkest_blue;
+  opacity: 0.15;
+}
+.icon-on{
+  opacity: 1;
 }

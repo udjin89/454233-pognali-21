@@ -10,5 +10,11 @@
 }
 
 @mixin shift-section {
-  margin-top: $section_shift;
+  top: $section_shift;
+  margin-bottom: $section_shift;
+}
+@mixin retina {
+  @media (min-resolution: 2dppx){
+    @content;
+  }
 }

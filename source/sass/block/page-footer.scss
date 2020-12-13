@@ -1,23 +1,35 @@
 .page-footer {
+  @include shift-section;
+  position: relative;
+  z-index: 20;
   background-color: $white;
-  outline: 3px solid black;
-  outline-offset: -2px;
-
   padding-top: 37px;
+  @include tablet{
+    padding-top: 46px;
+  }
 }
 .page-footer__grid{
   @include tablet{
     display: flex;
+    justify-content: space-between;
   }
+}
+.page-footer__social{
+  padding: 0;
+  margin: 0;
+  align-self: center;
 }
 .page-footer__copy{
   margin-top: 37px;
-  font-size: 16px;
-  line-height: 16px;
   color: $special_grey;
   border-top: 1px solid #F2F2F2;
   display: flex;
   justify-content: space-between;
+
+  @include tablet{
+    border: none;
+    margin: 0;
+  }
 }
 
 .page-footer__logo{
@@ -27,4 +39,18 @@
 }
 .copy-link{
   margin: auto 0 auto 0;
+}
+.copy-txt{
+  font-size: 16px;
+  line-height: 16px;
+  @include tablet{
+    margin-right: 23px;
+    font-size: 20px;
+    line-height: 20px;
+  };
+}
+.copy_img{
+    width: 27px;
+    height: 34px;
+
 }

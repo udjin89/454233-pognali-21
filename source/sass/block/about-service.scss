@@ -1,4 +1,6 @@
 .about-service {
+  position: relative;
+  z-index: 70;
   padding-top: 33px;
   padding-bottom: 82px;
   background-color: $special_dark_blue;
@@ -10,14 +12,16 @@
     font-size: 28px;
     line-height: 33px;
   }
-  outline: 2px solid pink;
-  outline-offset: -2px;
 
 }
 .about-service-grid{
   @include tablet{
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  @include desktop{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 73px;
   }
 }
 .about-service__title{
@@ -38,6 +42,12 @@
     grid-column-start: 1;
     grid-column-end: 2;
   }
+  @include desktop{
+    font-size: 28px;
+    line-height: 34px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .about-service__appeal {
@@ -51,10 +61,24 @@
     grid-column-start: 1;
     grid-column-end: 2;
   }
+  @include desktop{
+    line-height: 24px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 .about-service--button{
+
+  display: none;
+
   @include tablet{
+    display: block;
+    margin-top: 52px;
     grid-column-start: 1;
     grid-column-end: 2;
+    padding-right: 127px;
+  }
+  @include desktop{
+    padding: 29px 127px 27px 32px;
   }
 }

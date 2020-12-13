@@ -1,7 +1,8 @@
 .authorization {
   display: flex;
-  outline: 2px solid lightgreen;
-  outline-offset: -2px;
+  @include tablet{
+    display: none;
+  }
 }
 
 .authorization__phone,
@@ -16,6 +17,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
+
+  @include desktop{
+    width: 50px;
+    height: 50px;
+  }
 }
 .authorization__phone {
   background-color: $special_orange;
@@ -32,20 +39,24 @@
   text-align: center;
   text-transform: uppercase;
   flex-grow: 1;
-  align-self: center;
-  // text-decoration: none;
   border-radius: 25px 25px 25px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @include tablet{
-    display: block;
+    padding: 16px 28px 16px 28px;
+  }
+  @include desktop{
+    height: 50px;
   }
 }
 .authorization--header .authorization__login{
-  display: block;
-  margin-bottom: 60px;
+  // display: block;
+  // margin-bottom: 60px;
   // padding-top: 12px;
   // padding-bottom: 8px;
 }
 .authorization--header .authorization__phone,
 .authorization--header .authorization__mail{
-  display: none;
+  // display: none;
 }

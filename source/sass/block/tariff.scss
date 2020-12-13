@@ -1,8 +1,9 @@
 .tariff {
-  outline: 2px solid green;
-  outline-offset: -2px;
+  @include shift-section;
+  position: relative;
+  z-index: 40;
 
-  padding-top: 37px;
+  padding-top: 37px - $section_shift;
   padding-bottom: 38px;
   background-color: $gray;
 }
@@ -27,7 +28,9 @@
   font-size: 16px;
   line-height: 16px;
   color: $special_grey;
-
+  @include tablet{
+    max-width: 100%;
+  }
 
   counter-reset: my-awesome-counter;
 }
@@ -74,6 +77,17 @@
   &:nth-child(3)::before{
     background: $basic_yellow;
   }
+
+  @include tablet{
+    padding-left: 90px;
+    padding-top: 20px;
+    padding-bottom: 18px;
+    width: 100%;
+    font-size: 28px;
+    line-height: 28px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .tariff-name{
@@ -86,8 +100,12 @@
   padding: 0;
 }
 .modal--business-tariff{
+  max-width: 750px;
   padding-top: 34px;
   text-align: center;
+  @include tablet{
+    padding: 54px 0 0 0;
+  }
 }
 .tariffs--business {
   text-align: left;
@@ -95,6 +113,18 @@
   margin-left: 24px;
   .tariffs__item::before{
     content: none;
+  }
+  @include tablet{
+    margin: 0;
+    margin-top: 47px;
+    padding: 0 90px 0 90px;
+    .tariffs__item{
+      padding: 14px 0;
+      // display: flex;
+      font-size: 22px;
+      line-height: 28px;
+    }
+
   }
 }
 
@@ -110,6 +140,12 @@
   background-color: #F3F4F8;
   border: none;
   text-transform: uppercase;
+  @include tablet{
+    padding: 41px 0;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+  }
 }
 
 .show-business-tariff {
@@ -138,4 +174,9 @@
   height: 68px;
   background-color: #E2E5F2;
   border-radius: 50%;
+
+  display: none;
+  @include tablet{
+    display: block;
+  }
 }

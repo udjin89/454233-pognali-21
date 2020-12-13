@@ -1,17 +1,23 @@
 .destination {
-  // @include shift-section;
-  outline: 2px solid green;
-  outline-offset: -2px;
+  @include shift-section;
+  position: relative;
+  z-index: 60;
 
-  padding-top: 71px;
+  padding-top: 71px - $section_shift;
   padding-bottom: 34px;
   background-color: $gray_light;
+
+  @include desktop{
+    padding-bottom: 138px;
+  }
 }
 .destination__grid{
   @include desktop{
     display: grid;
     grid-template-rows: min-content min-content min-content;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 560px 1fr;
+    column-gap: 174px;
+    padding-left: 72px;
   }
 }
 .destination__title{
@@ -37,6 +43,7 @@
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
+
   }
 }
 
@@ -51,15 +58,30 @@
     grid-row-end: -1;
     grid-column-start: 1;
     grid-column-end: 2;
+    margin-top: 0;
+
   }
 }
 .destination__item{
   margin-bottom: 9px;
+
+  @include tablet{
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 .destination__img{
   width: 270px;
   height: 110px;
   border-radius: 10px 10px 0 0;
+  @include tablet{
+    height: 140px;
+    border-radius: 0 20px 20px 0;
+    // object-fit: none;
+    // position: relative;
+    // left: -100px;
+    // transform: translateX(-150px);
+  }
 }
 .destination__union-description{
   width: 100%;
@@ -74,6 +96,14 @@
   padding-top: 26px;
   padding-bottom: 24px;
   padding-left: 24px;
+
+  @include tablet{
+    margin: 0;
+    max-height: 140px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-radius: 20px 0 0 20px;
+  }
 }
 .destination__country {
   order: 1;
@@ -83,6 +113,10 @@
   font-size: 21px;
   line-height: 21px;
   color: $black;
+  @include tablet{
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .destination__country-description {
@@ -94,6 +128,10 @@
   line-height: 18px;
   color: $special_grey;
   opacity: 0.3;
+  @include tablet{
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .destination__user-count {
@@ -107,21 +145,36 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  // color: $basic_blue;
-  color: transparentize($basic_blue, 0);
-  // opacity: 0;
-  // background-color: green;
+  color: rgba($color: $basic_blue, $alpha: 0.3);
+
   background-image: url(../img/icon_user.svg);
   background-repeat: no-repeat;
   background-position-x: 0;
   background-position-y: center;
+
+  @include tablet{
+    padding-left: 32px;
+    order: 3;
+    font-size: 20px;
+    line-height: 20px;
+    background-size: 24px;
+  }
 }
 .destination__flag{
   position: absolute;
   top: -12px;
+  @include tablet{
+    width: 70px;
+    height: 47px;
+    right: -35px;
+    top: 17px;
+
+  }
 }
 
 .button--show-all-destination{
   margin-top: 25px;
-  // margin-bottom: 34px;
+  @include desktop{
+    padding: 29px 103px 27px 32px;
+  }
 }
