@@ -40,4 +40,26 @@ img {
   font-size: 24px;
   line-height: 24px;
   color: $special_orange;
+  @include tablet{
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+.main-title{
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.radius-section{
+  border-radius: 0 0 25px 25px;
+}
+.radius-section-up{
+  border-radius: 25px 25px 0 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }

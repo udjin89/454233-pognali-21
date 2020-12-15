@@ -1,0 +1,57 @@
+.level{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  // padding-top: 15px;
+  // padding-bottom: 9px;
+  background-color: rgba($color: $black, $alpha: 0.6);
+  border-radius: 50%;
+}
+.level__word{
+  position: relative;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  // top: -10px;
+
+  &::before{
+    top: -1px;
+    left: -2px;
+    position: absolute;
+    display: block;
+    content:"";
+    margin-bottom: 3px;
+    height: 1px;
+    width: 30px;
+    background-color: $white;
+    opacity: 0.3;
+  }
+}
+.level__wrap{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.level__progress-bar{
+  // fill: red;
+  position: absolute;
+  top: 0;
+  left:0;
+  stroke: $special_orange;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+.level__number{
+  display: inline-block;
+  margin-top: 15px;
+}

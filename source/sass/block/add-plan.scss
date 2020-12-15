@@ -1,0 +1,32 @@
+.add-plan{
+  background-color: $special_blue_medium;
+
+}
+.add-plan__head{
+  display: flex;
+}
+.add-plan__info-date{
+  @include desktop{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+.input-count-people{
+  order: 1;
+}
+.input-count-day{
+  order: 3;
+}
+.child-check{
+  order: 2;
+}
+.control-buttons{
+  display: flex;
+  flex-direction: column;
+  @include tablet{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}

@@ -1,19 +1,53 @@
 .about-service {
-  background-color: $special_dark_blue;
+  position: relative;
+  z-index: 70;
+  padding-top: 33px;
   padding-bottom: 82px;
+  background-color: $special_dark_blue;
+  background-image: url(../img/about-mobile.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
 
-  outline: 2px solid pink;
-  outline-offset: -2px;
+  @include tablet{
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+}
+.about-service-grid{
+  @include tablet{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @include desktop{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 73px;
+  }
 }
 .about-service__title{
   padding: 0;
   padding-top: 33px;
   margin-bottom: 19px;
+  @include tablet{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }
 .about-service__description {
   padding: 0;
   margin: 0;
+  margin-top: 19px;
   margin-bottom: 19px;
+  @include tablet{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  @include desktop{
+    font-size: 28px;
+    line-height: 34px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .about-service__appeal {
@@ -21,4 +55,30 @@
   margin: 0;
   // margin-bottom: 82px;
   font-weight: bold;
+  @include tablet{
+    font-size: 21px;
+    line-height: 25px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  @include desktop{
+    line-height: 24px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+.about-service--button{
+
+  display: none;
+
+  @include tablet{
+    display: block;
+    margin-top: 52px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-right: 127px;
+  }
+  @include desktop{
+    padding: 29px 127px 27px 32px;
+  }
 }

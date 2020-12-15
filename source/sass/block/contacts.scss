@@ -4,16 +4,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 16px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
   background-color: $basic_blue_dark;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  @include tablet{
+    width: 68px;
+    height: 68px
+  }
+  @include desktop{
+    width: 90px;
+    height: 90px;
+  }
 }
 .contacts__icon svg{
   fill: $basic_yellow;
+  @include tablet{
+    width: 27px;
+    height: 25px;
+  }
+  @include desktop{
+    width: 36px;
+    height: 36px;
+  }
 }
 .phone,
 .mail {
@@ -25,8 +40,19 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $special_dark_blue;
-}
+  &-reg{
+    color: $basic_yellow;
+  }
 
+  @include tablet{
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+// .phone-reg,
+// .mail-reg{
+//     color: $basic_yellow;
+// }
 .registration__phone,
 .registration__mail {
   color: $basic_yellow;

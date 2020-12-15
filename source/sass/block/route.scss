@@ -1,16 +1,67 @@
 .route {
-  outline: 2px solid crimson;
-  outline-offset: -2px;
+  @include shift-section;
+  position: relative;
+  z-index: 20;
 
+  padding-top: 34px - $section_shift;
+  padding-bottom: 35px;
   background-color: $basic_yellow;
-}
 
+  @include tablet{
+    padding-bottom: 101px;
+  }
+  @include desktop{
+    padding-bottom: 56px;
+  }
+}
+.route__grid{
+  @include tablet{
+    padding: 0 35px;
+  }
+  @include desktop{
+    display: flex;
+    justify-content: end;
+  }
+}
 .address {
   margin: 0;
   padding: 0;
-
+  padding-left: 61px;
+  padding-bottom: 5px;
   font-weight: bold;
   font-size: 16px;
   line-height: 22px;
   color: $basic_blue_light;
+  background-image: url(../img/map_mark.svg);
+  background-repeat: no-repeat;
+  overflow: auto;
+  @include tablet{
+    background-size: 68px;
+    padding-left: 94px;
+    padding-top: 22px;
+    padding-bottom: 24px;
+    font-size: 28px;
+    line-height: 28px;
+    br{
+      display: none;
+    }
+  }
+  @include desktop{
+    background-size: 90px;
+    padding-left: 121px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+}
+.button-route{
+  margin-top: 32px;
+  border: 3px solid $special_dark_blue;
+  @include desktop{
+    margin: 0;
+    margin-right: 75px;
+    margin-left: 147px;
+    padding: 29px 64px 27px 37px;
+    border-radius: 20px;
+    align-self: start;
+  }
 }

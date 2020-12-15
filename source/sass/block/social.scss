@@ -1,9 +1,12 @@
 .social {
   margin: 0;
+
   padding: 0;
+  padding-bottom: 37px;
   list-style: none;
 
   display: flex;
+  justify-content: center;
 }
 
 .social__link {
@@ -13,16 +16,19 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
-
-  outline: 2px solid green;
-  outline-offset: -2px;
+  @include tablet{
+    width: 62px;
+    height: 62px;
+  }
 }
 
 .page-header__social {}
 
 .social__link--page-header {}
 
-.page-footer__social {}
+.page-footer__social {
+  margin-top: 40px;
+}
 
 .social__link--page-footer {
   background-color: $basic_yellow;
@@ -30,4 +36,23 @@
 
 .social__link--facebook{
 
+}
+.facebook_img{
+  @include tablet{
+    width: 14px;
+    height: 26px;
+  }
+}
+.vkontakte_img{
+  @include tablet{
+    width: 28px;
+    height: 18px;
+  }
+}
+
+.instagram_img{
+  @include tablet{
+    width: 22px;
+    height: 22px;
+  }
 }
