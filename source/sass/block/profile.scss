@@ -1,7 +1,9 @@
 .profile{
   background-color: $basic_blue_lightest;
+  padding-top: 20px;
 }
 .profile__grid{
+  position: relative;
   display: grid;
   grid-template-rows: min-content min-content min-content min-content;
   grid-template-columns: 1fr 1fr;
@@ -48,6 +50,24 @@
   grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: -1;
+  border: 1px solid $gray_legend;
+  border-radius: 10px;
+
+  legend{
+
+    margin: 0 auto;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $basic_blue_light;
+  }
+  .user-tags{
+    background: transparent;
+  }
+
   @include desktop{
     grid-row-start: 3;
     grid-row-end: 4;
@@ -60,6 +80,18 @@
   grid-row-end: 5;
   grid-column-start: 1;
   grid-column-end: -1;
+
+  border: 1px solid $gray_legend;
+  border-radius: 10px;
+  legend{
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $basic_blue_light;
+  }
+
   @include tablet{
     grid-row-start: 1;
     grid-row-end: 2;
@@ -72,4 +104,17 @@
     grid-column-start: 2;
     grid-column-end: 3;
   }
+}
+
+.change-foto{
+  font-family: "Blogger Sans";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $basic_blue;
+  background-color: $special_blue_light;
+  padding: 12px 0;
+  border: none;
+  border-radius: 20px;
 }

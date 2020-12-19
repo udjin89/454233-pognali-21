@@ -15,15 +15,29 @@
     <div class="container">
       <div class="menu menu--close">
 
-        <a class="page-header__logo logo">
+        <a class="page-header__logo logo logo--dark">
           <picture>
-            <source media="(min-width: 1440px)" srcset="../img/logo-desktop-white.png"
+            <source media="(min-width: 1440px)"
+              srcset="./img/logo-desktop-white.png 1x, img/logo-desktop-white@2x.png 2x"
               sizes="(min-width: 768px) 200px 200px">
-            <source media="(min-width: 768px)" srcset="../img/logo-tablet.png" sizes="(min-width: 768px) 200px 200px">
-            <img src="../img/logo_mobile.svg" alt="Логотип Погнали?" width="100" height="15">
+            <source media="(min-width: 768px)" srcset="./img/logo-tablet-white.png 1x, img/logo-tablet-white@2x.png 2x"
+              sizes="(min-width: 768px) 200px 200px">
+            <img src="./img/logo-mobile-white.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип Погнали?"
+              width="100" height="15">
           </picture>
         </a>
-
+        <a class="page-header__logo logo logo--light hidden">
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="../img/logo-desktop-dark.png 1x, ../img/logo-desktop-dark@2x.png 2x"
+              sizes="(min-width: 768px) 200px 200px">
+            <source media="(min-width: 768px)"
+              srcset="../img/logo-tablet-dark.png 1x, ../img/logo-tablet-dark@2x.png 2x"
+              sizes="(min-width: 768px) 200px 200px">
+            <img src="../img/logo-mobile-dark.png" srcset="../img/logo-mobile-dark@2x.png 2x" alt="Логотип Погнали?"
+              width="100" height="15">
+          </picture>
+        </a>
         <button class="toogle toggle--close" type="button"><span class="hidden">Открыть меню</span></button>
 
         <nav class="main-nav">
@@ -35,8 +49,8 @@
         </nav>
 
         <div class="authorization authorization--header">
-          <a class="authorization__phone" href="#"><img src="../img/icon_call.svg" alt=""></a>
-          <a class="authorization__mail" href="#"><img src="../img/icon_mail_small.svg" alt=""></a>
+          <a class="authorization__phone" href="#"><img src="../img/icon/icon-call.svg" alt=""></a>
+          <a class="authorization__mail" href="#"><img src="../img/icon/icon-mail-small.svg" alt=""></a>
           <a class="authorization__login button" href="#">авторизация</a>
         </div>
 
@@ -63,14 +77,15 @@
         <ul class="page-header__social social">
           <li class="social__item">
             <a class="social__link social__link--page-header" href="#" aria-label="фейсбук"><img
-                src="../img/icon_facebook.svg" alt="фейсбук" width="11" height="21"></a>
+                src="../img/icon/icon-facebook.svg" alt="фейсбук" width="11" height="21"></a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--page-header" href="#" aria-label="вконтакте"><img
-                src="../img/icon_vkontakte.svg" alt="вконтакте" width="23" height="12"></a>
+                src="../img/icon/icon-vkontakte.svg" alt="вконтакте" width="23" height="12"></a>
           </li>
           <li class="social__item"><a class="social__link social__link--page-header" href="#"
-              aria-label="инстаграм"><img src="../img/icon_instagram.svg" alt="инстаграм" width="18" height="18"></a>
+              aria-label="инстаграм"><img src="../img/icon/icon-instagram.svg" alt="инстаграм" width="18"
+                height="18"></a>
           </li>
         </ul>
       </div>
@@ -86,9 +101,9 @@
         <p class="promo__slogan">В&nbsp;путешествие<br> с&nbsp;крутыми<br>попутчиками!</p>
 
         <div class="authorization">
-          <a class="authorization__phone" href="#"><img src="../img/icon_call.svg" alt="Позвонить" width="16"
+          <a class="authorization__phone" href="#"><img src="../img/icon/icon-call.svg" alt="Позвонить" width="16"
               height="16"></a>
-          <a class="authorization__mail" href="#"><img src="../img/icon_mail_small.svg" alt="Написать" width="16"
+          <a class="authorization__mail" href="#"><img src="../img/icon/icon-mail-small.svg" alt="Написать" width="16"
               height="16"></a>
           <a class="authorization__login button" href="#">авторизация</a>
         </div>
@@ -140,15 +155,19 @@
         <ul class="destination__list-country">
           <li class="destination__item">
             <picture>
-              <source media="(min-width: 768px)" srcset="../img/thailand-tablet.jpg">
-              <img class="destination__img destination__img--tailand" src="../img/thailand-mobile 1.jpg" width="270"
-                height="110" alt="Море с островом">
+              <source media="(min-width: 1440px)"
+                srcset="img/foto-country/thailand-tablet.jpg 1x, img/foto-country/thailand-tablet@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/foto-country/thailand-tablet.jpg 1x, img/foto-country/thailand-tablet@2x.jpg 2x">
+              <img class="destination__img destination__img--tailand" src="img/foto-country/thailand-mobile.jpg"
+                srcset="img/foto-country/thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Море с островом">
             </picture>
             <div class="destination__union-description">
               <picture>
-                <source media="(min-width: 768px)" srcset="../img/thailand-flag-tablet.png">
-                <img class="destination__flag flag flag--tailand" src="../img/Thailand-flag.svg" width="35" height="24"
-                  alt="Флаг Таиланда">
+                <source media="(min-width: 768px)"
+                  srcset="img/icon-flag/thailand-tablet.png 1x, img/icon-flag/thailand-tablet@2x.png 2x">
+                <img class="destination__flag flag flag--tailand" src="img/icon-flag/thailand.png"
+                  srcset="img/icon-flag/thailand-tablet.png 2x" width="35" height="24" alt="Флаг Таиланда">
               </picture>
               <h3 class="destination__country">Таиланд</h3>
               <p class="destination__country-description">Джунгли зовут!</p>
@@ -157,13 +176,20 @@
           </li>
           <li class="destination__item">
             <picture>
-              <source media="(min-width: 768px)" srcset="../img/france-tablet.jpg">
-              <img class="destination__img destination__img--france" src="../img/france-mobile 1.jpg" width="270"
-                height="110" alt="Здание на улице">
+              <source media="(min-width: 1440px)"
+                srcset="img/foto-country/france-tablet.jpg 1x, img/foto-country/france-tablet.jpg@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/foto-country/france-tablet.jpg 1x, img/foto-country/france-tablet.jpg@2x.jpg 2x">
+              <img class="destination__img destination__img--france" src="img/foto-country/france-mobile.jpg"
+                srcset="img/foto-country/france-mobile.jpg@2x.jpg 2x" width="270" height="110" alt="Море с островом">
             </picture>
             <div class="destination__union-description">
-              <img class="destination__flag flag flag--france" src="../img/france-flag.svg" width="35" height="24"
-                alt="Флаг Франции">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="img/icon-flag/france-tablet.png 1x, img/icon-flag/france-tablet@2x.png 2x">
+                <img class="destination__flag flag flag--france" src="img/icon-flag/france.png"
+                  srcset="img/icon-flag/france.png 2x" width="35" height="24" alt="Флаг Таиланда">
+              </picture>
               <h3 class="destination__country">Франция</h3>
               <p class="destination__country-description">Трэ бьен, манифик!</p>
               <p class="destination__user-count">12518</p>
@@ -171,13 +197,20 @@
           </li>
           <li class="destination__item">
             <picture>
-              <source media="(min-width: 768px)" srcset="../img/czech-tablet.jpg">
-              <img class="destination__img destination__img--czech-republic" src="../img/czech-mobile 1.jpg" width="270"
-                height="110" alt="Теплоход на фоне Карлова моста">
+              <source media="(min-width: 1440px)"
+                srcset="img/foto-country/czech-tablet.jpg 1x, img/foto-country/czech-tablet.jpg@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/foto-country/czech-tablet.jpg 1x, img/foto-country/czech-tablet.jpg@2x.jpg 2x">
+              <img class="destination__img destination__img--france" src="img/foto-country/czech-mobile.jpg"
+                srcset="img/foto-country/czech-mobile.jpg@2x.jpg 2x" width="270" height="110" alt="Море с островом">
             </picture>
             <div class="destination__union-description">
-              <img class="destination__flag flag flag--czech-republic" src="../img/Czechia.svg" width="35" height="24"
-                alt="Флаг Чехии">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="img/icon-flag/сzechia-tablet.png 1x, img/icon-flag/сzechia-tablet@2x.png 2x">
+                <img class="destination__flag flag flag--france" src="img/icon-flag/сzechia.png"
+                  srcset="img/icon-flag/сzechia.png 2x" width="35" height="24" alt="Флаг Таиланда">
+              </picture>
               <h3 class="destination__country">Чехия</h3>
               <p class="destination__country-description">Закоулки старой<br> Европы</p>
               <p class="destination__user-count">5326</p>
@@ -211,20 +244,23 @@
               <br>
               <span class="level__word">level</span>
             </div>
-            <img class="foto" src="../img/foto_tanya.jpg" alt="Фото попутчика" width="270" height="270">
+            <img class="foto" src="../img/foto-user/foto-tanya.jpg" srcset="img/foto-user/foto-tanya@2x.jpg 2x"
+              alt="Фото попутчика" width="270" height="270">
             <div class="companions__union-description">
               <ul class="country-list">
                 <li class="country-item">
-                  <img class="flag flag--shilanka" src="../img/srilanka.png" alt="Флаг Шриланки" width="35" height="24">
+                  <img class="flag flag--shilanka" src="../img/icon-flag/srilanka.png"
+                    srcset="img/icon-flag/srilanka.png@2x.jpg 2x" alt="Флаг Шриланки" width="35" height="24">
                   <span class="country-name hidden">шри-ланка</span>
                 </li>
                 <li class="country-item">
-                  <img class="flag flag--tailand" src="../img/thailand.png" alt="Флаг Таиланда" width="35" height="24">
+                  <img class="flag flag--tailand" src="../img/icon-flag/thailand.png"
+                    srcset="img/icon-flag/thailand.png@2x.jpg 2x" alt="Флаг Таиланда" width="35" height="24">
                   <span class="country-name hidden">Тайланд</span>
                 </li>
                 <li class="country-item">
-                  <img class="flag flag--seychelles" src="../img/seychelles.png" alt="Флаг Чехии" width="35"
-                    height="24">
+                  <img class="flag flag--seychelles" src="../img/icon-flag/seychelles.png"
+                    srcset="img/icon-flag/seychelles.png@2x.jpg 2x" alt="Флаг Чехии" width="35" height="24">
                   <span class="country-name hidden">Сейшелы</span>
                 </li>
               </ul>
@@ -282,15 +318,18 @@
               <br>
               <span class="level__word">level</span>
             </div>
-            <img class="foto" src="../img/demin-desktop.jpg" alt="Фото попутчика" width="270" height="270">
+            <img class="foto" src="../img/foto-user/foto-demin.jpg" srcset="img/foto-user/foto-demin@2x.jpg 2x"
+              alt="Фото попутчика" width="270" height="270">
             <div class="companions__union-description">
               <ul class="country-list">
                 <li class="country-item">
-                  <img class="flag flag--belgium" src="../img/belgium.png" alt="Флаг Бельгии" width="35" height="24">
+                  <img class="flag flag--belgium" src="../img/icon-flag/belgium.png"
+                    srcset="img/icon-flag/belgium.png@2x.jpg 2x" alt="Флаг Бельгии" width="35" height="24">
                   <span class="country-name hidden">Бельгия</span>
                 </li>
                 <li class="country-item">
-                  <img class="flag flag--tailand" src="../img/сzechia.png" alt="Флаг Чехии" width="35" height="24">
+                  <img class="flag" src="../img/icon-flag/сzechia.png" srcset="img/icon-flag/сzechia.png@2x.jpg 2x"
+                    alt="Флаг Чехии" width="35" height="24">
                   <span class="country-name hidden">Чехия</span>
                 </li>
               </ul>
@@ -346,7 +385,7 @@
     <section class="tariff radius-section">
       <div class="container tariff__padding-left">
         <h2 class="hidden">Тарифы</h2>
-        <img class="tariff__pic" src="../img/tariff.svg" alt="">
+        <img class="tariff__pic" src="../img/tarif.png" srcset="img/tarif.png 2x" alt="" width="100" height="100">
         <p class="title title_tariff">Добавьте<br> свой<br> профиль</p>
         <ol class="tariff__list tariffs">
           <li class="tariffs__item">
@@ -429,24 +468,31 @@
 
   <footer class="page-footer radius-section-up">
     <div class="container page-footer__grid">
-      <a class="page-footer__logo">
+      <a class="page-footer__logo logo">
         <picture>
-          <source media="(min-width: 768px)" srcset="../img/logo-footer-tablet.png">
-          <img src="../img/logo_mobile_footer.svg" alt="Логотип Погнали?" width="100" height="15">
+          <source media="(min-width: 1440px)"
+            srcset="../img/logo-desktop-dark.png 1x, ../img/logo-desktop-dark@2x.png 2x"
+            sizes="(min-width: 768px) 200px 200px">
+          <source media="(min-width: 768px)" srcset="../img/logo-tablet-dark.png 1x, ../img/logo-tablet-dark@2x.png 2x"
+            sizes="(min-width: 768px) 200px 200px">
+          <img src="../img/logo-mobile-dark.png" srcset="../img/logo-mobile-dark@2x.png 2x" alt="Логотип Погнали?"
+            width="100" height="15">
         </picture>
       </a>
       <ul class="page-footer__social social">
         <li class="social__item"><a class="social__link social__link--page-footer" href="#" aria-label="фейсбук"><img
-              class="facebook_img" src="../img/icon_facebook.svg" alt="фейсбук" width="11" height="21"></a></li>
+              class="facebook_img" src="../img/icon/icon-facebook.svg" alt="фейсбук" width="11" height="21"></a></li>
         <li class="social__item"><a class="social__link social__link--page-footer" href="#" aria-label="вконтакте"><img
-              class="vkontakte_img" src="../img/icon_vkontakte.svg" alt="вконтакте" width="23" height="12"></a></li>
+              class="vkontakte_img" src="../img/icon/icon-vkontakte.svg" alt="вконтакте" width="23" height="12"></a>
+        </li>
         <li class="social__item"><a class="social__link social__link--page-footer" href="#" aria-label="инстаграм"><img
-              img class="instagram_img" src="../img/icon_instagram.svg" alt="инстаграм" width="18" height="18"></a></li>
+              img class="instagram_img" src="../img/icon/icon-instagram.svg" alt="инстаграм" width="18" height="18"></a>
+        </li>
       </ul>
       <div class="page-footer__copy">
         <p class="copy-txt">Разработано</p>
         <a class="copy-link" href="#">
-          <img class="copy_img" src="../img/htmlacademy.svg" alt="Логотип HTML академии" width="27" height="33">
+          <img class="copy_img" src="../img/icon/htmlacademy.svg" alt="Логотип HTML академии" width="27" height="33">
         </a>
       </div>
     </div>
