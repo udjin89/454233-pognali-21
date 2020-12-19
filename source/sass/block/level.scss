@@ -51,7 +51,30 @@
   stroke-width: 4px;
   stroke-linecap: round;
 }
+
 .level__number{
   display: inline-block;
   margin-top: 15px;
+}
+
+.level--form{
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: none;
+}
+.level--form .level__progress-bar{
+  stroke-width: 3px;
+  stroke-linecap: butt;
+}
+.level--form .level__number{
+  font-size: 38px;
+  line-height: 38px;
+  color: $basic_blue;
+}
+.level--form .level__word{
+  font-size: 18px;
+  line-height: 18px;
+  color: $special_grey;
 }
