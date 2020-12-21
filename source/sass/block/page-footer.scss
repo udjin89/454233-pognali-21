@@ -1,7 +1,7 @@
 .page-footer {
   @include shift-section;
   position: relative;
-  z-index: 20;
+  z-index: 50;
   background-color: $white;
   padding-top: 37px;
   @include tablet{

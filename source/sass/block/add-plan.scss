@@ -1,9 +1,18 @@
 .add-plan{
   background-color: $special_blue_medium;
 
+  @include shift-section;
+  position: relative;
+  z-index: 30;
 }
 .add-plan__head{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-plan__step{
+  background-color: $white;
+  border-radius: 10px;
 }
 .add-plan__info-date{
   @include desktop{
@@ -20,6 +29,9 @@
 }
 .child-check{
   order: 2;
+
+  font-size: 15px;
+  line-height: 15px;
 }
 .control-buttons{
   display: flex;
@@ -29,4 +41,52 @@
     justify-content: space-between;
   }
 
+}
+.points{
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.points__item{
+  margin-right: 16px;
+  background: $basic_blue_light;
+  opacity: 0.3;
+
+  &--active{
+    opacity: 1;
+  }
+
+  span{
+    display: none;
+  }
+}
+.add-plan__description{
+  font-size: 16px;
+  line-height: 22px;
+  color: $special_grey;
+}
+.input-minus,
+.input-plus{
+  color: $gray;
+  background: none;
+  border: none;
+}
+.input-number{
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+}
+
+input[type="number"]{
+  flex-grow: 2;
+  border: none;
+  &::placeholder{
+    text-align: center;
+    font-weight: 500;
+    font-size: 14.86px;
+    line-height: 14px;
+    color: $basic_blue_light;
+  }
 }

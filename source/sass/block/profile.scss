@@ -1,6 +1,11 @@
 .profile{
   background-color: $basic_blue_lightest;
-  padding-top: 20px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  @include shift-section;
+  position: relative;
+  z-index: 10;
 }
 .profile__grid{
   position: relative;
@@ -66,6 +71,13 @@
   }
   .user-tags{
     background: transparent;
+    border: none;
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: $special_grey;
+    opacity: 0.6;
   }
 
   @include desktop{
@@ -75,7 +87,7 @@
     grid-column-end: 2;
   }
 }
-.select-transpo--form{
+.select-transport--form{
   grid-row-start: 4;
   grid-row-end: 5;
   grid-column-start: 1;

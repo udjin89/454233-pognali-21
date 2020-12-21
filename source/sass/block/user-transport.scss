@@ -20,3 +20,19 @@
 .icon-on{
   opacity: 1;
 }
+.user-transport--select{
+
+  // margin: 0;
+  // background-color: $white;
+  // border-radius: 50%;
+  .user-transport-item{
+    margin: 0;
+    background-color: $white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
