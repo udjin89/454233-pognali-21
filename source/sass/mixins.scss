@@ -10,6 +10,7 @@
 }
 
 @mixin shift-section {
+  position: relative;
   top: $section_shift;
   margin-bottom: $section_shift;
 }

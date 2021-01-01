@@ -10,7 +10,12 @@
   justify-content: space-between;
   align-items: center;
 }
+.title-plan-step__new-line{
+  display: block;
+}
 .add-plan__step{
+  margin-bottom: 10px;
+  padding: 24px 24px 23px 25px;
   background-color: $white;
   border-radius: 10px;
 }
@@ -89,4 +94,110 @@ input[type="number"]{
     line-height: 14px;
     color: $basic_blue_light;
   }
+}
+.travel-dates__control{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $gray_lighter;
+  border-bottom: 1px solid $gray_lighter;
+}
+.travel-dates__buttons{
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+.month{
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+}
+.arrow{
+  color: $black;
+  opacity: 0.3;
+
+  &--left{
+    transform: rotate(-180deg);
+  }
+}
+.add-plan__country{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.add-plan__item{
+  margin-bottom: 22px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &--select{
+
+  }
+  &--select-active{
+    .country-name{
+      color: $white;
+    }
+    background: $basic_blue_light;
+  }
+  &--new-country{
+    .country-name{
+      border: none;
+    }
+    background: $basic_blue_lightest;
+  }
+
+}
+.country-name{
+  white-space: nowrap;
+  overflow: hidden;
+  flex-grow: 1;
+  align-self: center;
+  margin: 0;
+  padding: 11px 0 11px 11px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid $gray_legend;
+  border-radius: 4px;
+}
+.country-flag{
+  margin: 0;
+  padding: 9px;
+  align-self: center;
+  border: 1px solid $gray_legend;
+  border-radius: 4px;
+}
+.remove-country{
+  position: absolute;
+  padding: 0;
+  top: -10.5px;
+  right: -10.5px;
+  width: 21px;
+  height: 21px;
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg{
+    fill: $black;
+    opacity: 0.1;
+
+    &:hover{
+      opacity: 0.3;
+    }
+    &:active{
+      opacity: 0.05;
+    }
+  }
+  // background-image: url(../img/icon/icon-remove-country.svg);
+  // background-size: 9px 9px;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-color: $basic_blue_lightest;
+  // opacity: 0.1;
 }

@@ -1,0 +1,39 @@
+.calendar{
+  width: 100%;
+  margin-top: 22px;
+  // border: 1px solid #D6D9E6;
+  border-collapse: collapse;
+}
+.calendar__head{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $special_grey;
+}
+.calendar__head--weekend{
+  color: #FF5C23;
+}
+.calendar__date{
+  height: 32px;
+  text-align: center;
+  border: 1px solid $gray_lighter;
+
+  &--occupy{
+    color: $special_grey;
+    opacity: 0.3;
+  }
+  &--chosen{
+    font-weight: 500;
+    color: $white;
+    background-color: $basic_blue_light;
+
+  }
+  &--free{
+    font-weight: 500;
+    color: $basic_blue_light;
+    background-color: $basic_blue_lightest;
+
+  }
+}
+

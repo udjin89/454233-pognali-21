@@ -3,7 +3,8 @@
   color: $basic_blue_light;
   background-color: $basic_yellow;
   align-self: end;
-	justify-self: start;
+  justify-self: start;
+  border: none;
   cursor: pointer;
   @include tablet{
     font-size: 24px;
@@ -110,4 +111,27 @@
   content: "";
   border-radius: 1.5px;
   transform: rotate(-45deg);
+}
+.button-next-step{
+  width: 100%;
+  padding: 7px 0;
+  margin-top: 22px;
+  font-family: "Blogger Sans";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 20px;
+}
+.button-back-step{
+  font-family: "Blogger Sans";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  color: $basic_blue_light;
 }

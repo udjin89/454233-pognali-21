@@ -105,7 +105,7 @@
   width: 100%;
   justify-content: center;
 }
-.companions__user-name {
+.user-name {
   position: relative;
   text-align: center;
   font-weight: bold;
@@ -120,8 +120,6 @@
 
   &::before{
     display: inline-block;
-    // position: absolute;
-    // top: 50%;
     transform: translateY(-50%);
     width: 6px;
     height: 6px;
@@ -136,10 +134,10 @@
   }
 }
 
-.companions__user-name--offline::before{
+.user-name--offline::before{
     background-color: #F97676;
 }
-.companions__user-name--online::before{
+.user-name--online::before{
   background-color: #81E31E;
 }
 .companions__user-tags {

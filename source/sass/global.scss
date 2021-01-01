@@ -23,6 +23,7 @@ img {
 }
 
 .container {
+  background: none;
   width: $mobile - 2*$mobilePaddind;
   margin: 0 auto;
   @include tablet{
@@ -49,14 +50,15 @@ img {
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
-
+  padding-bottom: 15px;
   &--form{
     // padding: 0;
     margin: 0;
     position: relative;
+    color: $white;
 
     &::after{
-      bottom: -15px;
+      bottom: -5px;
       left: 0;
       position: absolute;
       display: block;
@@ -81,4 +83,15 @@ img {
   content: "";
   display: table;
   clear: both;
+}
+.flag {
+  object-fit: contain;
+}
+
+.page-main-title{
+  position: relative;
+  z-index: 40;
+  margin: 0;
+  padding:0;
+  background-color: $special_dark_blue2;
 }

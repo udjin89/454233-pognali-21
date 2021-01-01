@@ -1,5 +1,6 @@
 .my-plans{
   background-color: $special_blue_light;
+  padding-top: 28px;
   padding-bottom: 60px;
   @include shift-section;
   position: relative;
@@ -13,10 +14,12 @@
 .my-plans__item{
   background-color: $white;
   border-radius: 10px;
-  padding: 24px 0 0 24px;
+  padding: 24px 0 23px 24px;
+  margin-bottom: 10px;
 }
 .my-plans__county{
   margin: 0;
+  margin-bottom: 20px;
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
@@ -24,6 +27,7 @@
 .my-plans__count-people,
 .my-plans__date{
   margin: 0;
+  margin-bottom: 5px;
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
@@ -31,6 +35,7 @@
   text-transform: uppercase;
 }
 .my-plans__change{
+  margin-top: 24px;
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;

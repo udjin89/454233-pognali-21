@@ -1,12 +1,234 @@
 .find-companion{
+  color: $basic_blue_light;
+  background-color: $basic_blue_lightest;
+}
 
-}
-.search{
-  background-color: $basic_yellow;
-}
 .find-companion__list{
-
+  margin: 28px 0 0 0;
+  padding: 0;
+  list-style: none;
 }
 .find-companion__item{
+  position: relative;
+  padding: 15px 0 23px 0;
+  background-color: $white;
+  border-radius: 20px;
+  &:nth-child(n){
+    margin-bottom: 10px;
+  }
+}
+.foto--find{
+  float: left;
+  border-radius: 50%;
+  margin-left: 18px;
+}
+.user-name--find{
+  text-align: left;
+  margin-left: 105px;
+  &::before{
+    position: absolute;
+    right: 22px;
+    top: 7px;
+    margin: 0;
+  }
+}
+.level--find{
+  position: relative;
+}
+.country-list--find{
+  padding-top: 24px;
+  padding-left: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $basic_blue_lightest;
+  &::before{
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    content:"хочет посетить:";
+    padding: 0 10px;
+    background: $white;
+  }
+  .country-item{
+    margin: 0;
+  }
+}
+.country-name--find{
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.wrap-transport-level{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid $basic_blue_lightest;
+  padding-left: 22px;
+  padding-right: 22px;
+  &::before{
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    content:"транспорт:";
+    padding: 0 10px;
+    background: $white;
+  }
+  &::after{
+    position: absolute;
+    top: -12px;
+    right: 10px;
+    content:"левел:";
+    padding: 0 11px 0 14px;
+    background: $white;
+  }
+}
+.user-transport--find{
+  margin: 0;
+  .user-transport-item{
+    margin-left: 0;
+    margin-right: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $basic_blue_lightest;
+  }
+}
+.level--find{
+  font-family: "Blogger Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  .level__number{
+    margin-top: 12px;
+  }
+  .level__word{
+    display: none;
+  }
+}
+.likes-count{
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: -20px;
+  .heart{
+    width: 30px;
+    height: 30px;
+    background-color: $special_blue_lightest;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+  }
+  span{
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
+.likes-count--million{
+  .heart{
+    background-color: $pink;
+    svg{
+      fill: $red;
+      fill-rule: nonzero;
+    }
+
+  }
+}
+.user-tags--find{
+  width: 170px;
+  margin: 14px 0 0 25px;
+  padding-bottom: 36px;
+}
+.button--invite{
+  width: 230px;
+  border: none;
+  border-radius: 20px;
+  margin: 13px 20px 0 20px;
+  padding: 12px 0;
+  font-family: "Blogger Sans";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $basic_yellow;
+}
+.wrap-invite{
+  display: flex;
+  .likes-count{
+    display: none;
+  }
+}
+.show-more{
+  display: flex;
+  align-items: center;
+  // padding-left: 34px;
+  margin: 24px auto 26px auto;
+  border: none;
+  font-family: "Blogger Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  &::before{
+    content: " ";
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+    background:  url(../img/icon/icon-plus-more.svg);
+    opacity: 1;
+    background-repeat: no-repeat;
+  }
+}
+.wrap-pagination{
+  background: $white;
+  margin-bottom: 46px;
+  border-radius: 20px;
+}
+.pagination{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+}
+.pagination-control{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  .pagination-control__item{
+    width: 100%;
+    height: 100%;
+  }
+}
+.pagination-control__link{
+  display: block;
+  width: 100%;
+  height: 51px;
+  background-image: url(../img/icon/icon-page-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+
+}
+.pagination-control__link--next{
+  transform: rotate(180deg);
+  border-right: 2px solid $basic_blue_lightest;
 }

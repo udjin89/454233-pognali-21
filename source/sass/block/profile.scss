@@ -1,7 +1,7 @@
 .profile{
   background-color: $basic_blue_lightest;
   padding-top: 60px;
-  padding-bottom: 40px;
+  padding-bottom: 40px + 24px;
 
   @include shift-section;
   position: relative;
@@ -51,23 +51,35 @@
   }
 }
 .tags--form{
+  padding: 0;
+  margin: 0;
+  position: relative;
   grid-row-start: 3;
   grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: -1;
   border: 1px solid $gray_legend;
   border-radius: 10px;
+  margin-bottom: 25px;
 
   legend{
 
+    padding: 0 20px;
     margin: 0 auto;
-    margin-top: 50px;
+    // margin-top: 50px;
     font-weight: bold;
     font-size: 16px;
     line-height: 18px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
     color: $basic_blue_light;
+    background-color: $basic_blue_lightest;
+    @include tablet{
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   .user-tags{
     background: transparent;
@@ -88,6 +100,8 @@
   }
 }
 .select-transport--form{
+  padding: 0;
+  margin: 0;
   grid-row-start: 4;
   grid-row-end: 5;
   grid-column-start: 1;
@@ -102,6 +116,8 @@
     line-height: 18px;
     text-transform: uppercase;
     color: $basic_blue_light;
+    background-color: $basic_blue_lightest;
+    padding: 0 14px;
   }
 
   @include tablet{
@@ -126,6 +142,7 @@
   text-transform: uppercase;
   color: $basic_blue;
   background-color: $special_blue_light;
+  margin: 18px 0 33px 0;
   padding: 12px 0;
   border: none;
   border-radius: 20px;

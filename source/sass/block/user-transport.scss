@@ -21,10 +21,7 @@
   opacity: 1;
 }
 .user-transport--select{
-
-  // margin: 0;
-  // background-color: $white;
-  // border-radius: 50%;
+  padding: 16px 0;
   .user-transport-item{
     margin: 0;
     background-color: $white;
@@ -34,5 +31,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+.user-transport--search{
+  padding: 0 0 20px 0;
+  margin: 0;
+  .user-transport-item{
+    margin-right: 2px;
   }
 }
