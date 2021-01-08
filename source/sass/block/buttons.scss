@@ -135,3 +135,26 @@
   background: none;
   color: $basic_blue_light;
 }
+.return-button{
+  display: none;
+  @include tablet{
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-image: url(../img/icon/icon_return-arrow.svg);
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    padding-right: 60px;
+  }
+
+  &:hover{
+    opacity: 0.6;
+  }
+  &:active{
+    opacity: 0.3;
+  }
+}

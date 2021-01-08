@@ -31,6 +31,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablet{
+      width: 44px;
+      height: 44px;
+    }
+
   }
 }
 .user-transport--search{
@@ -38,5 +44,9 @@
   margin: 0;
   .user-transport-item{
     margin-right: 2px;
+  }
+  @include tablet{
+    padding: 0;
+    align-self: center;
   }
 }
