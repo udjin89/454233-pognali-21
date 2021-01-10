@@ -85,7 +85,9 @@ img {
   clear: both;
 }
 .flag {
-  object-fit: contain;
+  display: block;
+  width: 35px;
+  height: 24px;
 }
 
 .page-main-title{

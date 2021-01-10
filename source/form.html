@@ -123,7 +123,7 @@
             <legend>Тэги</legend>
             <label class="hidden" for="user-tags">Список тегов</label>
             <textarea class="user-tags" name="user-tags" id="user-tags" cols="30"
-              rows="3">#бургер #бар #футбол #концерт #крафт</textarea>
+              rows="2">#бургер #бар #футбол #концерт #крафт</textarea>
           </fieldset>
           <fieldset class="select-transport--form">
             <legend>транспорт</legend>
@@ -237,22 +237,19 @@
             </p>
             <div class="add-plan__info-date">
               <fieldset class="input-number input-count-people">
-                <legend>ищу попутчиков:</legend>
-                <div class="control">
-                  <button class="input-minus" type="button" aria-label="Уменьшить количество попутчиков">-</button>
-                  <input name="count-people" type="number" placeholder="2">
-                  <button class="input-plus" type="button" aria-label="Увеличить количество попутчиков">+</button>
-                </div>
+                <!-- <legend>ищу попутчиков:</legend> -->
+                <button class="input-minus" type="button" aria-label="Уменьшить количество попутчиков"></button>
+                <input name="count-people" type="number" placeholder="2">
+                <button class="input-plus" type="button" aria-label="Увеличить количество попутчиков"></button>
               </fieldset>
               <fieldset class="input-number input-count-day">
-                <legend>длительность:</legend>
-                <button class="input-minus" aria-label="Уменьшить количество дней">-</button>
+                <!-- <legend>длительность:</legend> -->
+                <button class="input-minus" type="button" aria-label="Уменьшить количество дней"></button>
                 <input name="count-days" type="number" placeholder="3">
-                <button class="input-plus" aria-label="Увеличить количество дней">+</button>
+                <button class="input-plus" type="button" aria-label="Увеличить количество дней"></button>
               </fieldset>
-              <label class="child-check">
-                <input class="" name="child" type="checkbox" checked>Можно с детьми
-              </label>
+              <input class="child-checkbox hidden" name="child" id="child" type="checkbox" checked>
+              <label class="child-check" for="child">Можно с детьми</label>
             </div>
             <!-- <input type="date" name="calendar" value="2020-06-01" max="" min="2012-06-01"> -->
             <div class="travel-dates">
@@ -344,7 +341,7 @@
 
             </div>
 
-            <button class="button button-next-step" type="button">Следующий шаг</button>
+            <button class="button button-next-step button-arrow" type="button">Следующий шаг</button>
           </div>
           <div class="add-plan__step">
             <h3 class="title-plan-step">
@@ -380,7 +377,14 @@
                       stroke-linejoin="round" />
                   </svg>
                 </button>
+                <svg class="special-arrow" width="8" height="11" viewBox="0 0 8 11" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.64645 10.3536C3.84171 10.5488 4.15829 10.5488 4.35355 10.3536L7.53553 7.17157C7.7308 6.97631 7.7308 6.65973 7.53553 6.46447C7.34027 6.2692 7.02369 6.2692 6.82843 6.46447L4 9.29289L1.17157 6.46447C0.976311 6.2692 0.659728 6.2692 0.464466 6.46447C0.269204 6.65973 0.269204 6.97631 0.464466 7.17157L3.64645 10.3536ZM3.5 0L3.5 10H4.5L4.5 0L3.5 0Z"
+                    fill="#CBCED9" />
+                </svg>
               </li>
+              <!-- add-plan__item--select-active -->
               <li class="add-plan__item add-plan__item--select add-plan__item--select-active">
                 <p class="country-name"> выберите страну</p>
                 <button class="remove-country" type="button" aria-label="Удалить страну">
@@ -891,13 +895,18 @@
             <p class="add-plan__description">Наконец, расскажите о&nbsp;своих планахвремяпровождения. Можно писать
               в&nbsp;свободной форме и&nbsp;ставить тэги.</p>
 
-            <label>Босния и Герцеговина
-              <textarea name="" id="" cols="30" rows="10" placeholder="План действий"></textarea>
+            <label class="label-country">
+              Босния и Герцеговина
+              <img class="flag flag--bosnia" src="img/icon-flag/bosnia-and-herzegovina.png" alt="Флаг Боснии" width="35"
+                height="24">
             </label>
+            <textarea class="action-plan" name="" id="" cols="30" rows="10" placeholder="План действий"></textarea>
 
-            <label>Чехия
-              <textarea name="" id="" cols="30" rows="10" placeholder="План действий"></textarea>
-            </label>
+
+            <label class="label-country">Чехия<img class="flag flag--czech-republic" src="img/icon-flag/сzechia.png"
+                alt="Флаг Чехии" width="35" height="24"></label>
+            <textarea class="action-plan" name="" id="" cols="30" rows="10" placeholder="План действий"></textarea>
+
             <div class="control-buttons">
               <button class="button button-next-step button-submit" type="submit">Отправить</button>
               <button class="button-back-step" type="button">на шаг назад</button>

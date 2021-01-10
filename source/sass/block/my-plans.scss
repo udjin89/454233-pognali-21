@@ -6,6 +6,13 @@
   position: relative;
   z-index: 20;
 }
+.title-plan{
+  @include tablet{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
 .my-plans__list{
   padding: 0;
   margin: 0;
@@ -16,6 +23,13 @@
   border-radius: 10px;
   padding: 24px 0 23px 24px;
   margin-bottom: 10px;
+
+  @include tablet{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 40px 15px 40px;
+  }
 }
 .my-plans__county{
   margin: 0;
@@ -23,6 +37,11 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
+  @include tablet{
+    font-size: 24px;
+    line-height: 24px;
+    width: 100%;
+  }
 }
 .my-plans__count-people,
 .my-plans__date{
@@ -33,9 +52,15 @@
   line-height: 14px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  @include tablet{
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
 }
 .my-plans__change{
   margin-top: 24px;
+  font-family: "Blogger Sans";
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
@@ -45,4 +70,10 @@
   background: none;
   color: $black;
   opacity: 0.3;
+  @include tablet{
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
 }

@@ -115,7 +115,7 @@
 .button-next-step{
   width: 100%;
   padding: 7px 0;
-  margin-top: 22px;
+  // margin-top: 22px;
   font-family: "Blogger Sans";
   font-weight: bold;
   font-size: 17px;
@@ -123,6 +123,10 @@
   text-transform: uppercase;
   border: none;
   border-radius: 20px;
+  @include tablet{
+    width: auto;
+    padding: 29px 75px 27px 34px;
+  }
 }
 .button-back-step{
   font-family: "Blogger Sans";
@@ -134,6 +138,7 @@
   border: none;
   background: none;
   color: $basic_blue_light;
+  margin-top: 15px;
 }
 .return-button{
   display: none;

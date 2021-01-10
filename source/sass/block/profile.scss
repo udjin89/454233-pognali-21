@@ -34,6 +34,8 @@
   @include tablet{
     grid-column-start: 3;
     grid-column-end: 4;
+    justify-self: end;
+    border-radius: 7px;
   }
   @include desktop{
     grid-column-start: 2;
@@ -82,6 +84,7 @@
     }
   }
   .user-tags{
+    padding: 26px 0 26px 25px;
     background: transparent;
     border: none;
     font-family: inherit;
@@ -90,6 +93,9 @@
     line-height: 18px;
     color: $special_grey;
     opacity: 0.6;
+    @include tablet{
+      width: 100%;
+    }
   }
 
   @include desktop{
@@ -125,6 +131,14 @@
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
+    position: relative;
+    legend{
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0 14px;
+    }
   }
   @include desktop{
     grid-row-start: 3;

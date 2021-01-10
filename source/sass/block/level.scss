@@ -63,6 +63,11 @@
   width: 100px;
   height: 100px;
   background: none;
+  .level__word::before{
+    width: 51px;
+    left: -8px;
+    background-color: $special_grey;
+  }
 }
 .level--form .level__progress-bar{
   stroke-width: 3px;

@@ -4,11 +4,18 @@
   @include shift-section;
   position: relative;
   z-index: 30;
+  padding-bottom: 73px;
 }
 .add-plan__head{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.title-plan-step{
+  @include tablet{
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 .title-plan-step__new-line{
   display: block;
@@ -20,8 +27,13 @@
   border-radius: 10px;
 }
 .add-plan__info-date{
+  @include tablet{
+    display: flex;
+    flex-direction: column;
+  }
   @include desktop{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
   }
 
@@ -33,10 +45,32 @@
   order: 3;
 }
 .child-check{
+  position: relative;
   order: 2;
 
   font-size: 15px;
   line-height: 15px;
+  padding-left: 40px;
+  padding-top: 8px;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    background-color: $white;
+    border: 1px solid $gray_legend;
+    border-radius: 4px;
+  }
+  @include tablet{
+    order: 2;
+  }
+}
+.child-checkbox:checked + .child-check::before{
+  background: url(/img/icon/icon-checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 .control-buttons{
   display: flex;
@@ -69,24 +103,50 @@
   font-size: 16px;
   line-height: 22px;
   color: $special_grey;
+  @include tablet{
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 .input-minus,
 .input-plus{
+  width: 14px;
+  height: 14px;
   color: $gray;
-  background: none;
+  background-color: transparent;
   border: none;
 }
+.input-minus{
+ background-image: url(../img/icon/icon-minus.svg);
+ background-repeat: no-repeat;
+ background-position: center;
+}
+.input-plus{
+  background-image: url(../img/icon/icon-plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .input-number{
+  width: inherit;
   margin: 0;
-  padding: 0;
+  margin-bottom: 20px;
+  padding: 0 14px;
   background-color: $white;
   display: flex;
   align-items: center;
+  border: 1px solid $gray_legend;
+  border-radius: 4px;
 }
 
 input[type="number"]{
   flex-grow: 2;
   border: none;
+  padding: 16px 0 13px 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14.86px;
+  line-height: 14px;
+  color: $basic_blue_light;
   &::placeholder{
     text-align: center;
     font-weight: 500;
@@ -94,6 +154,9 @@ input[type="number"]{
     line-height: 14px;
     color: $basic_blue_light;
   }
+}
+.travel-dates{
+  margin-top: 28px;
 }
 .travel-dates__control{
   display: flex;
@@ -108,22 +171,43 @@ input[type="number"]{
   border: none;
 }
 .month{
+  padding: 11px 0;
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
+  @include tablet{
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 .arrow{
+  cursor: pointer;
   color: $black;
   opacity: 0.3;
+
+  @include tablet{
+    width: 19px;
+    height: 34px;
+  }
 
   &--left{
     transform: rotate(-180deg);
   }
 }
 .add-plan__country{
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  &:not(:nth-child(3)){
+    .special-arrow{
+      display: block;
+      position: absolute;
+      bottom: -10px;
+      background: red;
+    }
+  }
 }
 .add-plan__item{
   margin-bottom: 22px;
@@ -139,6 +223,9 @@ input[type="number"]{
       color: $white;
     }
     background: $basic_blue_light;
+    .select-country{
+      display: grid;
+    }
   }
   &--new-country{
     .country-name{
@@ -147,8 +234,20 @@ input[type="number"]{
     background: $basic_blue_lightest;
   }
 
+  &:not(:last-of-type)::after{
+    position: absolute;
+    z-index: 10;
+    content: "";
+    bottom: -15px;
+    right: 25px;
+    width: 8px;
+    height: 11px;
+    background-image: url(../img/icon/icon-special-arrow.svg);
+    background-color: rosybrown;
+  }
 }
 .country-name{
+  position: relative;
   white-space: nowrap;
   overflow: hidden;
   flex-grow: 1;
@@ -162,8 +261,22 @@ input[type="number"]{
   text-transform: uppercase;
   border: 1px solid $gray_legend;
   border-radius: 4px;
+
+  &::after{
+    position: absolute;
+    z-index: 10;
+    content: "";
+    width: 8px;
+    height: 8px;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: crimson;
+  }
 }
 .country-flag{
+  position: relative;
+  z-index: 0;
   margin: 0;
   padding: 9px;
   align-self: center;
@@ -200,4 +313,33 @@ input[type="number"]{
   // background-position: center;
   // background-color: $basic_blue_lightest;
   // opacity: 0.1;
+}
+.action-plan{
+  width: 100%;
+  height: 220px;
+  resize: none;
+  border: 1px solid $gray_legend;
+  border-radius: 4px;
+  margin-bottom: 23px;
+  padding: 10px 14px;
+  &::placeholder{
+    color: rgba($color: $special_grey, $alpha: 0.3);
+    font-family: "Blogger Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+
+  }
+
+}
+.label-country{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
 }

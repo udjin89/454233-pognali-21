@@ -1,8 +1,15 @@
 .calendar{
   width: 100%;
   margin-top: 22px;
+  margin-bottom: 22px;
   // border: 1px solid #D6D9E6;
   border-collapse: collapse;
+  @include tablet{
+    margin-bottom: 47px;
+  }
+  @include desktop{
+    margin-bottom: 57px;
+  }
 }
 .calendar__head{
   font-style: normal;
@@ -10,6 +17,9 @@
   font-size: 14px;
   line-height: 18px;
   color: $special_grey;
+  @include tablet{
+    font-size: 18px;
+  }
 }
 .calendar__head--weekend{
   color: #FF5C23;
@@ -19,6 +29,11 @@
   text-align: center;
   border: 1px solid $gray_lighter;
 
+  @include tablet{
+    height: 69px;
+    font-size: 18px;
+    line-height: 18px;
+  }
   &--occupy{
     color: $special_grey;
     opacity: 0.3;
@@ -36,4 +51,9 @@
 
   }
 }
-
+.calendar__date:hover{
+  border: none;
+  outline: 2px solid #FF5C23;
+  outline-offset: -2px;
+  background-color: yellow;
+}

@@ -120,6 +120,7 @@
     }
   }
   .country-item{
+    display: flex;
     margin: 0;
     margin-right: 25px;
     @include desktop{
@@ -150,13 +151,16 @@
   font-size: 15px;
   line-height: 16px;
   text-transform: uppercase;
-
+  margin-left: 14px;
   @include tablet{
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+    margin-left: 11px;
   }
-
+@include desktop{
+  margin-left: 18px;
+}
 }
 .wrap-transport-level{
   position: relative;
@@ -283,7 +287,8 @@
       color: rgba($color: $black, $alpha: 0.4);
 
       &::before{
-        color: rgba($color: $black, $alpha: 0.1);
+        left: 15px;
+        background-color: rgba($color: $black, $alpha: 0.1);
       }
     }
   }
