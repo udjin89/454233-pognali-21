@@ -5,12 +5,20 @@
   @include shift-section;
   position: relative;
   z-index: 20;
+  @include tablet{
+    padding-bottom: 114px;
+  }
 }
 .title-plan{
   @include tablet{
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
+
+  }
+  @include desktop{
+    margin: 0;
+    padding: 55px 0 54px 129px;
   }
 }
 .my-plans__list{
@@ -25,22 +33,54 @@
   margin-bottom: 10px;
 
   @include tablet{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px 40px 15px 40px;
+
+    &::after{
+      position: absolute;
+      left: 0;
+      bottom: 54px;
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color:  #CBCED9;
+      opacity: 0.3;
+
+    }
+  }
+  @include desktop{
+    padding-bottom: 40px;
+    &::after{
+      display: none;
+    }
   }
 }
 .my-plans__county{
+
   margin: 0;
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
-  @include tablet{
+  @include tablet-only{
     font-size: 24px;
     line-height: 24px;
     width: 100%;
+    padding-bottom: 34px;
+    span{
+      position: absolute;
+      top: 43px;
+      right: 32px;
+    }
+  }
+  @include desktop{
+    font-size: 24px;
+    line-height: 24px;
+    width: 50%;
+    margin-bottom: 0;
   }
 }
 .my-plans__count-people,
@@ -56,6 +96,9 @@
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
+  }
+  @include desktop{
+    margin-bottom: 0;
   }
 }
 .my-plans__change{
@@ -75,5 +118,16 @@
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
+  }
+  @include desktop{
+    letter-spacing: 0.08em;
+    margin-left: 121px;
+  }
+}
+.add-plan__head{
+  .points{
+    @include desktop{
+      display: none;
+    }
   }
 }

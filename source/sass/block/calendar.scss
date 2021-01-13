@@ -5,6 +5,7 @@
   // border: 1px solid #D6D9E6;
   border-collapse: collapse;
   @include tablet{
+    margin-top: 39px;
     margin-bottom: 47px;
   }
   @include desktop{
@@ -17,8 +18,18 @@
   font-size: 14px;
   line-height: 18px;
   color: $special_grey;
+  text-transform: uppercase;
+
+  span{
+    display: none;
+  }
   @include tablet{
     font-size: 18px;
+    padding-bottom: 9px;
+    span{
+      display: inline;
+      text-transform: none;
+    }
   }
 }
 .calendar__head--weekend{

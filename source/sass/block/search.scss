@@ -5,6 +5,8 @@
   padding: 26px 25px 22px 25px;
   margin-top: 21px;
   margin-bottom: 28px;
+  grid-column: 4/-1;
+  align-self: start;
   @include tablet{
     padding: 35px 37px 37px 36px;
   }
@@ -128,9 +130,34 @@
   text-align: center;
   grid-column-start: 3;
   grid-column-end: 4;
+
+  &::before{
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 15px;
+    background: $white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &::after{
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 1px;
+    background: $gray_legend;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
   @include tablet{
 
   }
+}
+input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 .range-filter{
   width: 100%;
@@ -189,37 +216,29 @@
   line-height: 13px;
   letter-spacing: 0.07em;
 
-  width: 110px;
+  width: 100%;
   height: 100%;
   text-align: center;
   background-color: transparent;
-  @include tablet{
-    width: 74px;
+  @include tablet-only{
+     width: 74px;
   }
 }
 .level-control{
 
   position: relative;
   .min-level{
-    border: 1px solid green;
+    width: 50%;
+    border: 1px solid $gray_legend;
     background-color: $white;
     border-radius: 4px 0 0 4px;
   }
   .max-level{
-    border: 1px solid green;
+    width: 50%;
+    border: 1px solid $gray_legend;
     background-color: $white;
     border-radius: 0 4px 4px 0;
     border-left: none;
-  }
-  .dash{
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    // padding: 5px 0;
-    width: 16px;
-    height: 1px;
-    background: red;
   }
 }
 .level-control input::-webkit-outer-spin-button,

@@ -6,10 +6,11 @@
   <title>HTML Academy: Погнали</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body class="page__body">
-  <header class="page-header ">
+  <header class="page-header page-header--light">
 
     <div class="container">
       <div class="menu menu--close">
@@ -48,8 +49,8 @@
         </nav>
 
         <div class="authorization authorization--header">
-          <a class="authorization__phone" href="#"><img src="../img/icon_call.svg" alt=""></a>
-          <a class="authorization__mail" href="#"><img src="../img/icon_mail_small.svg" alt=""></a>
+          <a class="authorization__phone" href="#"><img src="../img/icon/icon-call.svg" alt=""></a>
+          <a class="authorization__mail" href="#"><img src="../img/icon/icon-mail-small.svg" alt=""></a>
           <a class="authorization__login button" href="#">авторизация</a>
         </div>
 
@@ -96,18 +97,17 @@
     <form class="form" action="https://echo.htmlacademy.ru" method="POST">
 
       <header class="radius-section page-main-title">
-        <div class="container">
+        <div class="container-tablet ">
           <h1 class="hidden">Добавление путешествия</h1>
           <p class="main-title main-title--form">Направления</p>
         </div>
       </header>
       <section class="profile">
-        <div class="container profile__grid">
+        <div class="container-tablet profile__grid">
           <div class="level level--form">
 
-            <svg class="level__progress-bar" width="100" height="100" viewBox="0 0 60 60" fill="none"
-              stroke-dasharray="90 40">
-              <circle r="28" cx="50%" cy="50%"></circle>
+            <svg class="level__progress-bar" width="100" height="100" viewBox="0 0 60 60" fill="none" data-percent="80">
+              <circle id="circle" r="28" cx="50%" cy="50%"></circle>
             </svg>
 
             <span class="level__number">80</span>
@@ -122,8 +122,7 @@
           <fieldset class="tags--form">
             <legend>Тэги</legend>
             <label class="hidden" for="user-tags">Список тегов</label>
-            <textarea class="user-tags" name="user-tags" id="user-tags" cols="30"
-              rows="2">#бургер #бар #футбол #концерт #крафт</textarea>
+            <textarea class="user-tags" name="user-tags" id="user-tags">#бургер #бар #футбол #концерт #крафт</textarea>
           </fieldset>
           <fieldset class="select-transport--form">
             <legend>транспорт</legend>
@@ -193,7 +192,7 @@
         </div>
       </section>
       <section class="my-plans radius-section-up">
-        <div class="container">
+        <div class="container-tablet">
           <h2 class="title-plan">Мои планы:</h2>
           <ol class="my-plans__list">
             <li class="my-plans__item">
@@ -219,7 +218,7 @@
       </section>
 
       <section class="add-plan radius-section-up">
-        <div class="container ">
+        <div class="container-tablet ">
           <div class="add-plan__head">
             <h2 class="title-plan">Добавить план:</h2>
             <ul class="points">
@@ -236,12 +235,20 @@
               вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку и&nbsp;ее&nbsp;предполагаемую длительность.
             </p>
             <div class="add-plan__info-date">
+              <div class="wrap-title">
+                <label class="add-plan__title" for="">ищу попутчиков:</label>
+                <span class="add_plan__title-brief">чел.</span>
+              </div>
               <fieldset class="input-number input-count-people">
-                <!-- <legend>ищу попутчиков:</legend> -->
+
                 <button class="input-minus" type="button" aria-label="Уменьшить количество попутчиков"></button>
-                <input name="count-people" type="number" placeholder="2">
+                <input class="number" name="count-people" type="number" placeholder="2">
                 <button class="input-plus" type="button" aria-label="Увеличить количество попутчиков"></button>
               </fieldset>
+              <div class="wrap-title wrap-title--day">
+                <label class="add-plan__title" for="">длительность:</label>
+                <span class="add_plan__title-brief">дн.</span>
+              </div>
               <fieldset class="input-number input-count-day">
                 <!-- <legend>длительность:</legend> -->
                 <button class="input-minus" type="button" aria-label="Уменьшить количество дней"></button>
@@ -273,13 +280,13 @@
 
               <table class="calendar">
                 <tr class="calendar__header-row">
-                  <th class="calendar__head">п</th>
-                  <th class="calendar__head">в</th>
-                  <th class="calendar__head">с</th>
-                  <th class="calendar__head">ч</th>
-                  <th class="calendar__head">п</th>
-                  <th class="calendar__head calendar__head--weekend">с</th>
-                  <th class="calendar__head calendar__head--weekend">в</th>
+                  <th class="calendar__head">п<span>н</span></th>
+                  <th class="calendar__head">в<span>т</span></th>
+                  <th class="calendar__head">с<span>р</span></th>
+                  <th class="calendar__head">ч<span>т</span></th>
+                  <th class="calendar__head">п<span>т</span></th>
+                  <th class="calendar__head calendar__head--weekend">с<span>б</span></th>
+                  <th class="calendar__head calendar__head--weekend">в<span>с</span></th>
                 </tr>
                 <tr class="calendar__row">
                   <td class="calendar__date calendar__date--occupy">23</td>
@@ -341,7 +348,7 @@
 
             </div>
 
-            <button class="button button-next-step button-arrow" type="button">Следующий шаг</button>
+            <button class="button button-next-step" type="button">Следующий шаг</button>
           </div>
           <div class="add-plan__step">
             <h3 class="title-plan-step">
@@ -353,7 +360,10 @@
             </p>
             <ul class="add-plan__country">
               <li class="add-plan__item">
-                <p class="country-name">Босния и герцеговина</p>
+                <p class="country-name">Босния и герцеговина
+
+
+                </p>
                 <p class="country-flag"><img class="flag flag--bosnia" src="img/icon-flag/bosnia-and-herzegovina.png"
                     alt="Флаг Боснии" width="35" height="24"></p>
                 <button class="remove-country" type="button" aria-label="Удалить страну">
@@ -366,9 +376,14 @@
                 </button>
               </li>
               <li class="add-plan__item">
-                <p class="country-name">чехия</p>
-                <p class="country-flag"><img class="flag flag--czech-republic" src="img/icon-flag/сzechia.png"
-                    alt="Флаг Чехии" width="35" height="24"></p>
+                <p class="country-name">чехия
+
+
+                </p>
+                <p class="country-flag">
+                  <img class="flag flag--czech-republic" src="img/icon-flag/сzechia.png" alt="Флаг Чехии" width="35"
+                    height="24">
+                </p>
                 <button class="remove-country" type="button" aria-label="Удалить страну">
                   <svg width="9" height="9" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21 2.75L3 19.25" stroke="black" stroke-width="1.7" stroke-linecap="round"
@@ -377,16 +392,14 @@
                       stroke-linejoin="round" />
                   </svg>
                 </button>
-                <svg class="special-arrow" width="8" height="11" viewBox="0 0 8 11" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M3.64645 10.3536C3.84171 10.5488 4.15829 10.5488 4.35355 10.3536L7.53553 7.17157C7.7308 6.97631 7.7308 6.65973 7.53553 6.46447C7.34027 6.2692 7.02369 6.2692 6.82843 6.46447L4 9.29289L1.17157 6.46447C0.976311 6.2692 0.659728 6.2692 0.464466 6.46447C0.269204 6.65973 0.269204 6.97631 0.464466 7.17157L3.64645 10.3536ZM3.5 0L3.5 10H4.5L4.5 0L3.5 0Z"
-                    fill="#CBCED9" />
-                </svg>
+
               </li>
               <!-- add-plan__item--select-active -->
-              <li class="add-plan__item add-plan__item--select add-plan__item--select-active">
-                <p class="country-name"> выберите страну</p>
+              <li class="add-plan__item add-plan__item--select ">
+                <p class="country-name"> выберите страну
+
+
+                </p>
                 <button class="remove-country" type="button" aria-label="Удалить страну">
                   <svg width="9" height="9" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21 2.75L3 19.25" stroke="black" stroke-width="1.7" stroke-linecap="round"
@@ -878,12 +891,14 @@
                 </ul>
               </li>
               <li class="add-plan__item add-plan__item--new-country">
-                <p class="country-name">Добавить страну</p>
+                <p class="country-name">Добавить страну
+
+                </p>
               </li>
             </ul>
             <div class="control-buttons">
-              <button class="button button-next-step" type="button">Следующий шаг</button>
-              <button class="button-back-step" type="button">на шаг назад</button>
+              <button class="button button-next-step " type="button">Следующий шаг</button>
+              <button class="button-back-step" type="button">На шаг назад</button>
             </div>
           </div>
 
@@ -894,22 +909,22 @@
             </h3>
             <p class="add-plan__description">Наконец, расскажите о&nbsp;своих планахвремяпровождения. Можно писать
               в&nbsp;свободной форме и&nbsp;ставить тэги.</p>
-
-            <label class="label-country">
-              Босния и Герцеговина
-              <img class="flag flag--bosnia" src="img/icon-flag/bosnia-and-herzegovina.png" alt="Флаг Боснии" width="35"
-                height="24">
-            </label>
-            <textarea class="action-plan" name="" id="" cols="30" rows="10" placeholder="План действий"></textarea>
-
-
-            <label class="label-country">Чехия<img class="flag flag--czech-republic" src="img/icon-flag/сzechia.png"
-                alt="Флаг Чехии" width="35" height="24"></label>
-            <textarea class="action-plan" name="" id="" cols="30" rows="10" placeholder="План действий"></textarea>
-
+            <div class="wrap-action-plan">
+              <label class="label-country">
+                Босния и Герцеговина
+                <img class="flag flag-shadow" src="img/icon-flag/bosnia-and-herzegovina.png" alt="Флаг Боснии"
+                  width="35" height="24">
+              </label>
+              <textarea class="action-plan" name="" id="" placeholder="План действий"></textarea>
+            </div>
+            <div class="wrap-action-plan">
+              <label class="label-country">Чехия<img class="flag flag-shadow" src="img/icon-flag/сzechia.png"
+                  alt="Флаг Чехии" width="35" height="24"></label>
+              <textarea class="action-plan" name="" id="" cols="30" rows="10" placeholder="План действий"></textarea>
+            </div>
             <div class="control-buttons">
               <button class="button button-next-step button-submit" type="submit">Отправить</button>
-              <button class="button-back-step" type="button">на шаг назад</button>
+              <button class="button-back-step" type="button">На шаг назад</button>
             </div>
           </div>
         </div>
@@ -948,6 +963,8 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>

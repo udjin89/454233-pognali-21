@@ -17,7 +17,9 @@
     grid-template-columns: 1fr 2fr 1fr;
   }
   @include desktop{
+    grid-template-rows: min-content;
     grid-template-columns: 60% 40%;
+    position: relative;
   }
 }
 .level--form{
@@ -40,6 +42,14 @@
   @include desktop{
     grid-column-start: 2;
     grid-column-end: 3;
+
+    width: 190px;
+    height: 190px;
+
+    position: absolute;
+    z-index: 100;
+    top: -190px;
+    right: 0;
   }
 }
 .change-foto{
@@ -95,6 +105,8 @@
     opacity: 0.6;
     @include tablet{
       width: 100%;
+      padding: 35px 0 10px 40px;
+
     }
   }
 
@@ -160,4 +172,8 @@
   padding: 12px 0;
   border: none;
   border-radius: 20px;
+  @include tablet{
+    border-radius: 10px;
+    padding: 20px 0;
+  }
 }

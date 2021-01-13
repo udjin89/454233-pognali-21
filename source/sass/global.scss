@@ -33,6 +33,18 @@ img {
     width: $desktop - 2*$desktopPaddind;
   }
 }
+.container-tablet{
+  background: none;
+  width: $mobile - 2*$mobilePaddind;
+  margin: 0 auto;
+  @include tablet{
+   width: $tablet - 2*$tabletPaddindBig;
+    margin: 0 auto;
+  }
+  @include desktop{
+    width: $desktop - 2*$desktopPaddind;
+  }
+}
 
 .title {
   padding: 0;
@@ -69,7 +81,12 @@ img {
       background-color: $special_orange;
       border-radius: 4px;
     }
+    @include desktop{
+      padding-top: 130px;
+      padding-bottom: 68px;
+    }
   }
+
 }
 
 .radius-section{
@@ -89,7 +106,9 @@ img {
   width: 35px;
   height: 24px;
 }
-
+.flag-shadow{
+  box-shadow: -30px 0px 5px 3px $white;
+}
 .page-main-title{
   position: relative;
   z-index: 40;

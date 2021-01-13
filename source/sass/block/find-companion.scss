@@ -462,6 +462,8 @@
   width: 50px;
   height: 50px;
 
+  cursor: pointer;
+
   color: $basic_blue_light;
 
   &--active{
@@ -492,3 +494,11 @@
   }
 }
 
+.flag-catalog{
+  width: 26px;
+  height: 18px;
+  @include tablet{
+    width: 35px;
+    height: 24px;
+  }
+}

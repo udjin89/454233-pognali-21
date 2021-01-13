@@ -25,6 +25,40 @@
   padding: 24px 24px 23px 25px;
   background-color: $white;
   border-radius: 10px;
+  @include tablet{
+    padding: 48px 40px 56px 40px;
+  }
+}
+.wrap-title{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  @include tablet-only{
+    margin: 0;
+    padding: 26px 0 24px 0;
+    border-top: 1px solid #E1E3E9;
+
+    &--day{
+      order: 3;
+      margin-top: 34px;
+    }
+  }
+}
+.add-plan__title{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.add_plan__title-brief{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 0.07em;
+  opacity: 0.3;
 }
 .add-plan__info-date{
   @include tablet{
@@ -65,6 +99,11 @@
   }
   @include tablet{
     order: 2;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 }
 .child-checkbox:checked + .child-check::before{
@@ -106,6 +145,7 @@
   @include tablet{
     font-size: 20px;
     line-height: 24px;
+    width: 505px;
   }
 }
 .input-minus,
@@ -115,6 +155,7 @@
   color: $gray;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .input-minus{
  background-image: url(../img/icon/icon-minus.svg);
@@ -143,16 +184,26 @@ input[type="number"]{
   border: none;
   padding: 16px 0 13px 0;
   text-align: center;
+  font-family: "Blogger Sans";
   font-weight: 500;
-  font-size: 14.86px;
+  font-size: 14px;
   line-height: 14px;
   color: $basic_blue_light;
   &::placeholder{
     text-align: center;
     font-weight: 500;
-    font-size: 14.86px;
+    font-size: 14px;
     line-height: 14px;
     color: $basic_blue_light;
+    @include tablet{
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  @include tablet{
+    padding: 26px 0 26px 0;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 .travel-dates{
@@ -178,6 +229,7 @@ input[type="number"]{
   @include tablet{
     font-size: 36px;
     line-height: 36px;
+    padding: 27px 0 23px 0;
   }
 }
 .arrow{
@@ -208,6 +260,21 @@ input[type="number"]{
       background: red;
     }
   }
+  @include tablet{
+    padding-top: 42px;
+    border-top: 1px solid #E1E3E9;
+    margin-bottom: 50px;
+    &::before{
+      position:absolute;
+      content: "";
+      z-index: 0;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      right: 140px;
+      background-color: #E1E3E9;
+    }
+  }
 }
 .add-plan__item{
   margin-bottom: 22px;
@@ -215,8 +282,49 @@ input[type="number"]{
   display: flex;
   justify-content: space-between;
 
-  &--select{
+  &::before{
+    position: absolute;
+    z-index: 10;
+    content: "";
+    width: 8px;
+    height: 8px;
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $basic_blue_light;
+    border-radius: 50%;
+    @include tablet{
+      width: 14px;
+      height: 14px;
+      right: 133px;
+    }
+  }
 
+  &--select{
+    &::before{
+      background-color: $white;
+      border: 1px solid $gray_legend;
+    }
+    .country-name{
+      &::before {
+        top: 20px;
+        left: 193px;
+      }
+      &::after {
+        left: 193px;
+        top: 20px;
+      }
+      @include tablet{
+        &::before {
+          top: 27px;
+          left: 320px;
+        }
+        &::after {
+          top: 27px;
+          left: 320px;
+        }
+      }
+    }
   }
   &--select-active{
     .country-name{
@@ -229,9 +337,43 @@ input[type="number"]{
   }
   &--new-country{
     .country-name{
+      background: $basic_blue_lightest;
       border: none;
+      &::before {
+        height: 2px;
+        top: 20px;
+        left: 193px;
+        transform: rotate(0);
+      }
+      &::after {
+        height: 2px;
+        left: 193px;
+        top: 20px;
+        margin: 0;
+        transform: rotate(90deg);
+      }
+      @include tablet{
+        &::before {
+          width: 20px;
+          top: 27px;
+          left: 320px;
+        }
+        &::after {
+          width: 20px;
+          top: 27px;
+          left: 320px;
+        }
+      }
     }
     background: $basic_blue_lightest;
+    &::before{
+      background-color: $basic_blue_lightest;
+      border: 1px solid $gray_legend;
+    }
+    @include tablet{
+      background: none;
+
+    }
   }
 
   &:not(:last-of-type)::after{
@@ -239,11 +381,13 @@ input[type="number"]{
     z-index: 10;
     content: "";
     bottom: -15px;
-    right: 25px;
+    right: 49px;
     width: 8px;
     height: 11px;
     background-image: url(../img/icon/icon-special-arrow.svg);
-    background-color: rosybrown;
+    @include tablet{
+      display: none;
+    }
   }
 }
 .country-name{
@@ -253,7 +397,7 @@ input[type="number"]{
   flex-grow: 1;
   align-self: center;
   margin: 0;
-  padding: 11px 0 11px 11px;
+  padding: 12px 0 12px 11px;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
@@ -261,27 +405,71 @@ input[type="number"]{
   text-transform: uppercase;
   border: 1px solid $gray_legend;
   border-radius: 4px;
-
-  &::after{
+  // box-shadow: inset -50px 0px 6px -10px red;
+  &::before {
     position: absolute;
-    z-index: 10;
+    top: 20px;
+    left: 141px;
     content: "";
-    width: 8px;
-    height: 8px;
-    right: -4px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: crimson;
+    width: 12px;
+    height: 2px;
+    background-color: #B3B3B3;
+    display: inline-block;
+    transform: rotate(-45deg);
+
+
+  }
+  &::after {
+    position: absolute;
+    left: 141px;
+    top: 20px;
+    content: "";
+    width: 12px;
+    height: 2px;
+    background-color: #B3B3B3;
+    display: inline-block;
+    transform: rotate(45deg);
+    margin-left: -7px;
+  }
+  @include tablet{
+    width: 369px;
+    flex-grow: 0;
+    padding: 27px 0 23px 25px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    &::before {
+      top: 27px;
+      left: 320px;
+    }
+    &::after{
+      top: 27px;
+      left: 320px;
+    }
   }
 }
 .country-flag{
+  display: inline-table;
   position: relative;
   z-index: 0;
   margin: 0;
   padding: 9px;
+  width: 53px;
   align-self: center;
   border: 1px solid $gray_legend;
   border-radius: 4px;
+
+  @include tablet{
+    width: auto;
+    border: none;
+    margin-right: 44px;
+    padding: 0;
+    .flag{
+      width: 70px;
+      height: 47px;
+    }
+  }
+
 }
 .remove-country{
   position: absolute;
@@ -296,9 +484,19 @@ input[type="number"]{
   display: flex;
   justify-content: center;
   align-items: center;
+  @include tablet{
+    background: none;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
   svg{
     fill: $black;
     opacity: 0.1;
+    @include tablet{
+      width: 22px;
+      height: 22px;
+    }
 
     &:hover{
       opacity: 0.3;
@@ -313,6 +511,27 @@ input[type="number"]{
   // background-position: center;
   // background-color: $basic_blue_lightest;
   // opacity: 0.1;
+}
+.wrap-action-plan{
+  position: relative;
+  &:nth-child(2n+1):before{
+    position: absolute;
+    content: "";
+    top: 12px;
+    bottom: -12px;
+    left: -13px;
+    width: 2px;
+    background: $basic_blue_light;
+  }
+  @include tablet{
+    padding-top: 27px;
+    padding-right: 33px;
+    &:nth-child(2n+1):before{
+      top: 45px;
+      bottom: -45px;
+      left: 525px;
+    }
+  }
 }
 .action-plan{
   width: 100%;
@@ -331,15 +550,59 @@ input[type="number"]{
     line-height: 22px;
 
   }
-
+  @include tablet{
+    width: 500px;
+    height: 140px;
+  }
 }
 .label-country{
+  position: relative;
+  white-space: nowrap;
   display: flex;
   justify-content: space-between;
   margin-bottom: 14px;
-
+  padding-left: 12px;
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
   letter-spacing: 0.01em;
+  &::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: -13px;
+    width: 14px;
+    height: 2px;
+    background: $basic_blue_light;
+  }
+  &::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: -3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $basic_blue_light;
+  }
+  @include tablet{
+    font-size: 30px;
+    line-height: 47px;
+    margin-bottom: 30px;
+    .flag{
+      width: 70px;
+      height: 47px;
+    }
+    &::before{
+      display: none;
+    }
+    &::after{
+
+      left: 519px;
+      width: 14px;
+      height: 14px;
+    }
+  }
 }
