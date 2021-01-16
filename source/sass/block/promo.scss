@@ -2,28 +2,39 @@
 
   padding-bottom: 39px;
   background-color: $basic_blue;
-  background-image: url(../img/traveller.svg),
-                    url(../img/promo-background.png);
+  background-image: url(../img/background/traveller-mobile.png),
+                    url(../img/background/promo-mobile.png);
   background-repeat: no-repeat, no-repeat;
   background-position-y: 24%, -130px;
   background-position-x: 60%, center;
   background-size: auto, auto;
 
   @include retina{
-    background-image: url(../img/traveller.svg),
-                      url(../img/promo-background@2x.png);
+    background-image: url(../img/background/traveller-mobile@2x.png),
+                      url(../img/background/promo-mobile.png@2x.png);
   }
 
   @include tablet{
-    background-image: url(../img/traveller.svg),
-                      url(../img/promo-background-tablet.jpg);
+    background-color: $special_dark_blue2;
+    background-image: url(../img/background/traveller-tablet.png),
+                      url(../img/background/promo-tablet.png);
+    @include retina{
+      background-image: url(../img/background/traveller-tablet@2x.png),
+                        url(../img/background/promo-tablet@2x.png);
+    }
+
     background-position-y: 50%, 300px;
     background-position-x: 60%, center;
     background-size: 372px 451px, auto;
   }
   @include desktop{
-    background-image: url(../img/traveller.svg),
-                      url(../img/promo-background-desktop.jpg);
+    background-color: $basic_blue;
+    background-image: url(../img/background/traveller-desktop.png),
+                      url(../img/background/promo-desktop.png);
+    @include retina{
+      background-image: url(../img/background/traveller-desktop@2x.png),
+                        url(../img/background/promo-desktop@2x.png);
+    }
     padding-bottom: 123px;
   }
 }

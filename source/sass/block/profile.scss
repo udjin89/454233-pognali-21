@@ -5,7 +5,7 @@
 
   @include shift-section;
   position: relative;
-  z-index: 10;
+  // z-index: 10;
 }
 .profile__grid{
   position: relative;
@@ -17,7 +17,7 @@
     grid-template-columns: 1fr 2fr 1fr;
   }
   @include desktop{
-    grid-template-rows: min-content;
+    grid-template-rows: 105px;
     grid-template-columns: 60% 40%;
     position: relative;
   }
@@ -27,6 +27,18 @@
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 2;
+  @include desktop{
+    position: absolute;
+    top: -170px;
+    left: 956px;
+    z-index: 100;
+    .level__number{
+      color: $white;
+    }
+    .level__word{
+      color: $white;
+    }
+  }
 }
 .foto--form{
   grid-row-start: 1;
@@ -48,7 +60,7 @@
 
     position: absolute;
     z-index: 100;
-    top: -190px;
+    top: -210px;
     right: 0;
   }
 }
@@ -58,8 +70,13 @@
   grid-column-start: 1;
   grid-column-end: -1;
   @include desktop{
-    grid-column-start: 2;
-    grid-column-end: 3;
+    .change-foto__word{
+      display: none;
+    }
+    position: absolute;
+    right: 0;
+    top: -40px;
+    width: 190px;
   }
 }
 .tags--form{
@@ -92,6 +109,9 @@
       left: 50%;
       transform: translateX(-50%);
     }
+    @include desktop{
+      left: 60px;
+    }
   }
   .user-tags{
     padding: 26px 0 26px 25px;
@@ -106,7 +126,9 @@
     @include tablet{
       width: 100%;
       padding: 35px 0 10px 40px;
-
+    }
+    @include desktop{
+      width: 732px;
     }
   }
 
@@ -157,6 +179,10 @@
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 3;
+
+    width: 384px;
+    // align-self: end;
+    justify-self: end;
   }
 }
 

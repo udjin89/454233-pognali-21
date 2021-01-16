@@ -92,8 +92,12 @@
   .input-options{
     display: grid;
   }
-  .user-transport--search{
+  .user-transport--search,
+  .level-control{
     display: flex;
+  }
+  .range-filter{
+    display: block;
   }
 }
 .input-options{
@@ -117,7 +121,7 @@
 
 // ++++++++++++ Level ++++++++++++++
 .level-control{
-  display: flex;
+  display: none;
   justify-content: space-between;
   margin: auto 0;
 
@@ -151,8 +155,8 @@
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  @include tablet{
-
+  @include tablet-only{
+    display: flex;
   }
 }
 input::-webkit-outer-spin-button,
@@ -163,11 +167,12 @@ input::-webkit-outer-spin-button,
   width: 100%;
   grid-column-start: 2;
   grid-column-end: 3;
+  display: none;
   @include tablet-only{
     padding-top: 2px;
     width: 281px;
     grid-row-start: 1;
-
+    display: block;
   }
 }
 .range-control {
@@ -220,6 +225,7 @@ input::-webkit-outer-spin-button,
   height: 100%;
   text-align: center;
   background-color: transparent;
+  border: none;
   @include tablet-only{
      width: 74px;
   }

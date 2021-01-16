@@ -4,9 +4,30 @@
   padding-top: 33px;
   padding-bottom: 82px;
   background-color: $special_dark_blue;
-  background-image: url(../img/about-mobile.png);
+  background-image: url(../img/background/about-mobile.png);
   background-repeat: no-repeat;
   background-position-x: center;
+
+  @include retina{
+    background-image:  url(../img/background/about-mobile@2x.png);
+  }
+
+  @include tablet{
+    background-image: url(../img/background/about-tablet.png);
+    @include retina{
+      background-image: url(../img/background/about-tablet@2x.png);
+    }
+
+    background-position-y: 50%, 300px;
+    background-position-x: 60%, center;
+    background-size: 372px 451px, auto;
+  }
+  @include desktop{
+    background-image: url(../img/background/about-desktop.png);
+    @include retina{
+      background-image: url(../img/background/about-desktop@2x.png);
+    }
+  }
 
   @include tablet{
     font-size: 28px;

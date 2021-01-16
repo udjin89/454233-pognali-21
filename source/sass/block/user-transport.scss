@@ -41,6 +41,9 @@
 
     }
   }
+  @include desktop{
+    padding: 0;
+  }
 }
 .user-transport--search{
   padding: 0 0 20px 0;

@@ -45,6 +45,11 @@
   color: $special_dark_blue;
   text-align: center;
 
+  @include tablet{
+    font-size: 60px;
+    line-height: 71px;
+    text-align: left;
+  }
   @include desktop{
     color: $white;
     font-size: 20px;

@@ -117,7 +117,7 @@
           <img class="foto foto--form" src="../img/foto-user/foto-demin.jpg" alt="Фото попутчика" width="270"
             height="270">
 
-          <button class="change-foto" type="button">сменить фото</button>
+          <button class="change-foto" type="button"><span class="change-foto__word">сменить</span> фото</button>
 
           <fieldset class="tags--form">
             <legend>Тэги</legend>
@@ -202,7 +202,7 @@
                 <time datetime="2001-03-26 19:00">26 мар</time>&mdash;<time datetime="2001-03-29 19:00">29
                   мар</time>
               </p>
-              <button class="my-plans__change">изменить</button>
+              <button class="my-plans__change" type="button">изменить</button>
             </li>
             <li class="my-plans__item">
               <p class="my-plans__county"><span>2.</span>Таиланд, Индонезия</p>
@@ -211,7 +211,7 @@
                   datetime="2001-07-15 19:00">15
                   июл</time>
               </p>
-              <button class="my-plans__change">изменить</button>
+              <button class="my-plans__change" type="button">изменить</button>
             </li>
           </ol>
         </div>
@@ -231,6 +231,11 @@
             <h3 class="title-plan-step">
               <span class="title-plan-step__new-line">Шаг 1.</span> Даты пребывания
             </h3>
+            <ul class="points">
+              <li class="points__item points__item--active"><span>Даты</span></li>
+              <li class="points__item "><span>Маршрут</span></li>
+              <li class="points__item "><span>Развлечения</span></li>
+            </ul>
             <p class="add-plan__description">Укажите предпочтительное количество попутчиков, которых
               вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку и&nbsp;ее&nbsp;предполагаемую длительность.
             </p>
@@ -252,7 +257,7 @@
               <fieldset class="input-number input-count-day">
                 <!-- <legend>длительность:</legend> -->
                 <button class="input-minus" type="button" aria-label="Уменьшить количество дней"></button>
-                <input name="count-days" type="number" placeholder="3">
+                <input class="number" name="count-days" type="number" placeholder="3">
                 <button class="input-plus" type="button" aria-label="Увеличить количество дней"></button>
               </fieldset>
               <input class="child-checkbox hidden" name="child" id="child" type="checkbox" checked>
@@ -355,6 +360,11 @@
               <span class="title-plan-step__new-line">Шаг 2.</span>
               Маршрут
             </h3>
+            <ul class="points">
+              <li class="points__item "><span>Даты</span></li>
+              <li class="points__item points__item--active"><span>Маршрут</span></li>
+              <li class="points__item "><span>Развлечения</span></li>
+            </ul>
             <p class="add-plan__description">Укажите страны, которые вы&nbsp;хотели посетить. Это может быть одна или
               сразу несколько.
             </p>
@@ -395,7 +405,7 @@
 
               </li>
               <!-- add-plan__item--select-active -->
-              <li class="add-plan__item add-plan__item--select ">
+              <li class="add-plan__item add-plan__item--select add-plan__item--select-active">
                 <p class="country-name"> выберите страну
 
 
@@ -907,6 +917,11 @@
               <span class="title-plan-step__new-line">Шаг 3.</span>
               Развлечения
             </h3>
+            <ul class="points">
+              <li class="points__item "><span>Даты</span></li>
+              <li class="points__item "><span>Маршрут</span></li>
+              <li class="points__item points__item--active"><span>Развлечения</span></li>
+            </ul>
             <p class="add-plan__description">Наконец, расскажите о&nbsp;своих планахвремяпровождения. Можно писать
               в&nbsp;свободной форме и&nbsp;ставить тэги.</p>
             <div class="wrap-action-plan">

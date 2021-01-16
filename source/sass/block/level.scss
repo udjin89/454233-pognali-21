@@ -69,6 +69,12 @@
     left: -8px;
     background-color: $special_grey;
   }
+  @include desktop{
+    .level__word::before{
+      background-color: $white;
+      opacity: 0.3;
+    }
+  }
 }
 .level--form .level__progress-bar{
   stroke-width: 3px;

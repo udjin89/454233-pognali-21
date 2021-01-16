@@ -49,13 +49,14 @@
   }
 }
 .menu--open{
-    background-color: $white;
-    display: block;
+  position: relative;
+  background-color: $white;
+  display: block;
 
-    .authorization__phone,
-    .authorization__mail{
-      display: none;
-    }
+  .authorization__phone,
+  .authorization__mail{
+    display: none;
+  }
 
   .main-nav,
   .contacts

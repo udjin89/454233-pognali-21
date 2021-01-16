@@ -45,6 +45,10 @@
     font-size: 18px;
     line-height: 18px;
   }
+  @include desktop{
+    height: 72px;
+    font-weight: 400;
+  }
   &--occupy{
     color: $special_grey;
     opacity: 0.3;
@@ -53,7 +57,6 @@
     font-weight: 500;
     color: $white;
     background-color: $basic_blue_light;
-
   }
   &--free{
     font-weight: 500;
@@ -61,6 +64,7 @@
     background-color: $basic_blue_lightest;
 
   }
+
 }
 .calendar__date:hover{
   border: none;

@@ -86,6 +86,13 @@
 .toggle--open{
   height: 25px;
   float: right;
+
+  @include tablet{
+    float: none;
+    display: inline;
+    margin-left: 169px;
+  }
+
   &::before{
     position: absolute;
     display: block;
