@@ -14,16 +14,23 @@
     }
     background-repeat: no-repeat;
     background-position-y: 120px;
-    background-position-x: 530px;
+    background-position-x: 92%;
+    // background-position-y: 120px;
+    // background-position-x: 530px;
     background-size: 288px 574px;
   }
 
 
   @include desktop{
+    padding-top: 161px - $section_shift;
     padding-bottom: 138px;
+    background-position-x: 95%;
   }
 }
 .destination__grid{
+  @include tablet-only{
+    padding: 0 36px 0 36px;
+  }
   @include desktop{
     display: grid;
     grid-template-rows: min-content min-content min-content;
@@ -66,7 +73,22 @@
   margin-top: 60px;
   padding: 0;
   list-style: none;
+  position: relative;
+  @include tablet{
+    &::before{
+      z-index: -1;
+      position: absolute;
+      content: "";
+      left: -36px;
+      top: -38px;
+      width: 141px;
+      height: 141px;
 
+      //$special_decoration_blue
+      background-color: $special_blue_lightest;
+      border-radius: 20px;
+    }
+  }
   @include desktop{
     grid-row-start: 1;
     grid-row-end: -1;
@@ -74,6 +96,10 @@
     grid-column-end: 2;
     margin-top: 0;
 
+    &::before{
+      left: -70px;
+      top: -71px;
+    }
   }
 }
 .destination__item{
@@ -174,15 +200,18 @@
     background-size: 24px;
   }
 }
-.destination__flag{
+.destination__picture{
   position: absolute;
   top: -12px;
   @include tablet{
-    width: 70px;
-    height: 47px;
     right: -35px;
     top: 17px;
-
+  }
+  .destination__flag{
+    @include tablet{
+      width: 70px;
+      height: 47px;
+    }
   }
 }
 

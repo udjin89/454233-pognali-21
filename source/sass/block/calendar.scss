@@ -57,6 +57,9 @@
     font-weight: 500;
     color: $white;
     background-color: $basic_blue_light;
+    &:first-of-type{
+      background-color: red !important;
+    }
   }
   &--free{
     font-weight: 500;

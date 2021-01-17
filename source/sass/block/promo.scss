@@ -11,7 +11,7 @@
 
   @include retina{
     background-image: url(../img/background/traveller-mobile@2x.png),
-                      url(../img/background/promo-mobile.png@2x.png);
+                      url(../img/background/promo-mobile@2x.png);
   }
 
   @include tablet{
@@ -23,8 +23,8 @@
                         url(../img/background/promo-tablet@2x.png);
     }
 
-    background-position-y: 50%, 300px;
-    background-position-x: 60%, center;
+    background-position-y: 60%, 300px;
+    background-position-x: 70%, center;
     background-size: 372px 451px, auto;
   }
   @include desktop{
@@ -36,6 +36,9 @@
                         url(../img/background/promo-desktop@2x.png);
     }
     padding-bottom: 123px;
+    background-position-y: 60%, 300px;
+    background-position-x: 60%, center;
+    background-size: 431px 640px, auto;
   }
 }
 .promo__grid{

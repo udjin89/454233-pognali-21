@@ -413,30 +413,30 @@
 
     .country-name{
       &::before {
-        top: 20px;
+        top: 50%;
         left: 193px;
       }
       &::after {
         left: 193px;
-        top: 20px;
+        top: 50%;
       }
       @include tablet{
         &::before {
-          top: 27px;
+          top: 50%;
           left: 320px;
         }
         &::after {
-          top: 27px;
+          top: 50%;
           left: 320px;
         }
       }
       @include desktop{
         &::before {
-          top: 27px;
+          top: 50%;
           left: 680px;
         }
         &::after {
-          top: 27px;
+          top: 50%;
           left: 680px;
         }
       }
@@ -461,22 +461,47 @@
       background: $basic_blue_light;
       &::before {
         width: 16px;
-        height: 1px;
-        top: 20px;
+        height: 1.7px;
+        top: 50%;
         left: 193px;
         transform: rotate(45deg);
       }
       &::after {
         width: 16px;
-        height: 1px;
+        height: 1.7px;
         left: 193px;
-        top: 20px;
+        top: 50%;
         margin: 0;
         transform: rotate(135deg);
+      }
+      @include tablet{
+
+        &::before {
+          // transform: translateY(-50%);
+          left: 326px;
+        }
+        &::after {
+          // transform: translateY(-50%);
+          left: 326px;
+        }
+      }
+      @include tablet{
+
+        &::before {
+          // transform: translateY(-50%);
+          width: 22px;
+          left: 681px;
+        }
+        &::after {
+          // transform: translateY(-50%);
+          width: 22px;
+          left: 681px;
+        }
       }
     }
     .select-country{
       display: grid;
+      width: 730px;
     }
   }
   &--new-country{
@@ -485,36 +510,36 @@
       border: none;
       &::before {
         height: 2px;
-        top: 20px;
+        top: 50%;
         left: 193px;
         transform: rotate(0);
       }
       &::after {
         height: 2px;
         left: 193px;
-        top: 20px;
+        top: 50%;
         margin: 0;
         transform: rotate(90deg);
       }
       @include tablet{
         &::before {
           width: 20px;
-          top: 27px;
+          top: 50%;
           left: 320px;
         }
         &::after {
           width: 20px;
-          top: 27px;
+          top: 50%;
           left: 320px;
         }
       }
       @include desktop{
         &::before {
-          top: 27px;
+          top: 50%;
           left: 680px;
         }
         &::after {
-          top: 27px;
+          top: 50%;
           left: 680px;
         }
       }

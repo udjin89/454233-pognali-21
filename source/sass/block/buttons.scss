@@ -83,6 +83,12 @@
   // top: 100%;
   transform: translateY(6px);
 }
+.page-header--scroll{
+  .toggle--close::before,
+  .toggle--close::after{
+    background-color: $grey;
+  }
+}
 .toggle--open{
   height: 25px;
   float: right;

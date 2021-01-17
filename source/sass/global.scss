@@ -57,6 +57,9 @@ img {
     font-size: 45px;
     line-height: 45px;
   }
+  @include desktop{
+    margin-bottom: 57px;
+  }
 }
 .main-title{
   font-weight: bold;

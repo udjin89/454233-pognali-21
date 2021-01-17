@@ -1,13 +1,25 @@
 .page-header {
   position: relative;
   margin: 0;
+  padding: 0;
   background-color: $basic_blue;
+  @include tablet-only{
+    background-color: $special_dark_blue2;
+  }
   &--open-menu{
     background-color: $white;
   }
 
   &--light{
     background-color: $special_dark_blue2;
+  }
+  &--scroll{
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
   }
 }
 .menu{
@@ -17,6 +29,13 @@
   align-items: center;
   @include desktop{
     padding-top: 47px;
+
+  }
+}
+.page-header--scroll{
+  .menu{
+    padding-top: 17px;
+    padding-bottom: 17px;
   }
 }
 .menu--close{

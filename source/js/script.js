@@ -11,27 +11,27 @@ svgEl.forEach((svg) => { // цикл
   console.log(percent);
 });
 // ++++  Открытие меню ++++
-
+const head = document.querySelector(".page-header");
 const toggleButton = document.querySelector(".toogle");
 const menu = document.querySelector(".menu");
+const logoLight = menu.querySelector(".logo--light");
+const logoDark = menu.querySelector(".logo--dark");
 
 if (toggleButton) {
   console.log("toggle button find \n");
-
+  console.log(head);
   toggleButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     console.log("Click toggleButton");
 
-    const logoLight = menu.querySelector(".logo--light");
-    const logoDark = menu.querySelector(".logo--dark");
-
     if (!toggleButton.classList.contains("toggle--close")) {
       toggleButton.classList.remove("toggle--open");
       toggleButton.classList.add("toggle--close");
+      head.classList.remove("page-header--open-menu");
       menu.classList.remove("menu--open");
       menu.classList.add("menu--close");
 
-      if (logoLight && logoDark) {
+      if (logoLight && logoDark && !head.classList.contains("page-header--scroll")) {
         logoLight.classList.add("hidden");
         logoDark.classList.remove("hidden");
       }
@@ -40,6 +40,7 @@ if (toggleButton) {
     else { // Открываем меню
       toggleButton.classList.remove("toggle--close");
       toggleButton.classList.add("toggle--open");
+      head.classList.add("page-header--open-menu");
       menu.classList.remove("menu--close");
       menu.classList.add("menu--open");
 
@@ -83,3 +84,28 @@ if (modalBusiness) {
     console.log("Add class hidden");
   });
 }
+
+// ++++ Скрол меню+++
+// Cобытие scroll
+window.addEventListener('scroll', function () {
+
+  const scrolled = window.pageYOffset; // смещение окна браузера
+  const heightHeader = head.clientHeight;
+
+  if (scrolled > heightHeader) {
+    head.classList.add("page-header--scroll");
+    if (!head.classList.contains("page-header--open-menu")) {
+      logoDark.classList.add("hidden");
+      logoLight.classList.remove("hidden");
+    }
+
+  }
+  if (scrolled < heightHeader) {
+    head.classList.remove("page-header--scroll");
+    if (!head.classList.contains("page-header--open-menu")) {
+      logoDark.classList.remove("hidden");
+      logoLight.classList.add("hidden");
+    }
+  }
+  console.log("heightScroll = " + heightHeader);
+});
