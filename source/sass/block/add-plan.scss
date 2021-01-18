@@ -157,11 +157,26 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
+  &:hover{
+    &::before{
+      border-color: $special_grey;
+    }
+  }
+  &:active{
+    &::before{
+      border: none;
+      background-color: #E2E5F1;
+    }
+  }
 }
 .child-checkbox:checked + .child-check::before{
   background: url(/img/icon/icon-checkbox.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  &:active{
+    // border-color: $special_grey;
+    background-color: #E2E5F1;
+  }
 }
 .control-buttons{
   display: flex;
@@ -501,7 +516,10 @@
     }
     .select-country{
       display: grid;
-      width: 730px;
+      @include desktop{
+        width: 730px;
+      }
+
     }
   }
   &--new-country{
@@ -763,6 +781,24 @@
     height: 142px;
     margin: 0;
   }
+  &:hover{
+    border-color: #959BB2;
+  }
+  &:active{
+    border-color: red;
+  }
+  &:focus{
+    font-family: "Blogger Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: $special_grey;
+    border-color: $black;
+  }
+}
+.error{
+  background-color: green;
 }
 .label-country{
   position: relative;
@@ -824,4 +860,14 @@
 
     }
   }
+}
+
+.spesial-shadow{
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  background-color: brown;
+  height: 40px;
+  width: 50px;
 }

@@ -140,6 +140,16 @@
     grid-column-start: 1;
     grid-column-end: 2;
   }
+  &:hover{
+    border-color: #AEB4CB;
+  }
+
+  &:focus{
+    border-color: $basic_blue;
+    .user-tags{
+      opacity: 1;
+    }
+  }
 }
 .select-transport--form{
   padding: 0;
@@ -218,5 +228,11 @@
     top: -73px;
     width: 190px;
     border-radius: 0 0 20px 20px;
+  }
+  &:hover{
+    background-color: $basic_blue_2;
+  }
+  &:active{
+    opacity: 0.3;
   }
 }

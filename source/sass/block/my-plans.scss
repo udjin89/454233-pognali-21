@@ -123,6 +123,12 @@
     letter-spacing: 0.08em;
     margin-left: 121px;
   }
+  &:hover{
+    opacity: 0.6;
+  }
+  &:active{
+    opacity: 0.1;
+  }
 }
 .add-plan__head{
   .points{

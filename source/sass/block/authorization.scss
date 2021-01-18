@@ -71,3 +71,21 @@
 .authorization--header .authorization__mail{
   // display: none;
 }
+// ====== Отзывчивость======
+.authorization__login,
+.authorization__phone,
+.authorization__mail{
+  &:hover{
+    background-color: inherit + #f8f800;
+  }
+  &:active{
+    img,
+    span {
+      opacity: 0.3;
+    }
+  }
+}
+.authorization__phone,
+.authorization__mail{
+
+}

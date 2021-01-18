@@ -66,3 +66,22 @@ if (chose) {
 
   }
 }
+// Ошибка заполнения
+const form = document.querySelector("form");
+const textArea = form.querySelectorAll(".action-plan");
+
+form.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+  for (let i = 0; i < textArea.length; i++) {
+    if (!textArea[i].value) {
+
+      console.log("Error");
+      textArea[i].classList.remove("error");
+      setTimeout(function () {
+        textArea[i].classList.add("error");
+      }, 0);
+    }
+  }
+
+});
+
