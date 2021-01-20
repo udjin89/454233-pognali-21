@@ -22,7 +22,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 14px;
-  // top: -10px;
+  top: -10px;
 
   &::before{
     top: -1px;
@@ -64,10 +64,14 @@
   width: 100px;
   height: 100px;
   background: none;
-  .level__word::before{
-    width: 51px;
-    left: -8px;
-    background-color: $special_grey;
+  .level__word{
+    top: 0;
+    &::before{
+      width: 51px;
+      left: -8px;
+      top: -3px;
+      background-color: $special_grey;
+    }
   }
   @include desktop{
     .level__word::before{
@@ -89,4 +93,43 @@
   font-size: 18px;
   line-height: 18px;
   color: $special_grey;
+}
+.level--find{
+  font-family: "Blogger Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  background: none  ;
+
+  @include tablet{
+    width: 60px;
+    height: 60px;
+
+    .level__progress-bar{
+      width: 60px;
+      height: 60px;
+      stroke-width: 3px;
+    }
+  }
+  .level__number{
+    margin-top: 12px;
+  }
+  .level__word{
+    display: none;
+    top: 0;
+    @include tablet{
+      display: block;
+      color: rgba($color: $black, $alpha: 0.4);
+
+      &::before{
+        left: 15px;
+        top: -1px;
+        background-color: rgba($color: $black, $alpha: 0.1);
+      }
+    }
+  }
 }

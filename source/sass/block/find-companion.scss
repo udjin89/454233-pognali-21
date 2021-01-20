@@ -42,17 +42,48 @@
   @include desktop{
     padding: 0;
   }
+  &:hover{
+    box-shadow: (0px 4px 9px rgba(0, 0, 0, 0.16));
+    .foto{
+      outline: 5px solid red;
+      transform: scale(1.5);
+      overflow: hidden;
+    }
+  }
+  &:active{
+
+  }
 }
-.foto--find{
-  float: left;
-  border-radius: 50%;
+.wrap-foto-catalog{
+  overflow: hidden;
+  width: 190px;
+  height: 190px;
   margin-left: 18px;
   @include tablet{
     grid-row: 1/4;
     grid-column: 1/2;
     border-radius: 20px;
-    width: 190px;
-    height: 190px;
+
+  }
+  @include desktop{
+    grid-row: 1/-1;
+    width: 285px;
+    height: 285px;
+    margin: 0;
+    border-radius: 20px 0 0 20px;
+  }
+}
+.foto--find{
+  float: left;
+  border-radius: 50%;
+
+  width: 190px;
+  height: 190px;
+  @include tablet{
+    grid-row: 1/4;
+    grid-column: 1/2;
+    border-radius: 20px;
+
   }
   @include desktop{
     grid-row: 1/-1;
@@ -95,6 +126,14 @@
       order: 0;
       margin: 0;
     }
+  }
+}
+.user-name{
+  &:hover{
+    opacity: 0.6;
+  }
+  &:active{
+    opacity: 0.3;
   }
 }
 .level--find{
@@ -255,44 +294,7 @@
     }
   }
 }
-.level--find{
-  font-family: "Blogger Sans";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 24px;
-  text-align: center;
-  width: 45px;
-  height: 45px;
-  background: none  ;
 
-  @include tablet{
-    width: 60px;
-    height: 60px;
-
-    .level__progress-bar{
-      width: 60px;
-      height: 60px;
-      stroke-width: 3px;
-    }
-  }
-  .level__number{
-    margin-top: 12px;
-  }
-  .level__word{
-    display: none;
-
-    @include tablet{
-      display: block;
-      color: rgba($color: $black, $alpha: 0.4);
-
-      &::before{
-        left: 15px;
-        background-color: rgba($color: $black, $alpha: 0.1);
-      }
-    }
-  }
-}
 .likes-count{
   display: flex;
   // align-items: center;
@@ -302,7 +304,8 @@
   .heart{
     width: 30px;
     height: 30px;
-    background-color: $special_blue_lightest;
+    background-color: $basic_blue_lightest;
+
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -312,6 +315,14 @@
       width: 50px;
       height: 50px;
     }
+    &:hover{
+      background-color: $special_blue_lightest;
+    }
+    &:active{
+      svg{
+        opacity: 0.1;
+      }
+    }
   }
   span{
     margin-left: 5px;
@@ -319,7 +330,7 @@
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
-    // align-self: center;
+    align-self: center;
   }
 }
 .likes-count--active{
@@ -329,7 +340,14 @@
       fill: $red;
       fill-rule: nonzero;
     }
-
+    &:hover{
+      background-color: #F9D8D8;
+    }
+    &:active{
+      svg{
+        opacity: 0.3;
+      }
+    }
   }
 }
 .user-tags--find{
@@ -370,6 +388,7 @@
 }
 .wrap-invite{
   display: flex;
+  align-items: end;
 
   .likes-count{
     display: none;
@@ -403,6 +422,17 @@
     background:  url(../img/icon/icon-plus-more.svg);
     opacity: 1;
     background-repeat: no-repeat;
+
+  }
+  &:hover{
+    &::before{
+      opacity: 0.6;
+    }
+  }
+  &:active{
+    &::before{
+      opacity: 0.3;
+    }
   }
   @include desktop{
     margin-top: 36px;
@@ -466,6 +496,14 @@
 
   color: $basic_blue_light;
 
+
+  &:hover{
+    color:rgba($color: $basic_blue_light, $alpha: 0.6)
+  }
+  &:active{
+    background-color: $basic_yellow;
+    border-radius: 50%;
+  }
   &--active{
     background-color: $basic_yellow;
     border-radius: 50%;
@@ -484,7 +522,12 @@
     width: 40px;
 
   }
-
+  &:hover{
+    opacity: 0.6;
+  }
+  &:active{
+    opacity: 0.3;
+  }
 }
 .pagination-control__link--next{
   transform: rotate(180deg);

@@ -170,13 +170,15 @@
   }
 }
 .child-checkbox:checked + .child-check::before{
-  background: url(/img/icon/icon-checkbox.svg);
+  background-image: url(/img/icon/icon-checkbox.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  &:active{
-    // border-color: $special_grey;
-    background-color: #E2E5F1;
-  }
+}
+
+.child-checkbox:checked:active + .child-check::before{
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url(/img/icon/icon-checkbox-active.svg);
 }
 .control-buttons{
   display: flex;
@@ -255,10 +257,16 @@
   background-position: center;
   border: none;
   cursor: pointer;
-
+  opacity: 0.3;
   @include tablet{
     width: 20px;
     height: 20px;
+  }
+  &:hover{
+    opacity: 0.5;
+  }
+  &:active{
+    opacity: 0.1;
   }
 }
 .input-minus{
@@ -281,6 +289,16 @@
   border-radius: 4px;
   @include desktop{
     width: 180px;
+  }
+  &:hover{
+    border-color: #959BB2;
+    // .input-minus,
+    // .input-plus{
+    //   opacity: 0.5;
+    // }
+  }
+  &:active{
+    border-color: $basic_blue_light;
   }
 }
 
@@ -356,6 +374,12 @@
   &--left{
     transform: rotate(-180deg);
   }
+  &:hover{
+    opacity: 0.5;
+  }
+  &:active{
+    opacity: 0.1;
+  }
 }
 .add-plan__country{
   position: relative;
@@ -426,36 +450,36 @@
        border: 1px solid $gray_legend;
     }
 
-    .country-name{
-      &::before {
-        top: 50%;
-        left: 193px;
-      }
-      &::after {
-        left: 193px;
-        top: 50%;
-      }
-      @include tablet{
-        &::before {
-          top: 50%;
-          left: 320px;
-        }
-        &::after {
-          top: 50%;
-          left: 320px;
-        }
-      }
-      @include desktop{
-        &::before {
-          top: 50%;
-          left: 680px;
-        }
-        &::after {
-          top: 50%;
-          left: 680px;
-        }
-      }
-    }
+    // .country-name{
+    //   &::before {
+    //     top: 50%;
+    //     left: 193px;
+    //   }
+    //   &::after {
+    //     left: 193px;
+    //     top: 50%;
+    //   }
+    //   @include tablet{
+    //     &::before {
+    //       top: 50%;
+    //       left: 320px;
+    //     }
+    //     &::after {
+    //       top: 50%;
+    //       left: 320px;
+    //     }
+    //   }
+    //   @include desktop{
+    //     &::before {
+    //       top: 50%;
+    //       left: 680px;
+    //     }
+    //     &::after {
+    //       top: 50%;
+    //       left: 680px;
+    //     }
+    //   }
+    // }
   }
   &--select-active{
     border-radius: 4px;
@@ -474,21 +498,21 @@
     .country-name{
       color: $white;
       background: $basic_blue_light;
-      &::before {
-        width: 16px;
-        height: 1.7px;
-        top: 50%;
-        left: 193px;
-        transform: rotate(45deg);
-      }
-      &::after {
-        width: 16px;
-        height: 1.7px;
-        left: 193px;
-        top: 50%;
-        margin: 0;
-        transform: rotate(135deg);
-      }
+      // &::before {
+      //   width: 16px;
+      //   height: 1.7px;
+      //   top: 50%;
+      //   left: 193px;
+      //   transform: rotate(45deg);
+      // }
+      // &::after {
+      //   width: 16px;
+      //   height: 1.7px;
+      //   left: 193px;
+      //   top: 50%;
+      //   margin: 0;
+      //   transform: rotate(135deg);
+      // }
       @include tablet{
 
         &::before {
@@ -521,45 +545,78 @@
       }
 
     }
+    .spesial-shadow{
+      background: none;
+    }
+    .country-name__action{
+      &::before{
+        width: 24px;
+        background-color: rgba($color: $white, $alpha: 0.3);
+      }
+      &::after{
+        background-color: rgba($color: $white, $alpha: 0.3);
+        right: 15px;
+        width: 24px;
+      }
+      &:hover{
+        &::before,
+        &::after {
+          background-color:$white;
+        }
+      }
+      &:active{
+        &::before,
+        &::after {
+          background-color: rgba($color: $white, $alpha: 0.1);
+        }
+      }
+    }
   }
   &--new-country{
     .country-name{
       background: $basic_blue_lightest;
       border: none;
-      &::before {
-        height: 2px;
-        top: 50%;
-        left: 193px;
-        transform: rotate(0);
+      // &::before {
+      //   height: 2px;
+      //   top: 50%;
+      //   left: 193px;
+      //   transform: rotate(0);
+      // }
+      // &::after {
+      //   height: 2px;
+      //   left: 193px;
+      //   top: 50%;
+      //   margin: 0;
+      //   transform: rotate(90deg);
+      // }
+      // @include tablet{
+      //   &::before {
+      //     width: 20px;
+      //     top: 50%;
+      //     left: 320px;
+      //   }
+      //   &::after {
+      //     width: 20px;
+      //     top: 50%;
+      //     left: 320px;
+      //   }
+      // }
+      // @include desktop{
+      //   &::before {
+      //     top: 50%;
+      //     left: 680px;
+      //   }
+      //   &::after {
+      //     top: 50%;
+      //     left: 680px;
+      //   }
+      // }
+      &:hover{
+        background-color: $special_blue_light;
       }
-      &::after {
-        height: 2px;
-        left: 193px;
-        top: 50%;
-        margin: 0;
-        transform: rotate(90deg);
-      }
-      @include tablet{
-        &::before {
-          width: 20px;
-          top: 50%;
-          left: 320px;
-        }
-        &::after {
-          width: 20px;
-          top: 50%;
-          left: 320px;
-        }
-      }
-      @include desktop{
-        &::before {
-          top: 50%;
-          left: 680px;
-        }
-        &::after {
-          top: 50%;
-          left: 680px;
-        }
+
+      .spesial-shadow{
+        background: none;
       }
     }
     background: $basic_blue_lightest;
@@ -587,6 +644,20 @@
     }
   }
 }
+.country-name__action{
+  &:hover{
+    &::before,
+    &::after{
+     background-color: rgba($color: $black, $alpha: 0.3);
+    }
+  }
+  &:active{
+    &::before,
+    &::after{
+      background-color: rgba($color: $black, $alpha: 0.1);
+    }
+  }
+}
 .country-name{
   position: relative;
   white-space: nowrap;
@@ -603,31 +674,7 @@
   border: 1px solid $gray_legend;
   border-radius: 4px;
   // box-shadow: inset -50px 0px 6px -10px red;
-  &::before {
-    position: absolute;
-    top: 20px;
-    left: 141px;
-    content: "";
-    width: 12px;
-    height: 2px;
-    background-color: #B3B3B3;
-    display: inline-block;
-    transform: rotate(-45deg);
 
-
-  }
-  &::after {
-    position: absolute;
-    left: 141px;
-    top: 20px;
-    content: "";
-    width: 12px;
-    height: 2px;
-    background-color: #B3B3B3;
-    display: inline-block;
-    transform: rotate(45deg);
-    margin-left: -7px;
-  }
   @include tablet{
     width: 369px;
     flex-grow: 0;
@@ -654,6 +701,12 @@
       top: 27px;
       left: 680px;
     }
+  }
+  &:hover{
+    border-color: #959BB2;
+  }
+  &:active{
+
   }
 }
 .country-flag{
@@ -729,7 +782,7 @@
     position: absolute;
     content: "";
     top: 12px;
-    bottom: -12px;
+    bottom: -35px;
     left: -13px;
     width: 2px;
     background: $basic_blue_light;
@@ -739,14 +792,14 @@
     padding-right: 33px;
     &:nth-child(4):before{
       top: 45px;
-      bottom: -45px;
+      bottom: -75px;
       left: 525px;
     }
   }
   @include desktop{
     &:nth-child(4):before{
       top: 100px;
-      bottom: -55px;
+      bottom: -70px;
       left: 786px;
     }
     &:first-of-type{
@@ -761,16 +814,19 @@
   resize: none;
   border: 1px solid $gray_legend;
   border-radius: 4px;
-  margin-bottom: 23px;
+
   padding: 10px 14px;
+
+  font-family: "Blogger Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
   &::placeholder{
     color: rgba($color: $special_grey, $alpha: 0.3);
-    font-family: "Blogger Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-
+    &:focus{
+      color: red;
+    }
   }
   @include tablet{
     width: 500px;
@@ -796,9 +852,43 @@
     color: $special_grey;
     border-color: $black;
   }
+
 }
 .error{
-  background-color: green;
+
+  border-color: $special_red;
+  + .action-plan-error{
+    display: block;
+  }
+}
+.wrap-textarea{
+  position: relative;
+  // height: min-content;
+  margin-bottom: 23px;
+}
+.action-plan-error{
+  display: none;
+
+  color: #FF0000;
+  background: #FFEFEF;
+  position: absolute;
+  z-index: 1;
+  left: 1px;
+  right: 1px;
+  bottom: 3px;
+  border-radius: 0 0 4px 4px;
+  padding-left: 21px;
+  font-weight: normal;
+  @include tablet{
+    width: 498px;
+    height: 56px;
+    padding-top: 20px;
+    bottom: 4px;
+  }
+  @include desktop{
+    width: 728px;
+    bottom: 2px;
+  }
 }
 .label-country{
   position: relative;
@@ -861,13 +951,53 @@
     }
   }
 }
-
-.spesial-shadow{
+.country-name__action{
   position: absolute;
+  top: 0;
+  right: 0;
+  // height: 40px;
+  height: 100%;
+  width: 50px;
+  &::before {
+    position: absolute;
+    // top: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    // left: 141px;
+    right: 15px;
+    content: "";
+    width: 12px;
+    height: 2px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    display: inline-block;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    position: absolute;
+    // left: 141px;
+    // top: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 23px;
+    content: "";
+    width: 12px;
+    height: 2px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    display: inline-block;
+    transform: rotate(45deg);
+    margin-left: -7px;
+  }
+
+}
+.spesial-shadow{
+  // position: absolute;
   display: block;
   top: 0;
   right: 0;
-  background-color: brown;
+  background: linear-gradient(90deg, transparent 0%, $white 30%);
+  // background: -webkit-linear-gradient(90deg, transparent 0%, $white 30%);
+  // background: -moz-linear-gradient(90deg, transparent 0%, $white 30%);
   height: 40px;
   width: 50px;
+
 }

@@ -8,9 +8,11 @@
   background-color: $basic_yellow;
 
   @include tablet{
+    padding-top: 70px - $section_shift;
     padding-bottom: 101px;
   }
   @include desktop{
+    padding-top: 55px - $section_shift;
     padding-bottom: 56px;
   }
 }

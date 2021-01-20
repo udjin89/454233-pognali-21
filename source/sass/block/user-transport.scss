@@ -7,6 +7,7 @@
 
 }
 .user-transport-item{
+  position: relative;
   width: 25px;
   height: 25px;
   margin-left: 10px;
@@ -14,12 +15,13 @@
 
 }
 .user-transport-icon{
-  fill: $special_darkest_blue;
-  opacity: 0.15;
+  fill: rgba($color: $special_darkest_blue, $alpha: 0.15);
+  // opacity: 0.15;
 }
 .icon-on{
-  opacity: 1;
+  fill: rgba($color: $special_darkest_blue, $alpha: 1.0);
 }
+//---Form----
 .user-transport--select{
   padding: 16px 0;
   @include tablet{
@@ -31,9 +33,7 @@
     border-radius: 50%;
     width: 32px;
     height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 
     @include tablet{
       width: 44px;
@@ -45,6 +45,54 @@
     padding: 0;
   }
 }
+.label-transport-item{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.transport-input-checkbox + .label-transport-item{
+  //  background-color: seagreen;
+    svg{
+      fill: #D9D9D9;
+    }
+    &:hover{
+      box-shadow: (0px 2px 6px rgba(22, 28, 53, 0.17));
+      svg{
+        fill: #B2B2B2;
+      }
+    }
+  }
+  .transport-input-checkbox:active + .label-transport-item{
+    background-color: #E2E5F1;
+    box-shadow: none;
+    svg{
+      fill: rgba($color: $white, $alpha: 0.2);
+    }
+  }
+.transport-input-checkbox:checked + .label-transport-item{
+//  background-color: seagreen;
+  svg{
+    fill: $basic_blue_light;
+  }
+  &:hover{
+    box-shadow: (0px 2px 6px rgba(22, 28, 53, 0.17));
+    svg{
+      fill: rgba($color: $basic_blue_light, $alpha: 0.7);
+    }
+  }
+}
+
+.transport-input-checkbox:checked:active + .label-transport-item{
+  background-color: #E2E5F1;
+  box-shadow: none;
+  svg{
+    fill: rgba($color: $basic_blue_light, $alpha: 0.3);
+  }
+}
+//------------------
 .user-transport--search{
   padding: 0 0 20px 0;
   margin: 0;
@@ -54,5 +102,39 @@
   @include tablet{
     padding: 0;
     align-self: center;
+  }
+}
+//---Tooltip
+.tooltip{
+  display:block;
+}
+.dropdown{
+  display: none;
+  z-index: 1000;
+  padding: 18px 25px;
+  color: $white;
+  background: $special_darkest_blue;
+  position: absolute;
+  border: 4px;
+  top:  125%;
+  right: 0;
+  transform: translateX(40%);
+}
+.dropdown:before{
+  content: "";
+  position: absolute;
+  display:block;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $special_darkest_blue;
+  bottom:100%;
+  left:50%;
+  transform:translate(-50%);
+}
+.user-transport-item:hover,
+.country-item:hover{
+  .dropdown{
+    display: block;
   }
 }

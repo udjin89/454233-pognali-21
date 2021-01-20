@@ -28,6 +28,9 @@
     background-size: 372px 451px, auto;
   }
   @include desktop{
+    position: relative;
+    z-index: 80;
+
     background-color: $basic_blue;
     background-image: url(../img/background/traveller-desktop.png),
                       url(../img/background/promo-desktop.png);
@@ -36,7 +39,7 @@
                         url(../img/background/promo-desktop@2x.png);
     }
     padding-bottom: 123px;
-    background-position-y: 60%, 300px;
+    background-position-y: bottom, 300px;
     background-position-x: 60%, center;
     background-size: 431px 640px, auto;
   }

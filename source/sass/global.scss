@@ -84,9 +84,14 @@ img {
       background-color: $special_orange;
       border-radius: 4px;
     }
+    @include tablet{
+      padding-bottom: 84px;
+    }
     @include desktop{
-      padding-top: 130px;
+      // padding-top: 130px;
       padding-bottom: 68px;
+      font-size: 60px;
+      line-height: 60px;
     }
   }
 
@@ -118,4 +123,11 @@ img {
   margin: 0;
   padding:0;
   background-color: $special_dark_blue2;
+
+  padding-top: 60px;
+  @include desktop{
+    padding-top: 124px;
+  }
+  // padding-bottom: 50px;
+
 }

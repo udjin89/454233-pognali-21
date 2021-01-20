@@ -6,6 +6,14 @@
   padding-top: 37px - $section_shift;
   padding-bottom: 38px;
   background-color: $gray;
+  @include tablet{
+    padding-top: 74px - $section_shift;
+    padding-bottom: 63px;
+  }
+  @include desktop{
+    padding-top: 107px - $section_shift;
+    padding-bottom: 165px;
+  }
 }
 .tariff__padding-left{
   padding-left: 24px;
@@ -14,6 +22,7 @@
 .title_tariff{
 
   @include tablet{
+    text-align: center;
     br{
     display: none;
     }
@@ -39,6 +48,7 @@
   position: relative;
   z-index: 10;
   @include tablet{
+    margin-top: 134px;
     &::after{
       position: absolute;
       z-index: 0;

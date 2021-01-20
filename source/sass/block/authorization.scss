@@ -72,20 +72,29 @@
   // display: none;
 }
 // ====== Отзывчивость======
+.authorization__phone{
+  &:hover{
+    background-color: $special_orange_dark;
+  }
+}
+.authorization__mail{
+  &:hover{
+    background-color: $special_orange;
+  }
+}
+.authorization__login{
+  &:hover{
+    background-color: $special_yellow_dark;
+  }
+}
+
 .authorization__login,
 .authorization__phone,
 .authorization__mail{
-  &:hover{
-    background-color: inherit + #f8f800;
-  }
   &:active{
     img,
     span {
       opacity: 0.3;
     }
   }
-}
-.authorization__phone,
-.authorization__mail{
-
 }

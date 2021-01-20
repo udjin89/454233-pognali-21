@@ -75,6 +75,12 @@
     font-size: 20px;
     line-height: 22px;
   }
+  &:hover{
+    opacity: 0.6;
+  }
+  &:active{
+    opacity: 0.3;
+  }
 }
 .user-transport--search{
   display: none;
@@ -234,17 +240,22 @@ input::-webkit-outer-spin-button,
 
   position: relative;
   .min-level{
-    width: 50%;
-    border: 1px solid $gray_legend;
-    background-color: $white;
     border-radius: 4px 0 0 4px;
   }
   .max-level{
+    border-radius: 0 4px 4px 0;
+  }
+  .max-level,
+  .min-level{
     width: 50%;
     border: 1px solid $gray_legend;
     background-color: $white;
-    border-radius: 0 4px 4px 0;
-    border-left: none;
+    &:hover{
+      border-color: #959BB2;
+    }
+    &:active{
+      border-color: $black;
+    }
   }
 }
 .level-control input::-webkit-outer-spin-button,
@@ -263,6 +274,14 @@ input::-webkit-outer-spin-button,
   text-align: center;
   text-transform: uppercase;
   background-color: $white;
+  &:hover{
+    background-color: $white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.14);
+  }
+  &:active{
+    color: rgba($color: $basic_blue_light, $alpha: 0.3);
+    background-color: #F3C72B;
+  }
 }
 
 // +++++++++++CheckBox++++++++++
@@ -280,6 +299,12 @@ input::-webkit-outer-spin-button,
     height: 18px;
     background-color: $white;
     border-radius: 4px;
+  }
+  &:hover{
+    color: rgba($color: $black, $alpha: 0.6);
+  }
+  &:active{
+    opacity: 0.3;
   }
 }
 
@@ -299,5 +324,5 @@ input::-webkit-outer-spin-button,
 }
 .filter-input-checkbox:hover:checked + .label-checkbox::before{
   opacity: 1;
-  background-color: olive;
+  // background-color: olive;
 }

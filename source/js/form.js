@@ -30,27 +30,15 @@ window.addEventListener(`resize`, event => {
 }, false);
 //++++++ Выпадающая таблица со странами
 const chose = document.querySelectorAll(".add-plan__item--select");
-console.log("chose = " + chose[0]);
+// console.log("chose = " + chose[0]);
 if (chose) {
 
   for (let i = 0; i < chose.length; i++) {
-    // let removeButton = 0;
+
     let buttonCloseChose = chose[i].querySelector(".remove-country");
+    let countryName = chose[i].querySelector(".country-name");
 
-    // buttonCloseChose.addEventListener("click", function (evt) {
-    //   evt.preventDefault();
-    //   console.log("Click Remove Button \n");
-    //   removeButton = 1;
-    //   console.log("-> " + removeButton);
-    //   if (1) {
-
-    //   }
-    //   else {
-
-    //   }
-    // });
-
-    chose[i].addEventListener("click", function (evt) {
+    countryName.addEventListener("click", function (evt) {
       evt.preventDefault();
       console.log("click chose country");
       if (!chose[i].classList.contains("add-plan__item--select-active")) {
@@ -60,6 +48,13 @@ if (chose) {
       }
       else {
         // buttonCloseChose.classList.remove("hidden");
+        chose[i].classList.remove("add-plan__item--select-active");
+      }
+    });
+    buttonCloseChose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      console.log("click Close country");
+      if (chose[i].classList.contains("add-plan__item--select-active")) {
         chose[i].classList.remove("add-plan__item--select-active");
       }
     });

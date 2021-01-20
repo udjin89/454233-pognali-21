@@ -10,6 +10,13 @@
     font-size: 24px;
     line-height: 24px;
   }
+
+  &:hover{
+    background-color: $special_yellow_dark;
+  }
+  &:active{
+    color: rgba($color: $basic_blue_light, $alpha: 0.3);
+  }
 }
 
 .button-arrow {
@@ -39,6 +46,11 @@
   @include tablet{
     font-size: 24px;
     line-height: 24px;
+  }
+  &:active{
+    &::after{
+      opacity: 0.3;
+    }
   }
 }
 
@@ -96,7 +108,8 @@
   @include tablet{
     float: none;
     display: inline;
-    margin-left: 169px;
+    margin-left: 160px;
+    top: -14px;
   }
 
   &::before{
@@ -176,6 +189,12 @@
 
     }
   }
+  &:hover{
+    opacity: 0.7;
+  }
+  &:active{
+    opacity: 0.3;
+  }
 }
 .return-button{
   display: none;
@@ -191,6 +210,7 @@
     background-repeat: no-repeat;
     background-position-x: 100%;
     padding-right: 60px;
+    padding-bottom: 80px;
   }
 
   &:hover{

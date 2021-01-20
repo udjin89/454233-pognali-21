@@ -107,6 +107,14 @@
       display: none;
     }
   }
+
+  &:hover{
+    background-color: transparent;
+    opacity: 0.6;
+  }
+  &:active{
+    opacity: 0.3;
+  }
 }
 .filter__continent-list{
   margin: 0;
@@ -137,6 +145,12 @@
   @include tablet{
     font-size: 20px;
     line-height: 20px;
+  }
+  &:hover{
+    opacity: 0.6;
+  }
+  &:active{
+    opacity: 1;
   }
 }
 .filter-country{
@@ -194,7 +208,7 @@
   line-height: 20px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #161C35;
+  color: $special_dark_blue;
   background-color: #D6DAED;
   margin: 18px 0 0 0;
   padding: 12px 0;
@@ -219,6 +233,15 @@
     svg{
       width: 22px;
       height: 24px;
+    }
+  }
+  &:hover{
+    background-color: #C8CEE8;
+  }
+  &:active{
+    color: rgba($color: $special_dark_blue, $alpha: 0.3);
+    svg{
+      opacity: 0.3;
     }
   }
 }

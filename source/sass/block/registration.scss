@@ -11,6 +11,10 @@
   @include tablet{
     padding-bottom: 80px;
   }
+  @include desktop{
+    padding-top: 109px - $section_shift;
+    padding-bottom: 103px;
+  }
 }
 .registration__padding{
   @include tablet{
@@ -30,9 +34,15 @@
       display: none;
     }
   }
+  @include desktop{
+    width: 655px;
+    margin: 60px auto;
+
+  }
 }
 .registration-form{
   display: flex;
+  position: relative;
 
 }
 .field-email{
@@ -40,6 +50,7 @@
   height: 62px;
   border-radius: 10px 0 0 10px;
   border: none;
+  outline: none;
   padding-left: 25px;
   font-family: "Blogger Sans";
   font-weight: bold;
@@ -78,7 +89,7 @@
   }
 
 }
-input[type="email"]::placeholder{
+.field-email::placeholder{
   font-family: "Blogger Sans";
   font-weight: bold;
   font-size: 18px;
@@ -91,8 +102,18 @@ input[type="email"]::placeholder{
     line-height: 80px;
   }
 }
+.email-error::placeholder{
+  opacity: 0;
+  color: rgba(#FF0000, $alpha: 0);
+}
 .link-autorization {
   color: $basic_yellow;
+  &:hover{
+    color: $special_orange;
+  }
+  &:active{
+    opacity: 0.3;
+  }
 }
 
 .button-registration{
@@ -100,6 +121,7 @@ input[type="email"]::placeholder{
   font-family: "Blogger Sans";
   font-style: normal;
   font-weight: bold;
+  flex-shrink: 0;
   &::after{
     right: 22px;
   }
@@ -141,3 +163,25 @@ input[type="email"]::placeholder{
   }
 }
 
+.error-message{
+
+  color: #FF0000;
+  position: absolute;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  padding-top: 22px;
+  padding-left: 25px;
+  @include tablet{
+    padding-top: 28px;
+    padding-left: 36px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  &--off{
+    display: none;
+  }
+  &--on{
+    display: block;
+  }
+}

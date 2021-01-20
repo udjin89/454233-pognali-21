@@ -161,7 +161,16 @@
     margin: 0;
   }
 }
-
+.companions__wrap-foto{
+  overflow: hidden;
+  border-radius: 10px;
+  height: 270px;
+  width: 270px;
+  @include tablet{
+    height: 285px;
+    width: 285px;
+  }
+}
 .companions__item {
   position: relative;
   background-color: $white;
@@ -169,6 +178,21 @@
   padding-bottom: 20px;
   border-radius: 10px;
   width: 270px;
+  &:hover{
+    box-shadow: (0px 4px 9px rgba(0, 0, 0, 0.16));
+    .foto{
+      // z-index: -1;
+      outline: 5px solid red;
+      transform: scale(1.2);
+      overflow: hidden;
+    }
+  }
+  @include tablet{
+    width: 285px;
+    .foto{
+      width: 100%
+    }
+  }
 }
 .companions__item .foto{
   background-color: $special_dark_blue;
@@ -185,9 +209,12 @@
 }
 .country-list{
   position: absolute ;
-  top: -20px;
+  top: -15px;
   width: 100%;
   justify-content: center;
+  @include tablet{
+    // top: -15px;
+  }
 }
 .user-name {
   position: relative;

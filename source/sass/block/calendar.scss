@@ -36,9 +36,12 @@
   color: #FF5C23;
 }
 .calendar__date{
+  position: relative;
   height: 32px;
   text-align: center;
   border: 1px solid $gray_lighter;
+  // outline: 1px solid $gray_lighter;
+  // outline-offset: -1px;
 
   @include tablet{
     height: 69px;
@@ -47,7 +50,13 @@
   }
   @include desktop{
     height: 72px;
+    width: 144px;
+    padding: 14px 0 0 16px;
     font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: left;
+    vertical-align: top;
   }
   &--occupy{
     color: $special_grey;
@@ -57,9 +66,7 @@
     font-weight: 500;
     color: $white;
     background-color: $basic_blue_light;
-    &:first-of-type{
-      background-color: red !important;
-    }
+
   }
   &--free{
     font-weight: 500;
@@ -72,6 +79,26 @@
 .calendar__date:hover{
   border: none;
   outline: 2px solid #FF5C23;
-  outline-offset: -2px;
-  background-color: yellow;
+  outline-offset: -1px;
+
+}
+.checkin,
+.checkout{
+  display: none;
+  @include desktop{
+    display: block;
+    // width: auto;
+    position: absolute;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    bottom: 15px;
+    left: 18px;
+  }
+}
+.name-month{
+  display: none;
+  @include desktop{
+    display: inline;
+  }
 }

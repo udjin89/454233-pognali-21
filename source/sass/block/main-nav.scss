@@ -45,6 +45,12 @@
   color: $special_dark_blue;
   text-align: center;
 
+  &:hover{
+    color: $basic_yellow;
+  }
+  &:active{
+    opacity: 0.3;
+  }
   @include tablet{
     font-size: 60px;
     line-height: 71px;

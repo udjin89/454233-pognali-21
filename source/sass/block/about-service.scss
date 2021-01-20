@@ -1,4 +1,5 @@
 .about-service {
+  @include shift-section;
   position: relative;
   z-index: 70;
   padding-top: 33px;
@@ -8,17 +9,7 @@
   background-repeat: no-repeat;
   background-position-x: center;
 
-  &::before{
-    z-index: -1;
-    position: absolute;
-    content: "";
-    width: 113px;
-    height: 132px;
-    top: 0;
-    //$special_decoration_blue
-    background-color: red;
 
-  }
 
   @include retina{
     background-image:  url(../img/background/about-mobile@2x.png);
@@ -26,14 +17,15 @@
   }
 
   @include tablet{
+    padding-top: 136px;
     background-image: url(../img/background/about-tablet.png);
     @include retina{
       background-image: url(../img/background/about-tablet@2x.png);
     }
 
-    background-position-y: 50%;
-    background-position-x: 90%;
-    // background-size: 372px 451px, auto;
+    background-position-y: 100%;
+    background-position-x: 80%;
+    background-size: auto;
   }
   @include desktop{
 
@@ -49,7 +41,7 @@
   }
 
   @include desktop{
-    padding-top: 70px;
+    padding-top: 172px;
     padding-bottom: 163px;
   }
 }
@@ -64,23 +56,29 @@
   }
 }
 .about-service__title{
+  position: relative;
   padding: 0;
   padding-top: 33px;
   margin-bottom: 19px;
-  &::before{
-    z-index: -1;
-    position: absolute;
-    content: "";
-    width: 113px;
-    height: 132px;
 
-    //$special_decoration_blue
-    // background-color: red;
-
-  }
   @include tablet{
     grid-column-start: 1;
     grid-column-end: 2;
+  }
+  @include desktop{
+    &::before{
+      z-index: -1;
+      position: absolute;
+      content: "";
+      width: 212px;
+      height: 212px;
+      top: -62px;
+      left: -70px;
+      //$special_decoration_blue
+      background-color: $special_decoration_blue;
+      border-radius: 20px;
+
+    }
   }
 }
 .about-service__description {
