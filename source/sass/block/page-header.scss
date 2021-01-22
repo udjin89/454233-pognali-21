@@ -6,6 +6,10 @@
   @include tablet-only{
     background-color: $special_dark_blue2;
   }
+  &--catalog,
+  &--form{
+    background-color: $special_dark_blue2;
+  }
   &--open-menu{
     background-color: $white;
   }
@@ -93,10 +97,6 @@
 .page-header__contacts{
   margin-top: 50px;
   margin-bottom: 40px;
-}
-.page-header--catalog,
-.page-header--form{
-  background-color: $special_dark_blue2;
 }
 
 //++++++++++++++++++++++++++

@@ -2,7 +2,7 @@
 // console.log("start script");
 const svgEl = document.querySelectorAll(".level__progress-bar"); // ищем все элементы с уровнем
 svgEl.forEach((svg) => { // цикл
-  const circle = document.getElementById("circle"); // svg c тегом "circle"
+  const circle = document.querySelector(".circle"); // svg c тегом "circle"
   const dashArray = circle.getTotalLength(); // возвращает длинну circle
   const percentFill = svg.dataset.percent; // берем процент из html разметки, атрибут data-percent="97"
   const percent = (dashArray / 100) * (100 - percentFill); // вычисление смещения
