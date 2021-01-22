@@ -166,7 +166,7 @@
   }
 }
 input::-webkit-outer-spin-button,
- input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
 .range-filter{
@@ -233,7 +233,7 @@ input::-webkit-outer-spin-button,
   background-color: transparent;
   border: none;
   @include tablet-only{
-     width: 74px;
+    width: 74px;
   }
 }
 .level-control{
@@ -316,8 +316,8 @@ input::-webkit-outer-spin-button,
 .filter-input-checkbox:hover{
   + .label-checkbox{
     // opacity: 0.6;
- }
- + .label-checkbox::before{
+  }
+  + .label-checkbox::before{
   // opacity: 0.6;
 }
 

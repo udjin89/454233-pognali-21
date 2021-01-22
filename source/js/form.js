@@ -2,7 +2,7 @@
 const addArrow = document.querySelectorAll(".button-next-step");
 // +++++++++++++ Проверка размера экрана
 let sizeWindow = window.innerWidth;
-console.log("Size Window =" + sizeWindow);
+// console.log("Size Window =" + sizeWindow);
 if (sizeWindow > 768) {
   // console.log("Size Window =" + sizeWindow);
   for (let i = 0; i < addArrow.length; i++) {
@@ -17,7 +17,7 @@ else {
 // +++++++++++ добавление стрелочки при изменинии экрана
 window.addEventListener(`resize`, event => {
   if (screen.width > 768) {
-    console.log(screen.width);
+    // console.log(screen.width);
     for (let i = 0; i < addArrow.length; i++) {
       addArrow[i].classList.add("button-arrow");
     }
@@ -40,7 +40,7 @@ if (chose) {
 
     countryName.addEventListener("click", function (evt) {
       evt.preventDefault();
-      console.log("click chose country");
+      // console.log("click chose country");
       if (!chose[i].classList.contains("add-plan__item--select-active")) {
         // modalMap.classList.remove("hidden");
         // buttonCloseChose.classList.add("hidden");
@@ -53,7 +53,7 @@ if (chose) {
     });
     buttonCloseChose.addEventListener("click", function (evt) {
       evt.preventDefault();
-      console.log("click Close country");
+      // console.log("click Close country");
       if (chose[i].classList.contains("add-plan__item--select-active")) {
         chose[i].classList.remove("add-plan__item--select-active");
       }
@@ -70,7 +70,7 @@ form.addEventListener("submit", function (evt) {
   for (let i = 0; i < textArea.length; i++) {
     if (!textArea[i].value) {
 
-      console.log("Error");
+      // console.log("Error");
       textArea[i].classList.remove("error");
       setTimeout(function () {
         textArea[i].classList.add("error");
@@ -79,4 +79,3 @@ form.addEventListener("submit", function (evt) {
   }
 
 });
-

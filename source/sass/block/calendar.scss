@@ -36,7 +36,7 @@
   color: #FF5C23;
 }
 .calendar__date{
-  position: relative;
+  // position: relative;
   height: 32px;
   text-align: center;
   border: 1px solid $gray_lighter;
@@ -88,12 +88,13 @@
   @include desktop{
     display: block;
     // width: auto;
-    position: absolute;
+    // position: absolute;
     font-weight: normal;
     font-size: 18px;
     line-height: 20px;
-    bottom: 15px;
-    left: 18px;
+    padding-top: 9px;
+    // bottom: 15px;
+    // left: 18px;
   }
 }
 .name-month{

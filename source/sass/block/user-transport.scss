@@ -118,7 +118,7 @@
   border: 4px;
   top:  125%;
   right: 0;
-  transform: translateX(40%);
+  transform: translateX(50%);
 }
 .dropdown:before{
   content: "";
@@ -128,8 +128,8 @@
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid $special_darkest_blue;
-  bottom:100%;
-  left:50%;
+  bottom: 100%;
+  left: 50%;
   transform:translate(-50%);
 }
 .user-transport-item:hover,

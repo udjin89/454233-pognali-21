@@ -10,7 +10,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header page-header--light">
+  <header class="page-header">
     <div class="container">
       <div class="menu menu--close">
         <a class="page-header__logo logo logo--dark" href="index.html">
@@ -27,12 +27,11 @@
         <a class="page-header__logo logo logo--light hidden" href="index.html">
           <picture>
             <source media="(min-width: 1440px)"
-              srcset="../img/logo-desktop-dark.png 1x, ../img/logo-desktop-dark@2x.png 2x"
+              srcset="./img/logo-desktop-dark.png 1x, ./img/logo-desktop-dark@2x.png 2x"
               sizes="(min-width: 768px) 200px 200px">
-            <source media="(min-width: 768px)"
-              srcset="../img/logo-tablet-dark.png 1x, ../img/logo-tablet-dark@2x.png 2x"
+            <source media="(min-width: 768px)" srcset="./img/logo-tablet-dark.png 1x, ./img/logo-tablet-dark@2x.png 2x"
               sizes="(min-width: 768px) 200px 200px">
-            <img src="../img/logo-mobile-dark.png" srcset="../img/logo-mobile-dark@2x.png 2x" alt="Логотип Погнали?"
+            <img src="./img/logo-mobile-dark.png" srcset="./img/logo-mobile-dark@2x.png 2x" alt="Логотип Погнали?"
               width="100" height="15">
           </picture>
         </a>
@@ -51,8 +50,8 @@
         </nav>
 
         <div class="authorization authorization--header">
-          <a class="authorization__phone" href="#"><img src="../img/icon/icon-call.svg" alt=""></a>
-          <a class="authorization__mail" href="#"><img src="../img/icon/icon-mail-small.svg" alt=""></a>
+          <a class="authorization__phone" href="#"><img src="./img/icon/icon-call.svg" alt=""></a>
+          <a class="authorization__mail" href="#"><img src="./img/icon/icon-mail-small.svg" alt=""></a>
           <a class="authorization__login button" href="#"><span>авторизация</span></a>
         </div>
 
@@ -79,14 +78,14 @@
         <ul class="page-header__social social">
           <li class="social__item">
             <a class="social__link social__link--page-header" href="#" aria-label="фейсбук"><img
-                src="../img/icon/icon-facebook.svg" alt="фейсбук" width="11" height="21"></a>
+                src="./img/icon/icon-facebook.svg" alt="фейсбук" width="11" height="21"></a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--page-header" href="#" aria-label="вконтакте"><img
-                src="../img/icon/icon-vkontakte.svg" alt="вконтакте" width="23" height="12"></a>
+                src="./img/icon/icon-vkontakte.svg" alt="вконтакте" width="23" height="12"></a>
           </li>
           <li class="social__item"><a class="social__link social__link--page-header" href="#"
-              aria-label="инстаграм"><img src="../img/icon/icon-instagram.svg" alt="инстаграм" width="18"
+              aria-label="инстаграм"><img src="./img/icon/icon-instagram.svg" alt="инстаграм" width="18"
                 height="18"></a>
           </li>
         </ul>
@@ -97,7 +96,7 @@
   </header>
 
   <main class="page-main  ">
-    <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+    <form class="form" action="https://echo.htmlacademy.ru" method="POST" novalidate>
 
       <header class="radius-section page-main-title">
         <div class="container-tablet ">
@@ -117,7 +116,7 @@
             <br>
             <span class="level__word">level</span>
           </div>
-          <img class="foto foto--form" src="../img/foto-user/foto-demin.jpg" alt="Фото попутчика" width="270"
+          <img class="foto foto--form" src="./img/foto-user/foto-demin.jpg" alt="Фото попутчика" width="270"
             height="270">
 
           <button class="change-foto" type="button"><span class="change-foto__word">сменить</span> фото</button>
@@ -260,7 +259,7 @@
                 <button class="input-plus" type="button" aria-label="Увеличить количество попутчиков"></button>
               </fieldset>
               <div class="wrap-title wrap-title--day">
-                <label class="add-plan__title" for="">длительность:</label>
+                <label class="add-plan__title" for="">длителтность:</label>
                 <span class="add_plan__title-brief">дн.</span>
               </div>
               <fieldset class="input-number input-count-day">
@@ -949,7 +948,7 @@
                   width="35" height="24">
               </label>
               <div class="wrap-textarea">
-                <textarea class="action-plan" name="" id="" placeholder="План действий"></textarea>
+                <textarea class="action-plan" name="" id="" placeholder="План действий" required></textarea>
                 <span class="action-plan-error">Это поле должно быть заполнено</span>
               </div>
             </div>
@@ -957,7 +956,7 @@
               <label class="label-country">Чехия<img class="flag flag-shadow" src="img/icon-flag/сzechia.png"
                   alt="Флаг Чехии" width="35" height="24"></label>
               <div class="wrap-textarea">
-                <textarea class="action-plan" name="" id="" placeholder="План действий"></textarea>
+                <textarea class="action-plan" name="" id="" placeholder="План действий" required></textarea>
                 <span class="action-plan-error">Это поле должно быть заполнено</span>
               </div>
             </div>
@@ -975,29 +974,28 @@
     <div class="container page-footer__grid">
       <a class="page-footer__logo logo">
         <picture>
-          <source media="(min-width: 1440px)"
-            srcset="../img/logo-desktop-dark.png 1x, ../img/logo-desktop-dark@2x.png 2x"
+          <source media="(min-width: 1440px)" srcset="./img/logo-desktop-dark.png 1x, ./img/logo-desktop-dark@2x.png 2x"
             sizes="(min-width: 768px) 200px 200px">
-          <source media="(min-width: 768px)" srcset="../img/logo-tablet-dark.png 1x, ../img/logo-tablet-dark@2x.png 2x"
+          <source media="(min-width: 768px)" srcset="./img/logo-tablet-dark.png 1x, ./img/logo-tablet-dark@2x.png 2x"
             sizes="(min-width: 768px) 200px 200px">
-          <img src="../img/logo-mobile-dark.png" srcset="../img/logo-mobile-dark@2x.png 2x" alt="Логотип Погнали?"
+          <img src="./img/logo-mobile-dark.png" srcset="./img/logo-mobile-dark@2x.png 2x" alt="Логотип Погнали?"
             width="100" height="15">
         </picture>
       </a>
       <ul class="page-footer__social social">
         <li class="social__item"><a class="social__link social__link--page-footer" href="#" aria-label="фейсбук"><img
-              class="facebook_img" src="../img/icon/icon-facebook.svg" alt="фейсбук" width="11" height="21"></a></li>
+              class="facebook_img" src="./img/icon/icon-facebook.svg" alt="фейсбук" width="11" height="21"></a></li>
         <li class="social__item"><a class="social__link social__link--page-footer" href="#" aria-label="вконтакте"><img
-              class="vkontakte_img" src="../img/icon/icon-vkontakte.svg" alt="вконтакте" width="23" height="12"></a>
+              class="vkontakte_img" src="./img/icon/icon-vkontakte.svg" alt="вконтакте" width="23" height="12"></a>
         </li>
         <li class="social__item"><a class="social__link social__link--page-footer" href="#" aria-label="инстаграм"><img
-              img class="instagram_img" src="../img/icon/icon-instagram.svg" alt="инстаграм" width="18" height="18"></a>
+              img class="instagram_img" src="./img/icon/icon-instagram.svg" alt="инстаграм" width="18" height="18"></a>
         </li>
       </ul>
       <div class="page-footer__copy">
         <p class="copy-txt">Разработано</p>
         <a class="copy-link" href="#">
-          <img class="copy_img" src="../img/icon/htmlacademy.svg" alt="Логотип HTML академии" width="27" height="33">
+          <img class="copy_img" src="./img/icon/htmlacademy.svg" alt="Логотип HTML академии" width="27" height="33">
         </a>
       </div>
     </div>

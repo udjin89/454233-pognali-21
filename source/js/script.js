@@ -1,5 +1,5 @@
 // Вычесление длинны "прогресс бара", смещения stoke dash
-console.log("start script");
+// console.log("start script");
 const svgEl = document.querySelectorAll(".level__progress-bar"); // ищем все элементы с уровнем
 svgEl.forEach((svg) => { // цикл
   const circle = document.getElementById("circle"); // svg c тегом "circle"
@@ -8,7 +8,7 @@ svgEl.forEach((svg) => { // цикл
   const percent = (dashArray / 100) * (100 - percentFill); // вычисление смещения
   svg.style.strokeDasharray = dashArray; // задаем длину  stroke svg
   svg.style.strokeDashoffset = percent; // смещение
-  console.log(percent);
+  // console.log(percent);
 });
 // ++++  Открытие меню ++++
 const head = document.querySelector(".page-header");
@@ -18,11 +18,11 @@ const logoLight = menu.querySelector(".logo--light");
 const logoDark = menu.querySelector(".logo--dark");
 
 if (toggleButton) {
-  console.log("toggle button find \n");
-  console.log(head);
+  // console.log("toggle button find \n");
+  // console.log(head);
   toggleButton.addEventListener("click", function (evt) {
     evt.preventDefault();
-    console.log("Click toggleButton");
+    // console.log("Click toggleButton");
 
     if (!toggleButton.classList.contains("toggle--close")) {
       toggleButton.classList.remove("toggle--open");
@@ -35,7 +35,7 @@ if (toggleButton) {
         logoLight.classList.add("hidden");
         logoDark.classList.remove("hidden");
       }
-      console.log("Close menu");
+      // console.log("Close menu");
     }
     else { // Открываем меню
       toggleButton.classList.remove("toggle--close");
@@ -48,7 +48,7 @@ if (toggleButton) {
         logoDark.classList.add("hidden");
         logoLight.classList.remove("hidden");
       }
-      console.log("Open menu");
+      // console.log("Open menu");
     }
   });
 }
@@ -70,7 +70,7 @@ if (modalBusiness) {
 
   showButtonTariff.addEventListener("click", function (evt) {
     evt.preventDefault();
-    console.log("Click showButtonTariff");
+    // console.log("Click showButtonTariff");
     modalBusiness.classList.remove("hidden");
     modalBusiness.classList.add("modal-show");
     console.log("Show Tariff");
@@ -78,10 +78,10 @@ if (modalBusiness) {
 
   closeButtonTariff.addEventListener("click", function (evt) {
     evt.preventDefault();
-    console.log("Click closeButtonTariff");
+    // console.log("Click closeButtonTariff");
     modalBusiness.classList.add("hidden");
     modalBusiness.classList.remove("modal-show");
-    console.log("Add class hidden");
+    // console.log("Add class hidden");
   });
 }
 
@@ -107,5 +107,5 @@ window.addEventListener('scroll', function () {
       logoLight.classList.add("hidden");
     }
   }
-  console.log("heightScroll = " + heightHeader);
+  // console.log("heightScroll = " + heightHeader);
 });

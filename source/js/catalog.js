@@ -6,7 +6,7 @@ if (filterClickZone) {
 
   filterClickZone.addEventListener("click", function (evt) {
     evt.preventDefault();
-    console.log("Click Filter");
+    // console.log("Click Filter");
     if (!filter.classList.contains("filter--open")) {
       // modalMap.classList.remove("hidden");
       filter.classList.add("filter--open");
@@ -20,7 +20,7 @@ if (buttonCloseFilter) {
 
   buttonCloseFilter.addEventListener("click", function (evt) {
     evt.preventDefault();
-    console.log("Click Filter");
+    // console.log("Click Filter");
     if (!filter.classList.contains("filter--open")) {
       // modalMap.classList.remove("hidden");
       filter.classList.add("filter--open");
@@ -41,7 +41,7 @@ if (optionsListItems) {
 
     clickOption.addEventListener("click", function (evt) {
       evt.preventDefault();
-      console.log("Click Option = " + i);
+      // console.log("Click Option = " + i);
       if (!optionsListItems[i].classList.contains("option-list__item--active")) {
         // modalMap.classList.remove("hidden");
         optionsListItems[i].classList.add("option-list__item--active");

@@ -38,7 +38,7 @@ img {
   width: $mobile - 2*$mobilePaddind;
   margin: 0 auto;
   @include tablet{
-   width: $tablet - 2*$tabletPaddindBig;
+    width: $tablet - 2*$tabletPaddindBig;
     margin: 0 auto;
   }
   @include desktop{
@@ -130,4 +130,7 @@ img {
   }
   // padding-bottom: 50px;
 
+}
+.foto{
+  transition: transform 0.3s;
 }

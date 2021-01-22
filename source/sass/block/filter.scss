@@ -64,7 +64,7 @@
 .filter__continent-list,
 .filter-country,
 .filter-country__list-item--disable{
-   display: none;
+  display: none;
 }
 .filter-country__list-item--disable{
   @include desktop{

@@ -270,8 +270,7 @@
   }
 }
 .input-minus{
- background-image: url(../img/icon/icon-minus.svg);
-
+  background-image: url(../img/icon/icon-minus.svg);
 }
 .input-plus{
   background-image: url(../img/icon/icon-plus.svg);
@@ -443,13 +442,11 @@
       right: 212px;
     }
   }
-
   &--select{
     &::before{
-       background-color: $white;
-       border: 1px solid $gray_legend;
+      background-color: $white;
+      border: 1px solid $gray_legend;
     }
-
     // .country-name{
     //   &::before {
     //     top: 50%;
@@ -494,25 +491,25 @@
       @include tablet{
         display: block;
       }
-   }
-    .country-name{
-      color: $white;
-      background: $basic_blue_light;
-      // &::before {
-      //   width: 16px;
-      //   height: 1.7px;
-      //   top: 50%;
-      //   left: 193px;
-      //   transform: rotate(45deg);
-      // }
-      // &::after {
-      //   width: 16px;
-      //   height: 1.7px;
-      //   left: 193px;
-      //   top: 50%;
-      //   margin: 0;
-      //   transform: rotate(135deg);
-      // }
+  }
+  .country-name{
+    color: $white;
+    background: $basic_blue_light;
+    // &::before {
+    //   width: 16px;
+    //   height: 1.7px;
+    //   top: 50%;
+    //   left: 193px;
+    //   transform: rotate(45deg);
+    // }
+    // &::after {
+    //   width: 16px;
+    //   height: 1.7px;
+    //   left: 193px;
+    //   top: 50%;
+    //   margin: 0;
+    //   transform: rotate(135deg);
+    // }
       @include tablet{
 
         &::before {
@@ -648,7 +645,7 @@
   &:hover{
     &::before,
     &::after{
-     background-color: rgba($color: $black, $alpha: 0.3);
+      background-color: rgba($color: $black, $alpha: 0.3);
     }
   }
   &:active{
@@ -814,7 +811,7 @@
   resize: none;
   border: 1px solid $gray_legend;
   border-radius: 4px;
-
+  outline: none;
   padding: 10px 14px;
 
   font-family: "Blogger Sans";
@@ -850,32 +847,38 @@
     font-size: 16px;
     line-height: 22px;
     color: $special_grey;
-    border-color: $black;
+    border-color: $basic_blue;
   }
 
 }
-.error{
+// .error{
 
+//   border-color: $special_red;
+//   + .action-plan-error{
+//     display: block;
+//   }
+// }
+.action-plan.error:invalid{
   border-color: $special_red;
   + .action-plan-error{
     display: block;
-  }
+    }
 }
 .wrap-textarea{
   position: relative;
+  display: flex;
   // height: min-content;
   margin-bottom: 23px;
 }
 .action-plan-error{
   display: none;
-
   color: #FF0000;
   background: #FFEFEF;
   position: absolute;
   z-index: 1;
   left: 1px;
   right: 1px;
-  bottom: 3px;
+  bottom: 1px;
   border-radius: 0 0 4px 4px;
   padding-left: 21px;
   font-weight: normal;
@@ -883,11 +886,11 @@
     width: 498px;
     height: 56px;
     padding-top: 20px;
-    bottom: 4px;
+    // bottom: 4px;
   }
   @include desktop{
     width: 728px;
-    bottom: 2px;
+    // bottom: 2px;
   }
 }
 .label-country{

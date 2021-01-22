@@ -163,7 +163,7 @@
 }
 .companions__wrap-foto{
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0 ;
   height: 270px;
   width: 270px;
   @include tablet{
@@ -178,6 +178,7 @@
   padding-bottom: 20px;
   border-radius: 10px;
   width: 270px;
+  overflow: hidden;
   &:hover{
     box-shadow: (0px 4px 9px rgba(0, 0, 0, 0.16));
     .foto{
@@ -189,6 +190,7 @@
   }
   @include tablet{
     width: 285px;
+    border-radius: 20px;
     .foto{
       width: 100%
     }
@@ -196,7 +198,7 @@
 }
 .companions__item .foto{
   background-color: $special_dark_blue;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 .level {
   font-weight: bold;
