@@ -1,0 +1,329 @@
+.search{
+  color: $basic_blue_light;
+  background-color: $basic_yellow;
+  border-radius: 20px;
+  padding: 26px 25px 22px 25px;
+  margin-top: 21px;
+  margin-bottom: 28px;
+  grid-column: 4/-1;
+  align-self: start;
+  @include tablet{
+    padding: 35px 37px 37px 36px;
+  }
+}
+.search__title{
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0;
+  width: 145px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  @include tablet{
+    width: 100%;
+    margin-bottom: 38px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+.option-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.option-list__item{
+  border-top: 1px solid #F3C72B;
+  @include tablet-only{
+    display: grid;
+    grid-template-columns: 123px 1fr auto;
+    border: none;
+    &:first-of-type {
+      border-top: 1px solid #F3C72B;
+    }
+    &:last-of-type {
+      border-bottom: 1px solid #F3C72B;
+    }
+  }
+}
+.option-list__title{
+  margin: 0;
+  padding: 12px 0 12px 0;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  background-image: url(../img/icon/icon-arrow-open-menu.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+
+  @include tablet-only{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    background: none;
+  }
+  .colon{
+    display: none;
+    @include tablet-only{
+      display: inline;
+    }
+  }
+  @include desktop{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+  }
+  &:hover{
+    opacity: 0.6;
+  }
+  &:active{
+    opacity: 0.3;
+  }
+}
+.user-transport--search{
+  display: none;
+  @include tablet-only{
+    display: flex;
+  }
+}
+.option-list__item--active{
+  .option-list__title{
+    background-image: url(../img/icon/icon-arrow-close-menu.svg);
+    @include tablet-only{
+      background: none;
+    }
+  }
+  .input-options{
+    display: grid;
+  }
+  .user-transport--search,
+  .level-control{
+    display: flex;
+  }
+  .range-filter{
+    display: block;
+  }
+}
+.input-options{
+  display: none;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
+  @include tablet-only{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    align-items: center;
+  }
+}
+.input-options__item{
+  font-size: 15px;
+  line-height: 20px;
+  color: $black;
+
+}
+
+
+// ++++++++++++ Level ++++++++++++++
+.level-control{
+  display: none;
+  justify-content: space-between;
+  margin: auto 0;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 13px;
+  letter-spacing: 0.06em;
+
+  height: 34px;
+  text-align: center;
+  grid-column-start: 3;
+  grid-column-end: 4;
+
+  &::before{
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 15px;
+    background: $white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &::after{
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 1px;
+    background: $gray_legend;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include tablet-only{
+    display: flex;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.range-filter{
+  width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: none;
+  @include tablet-only{
+    padding-top: 2px;
+    width: 281px;
+    grid-row-start: 1;
+    display: block;
+  }
+}
+.range-control {
+  position: relative;
+  padding-top: 21px;
+  height: 50px;
+  border-radius: 2px;
+  @include tablet{
+    // padding-top: 25px;
+  }
+  .scale{
+    height: 2px;
+    background-color: rgba($color: $basic_blue_light, $alpha:  0.2);
+  }
+  .bar{
+    height: 2px;
+    background-color: $basic_blue_light;
+  }
+
+  .toggle{
+    position: absolute;
+    top: 17px;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    background-color: $basic_blue_light;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover{
+      width: 19px;
+      height: 19px;
+      top: 13px;
+      transform: translateX(-25%);
+    }
+    &:active{
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.24);
+    }
+  }
+}
+
+.level-control input{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 13px;
+  letter-spacing: 0.07em;
+
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  @include tablet-only{
+    width: 74px;
+  }
+}
+.level-control{
+
+  position: relative;
+  .min-level{
+    border-radius: 4px 0 0 4px;
+  }
+  .max-level{
+    border-radius: 0 4px 4px 0;
+  }
+  .max-level,
+  .min-level{
+    width: 50%;
+    border: 1px solid $gray_legend;
+    background-color: $white;
+    &:hover{
+      border-color: #959BB2;
+    }
+    &:active{
+      border-color: $black;
+    }
+  }
+}
+.level-control input::-webkit-outer-spin-button,
+.level-control input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.search-filter-apply{
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 0;
+  font-family: "Blogger Sans";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $white;
+  &:hover{
+    background-color: $white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.14);
+  }
+  &:active{
+    color: rgba($color: $basic_blue_light, $alpha: 0.3);
+    background-color: #F3C72B;
+  }
+}
+
+// +++++++++++CheckBox++++++++++
+.label-checkbox{
+  position: relative;
+  cursor: pointer;
+  padding-left: 27px;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: $white;
+    border-radius: 4px;
+  }
+  &:hover{
+    color: rgba($color: $black, $alpha: 0.6);
+  }
+  &:active{
+    opacity: 0.3;
+  }
+}
+
+.filter-input-checkbox:checked + .label-checkbox::before{
+  background: url(/img/icon/icon-checkbox.svg), $white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.filter-input-checkbox:hover{
+  + .label-checkbox{
+    // opacity: 0.6;
+  }
+  + .label-checkbox::before{
+  // opacity: 0.6;
+}
+
+}
+.filter-input-checkbox:hover:checked + .label-checkbox::before{
+  opacity: 1;
+  // background-color: olive;
+}

@@ -55,5 +55,20 @@
 // }
 .registration__phone,
 .registration__mail {
-  color: $basic_yellow;
+  // color: $basic_yellow;
+}
+.phone-reg,
+.mail-reg{
+  &:hover{
+    color: $special_yellow_dark;
+    svg{
+      fill: $special_yellow_dark;
+    }
+  }
+  &:active{
+    color: rgba($color: $special_yellow_dark, $alpha: 0.3) ;
+    svg{
+      fill: rgba($color: $special_yellow_dark, $alpha: 0.3) ;
+    }
+  }
 }

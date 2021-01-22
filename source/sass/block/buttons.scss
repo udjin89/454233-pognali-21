@@ -3,11 +3,19 @@
   color: $basic_blue_light;
   background-color: $basic_yellow;
   align-self: end;
-	justify-self: start;
+  justify-self: start;
+  border: none;
   cursor: pointer;
   @include tablet{
     font-size: 24px;
     line-height: 24px;
+  }
+
+  &:hover{
+    background-color: $special_yellow_dark;
+  }
+  &:active{
+    color: rgba($color: $basic_blue_light, $alpha: 0.3);
   }
 }
 
@@ -38,6 +46,11 @@
   @include tablet{
     font-size: 24px;
     line-height: 24px;
+  }
+  &:active{
+    &::after{
+      opacity: 0.3;
+    }
   }
 }
 
@@ -82,9 +95,23 @@
   // top: 100%;
   transform: translateY(6px);
 }
+.page-header--scroll{
+  .toggle--close::before,
+  .toggle--close::after{
+    background-color: $grey;
+  }
+}
 .toggle--open{
   height: 25px;
   float: right;
+
+  @include tablet{
+    float: none;
+    display: inline;
+    margin-left: 160px;
+    top: -14px;
+  }
+
   &::before{
     position: absolute;
     display: block;
@@ -110,4 +137,86 @@
   content: "";
   border-radius: 1.5px;
   transform: rotate(-45deg);
+}
+.button-next-step{
+  width: 100%;
+  padding: 7px 0;
+  // margin-top: 22px;
+  font-family: "Blogger Sans";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  @include tablet{
+    width: auto;
+    padding: 29px 75px 27px 34px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+.button-back-step{
+  position: relative;
+  font-family: "Blogger Sans";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  color: $basic_blue_light;
+  margin-top: 15px;
+  cursor: pointer;
+  @include tablet{
+    margin: 0;
+    text-transform: none;
+    font-size: 24px;
+    line-height: 22px;
+    &::after{
+      display: inline-block;
+      position: absolute;
+      left: -20px;
+      top: 33px;
+      transform: rotate(180deg);
+      width: 14px;
+      height: 14px;
+      content: " ";
+      background-image: url(../img/icon/icon-arrow-button.svg);
+      background-repeat: no-repeat;
+
+    }
+  }
+  &:hover{
+    opacity: 0.7;
+  }
+  &:active{
+    opacity: 0.3;
+  }
+}
+.return-button{
+  display: none;
+  @include tablet{
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-image: url(../img/icon/icon_return-arrow.svg);
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    padding-right: 60px;
+    padding-bottom: 80px;
+  }
+
+  &:hover{
+    opacity: 0.6;
+  }
+  &:active{
+    opacity: 0.3;
+  }
 }

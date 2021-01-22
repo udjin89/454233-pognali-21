@@ -8,6 +8,8 @@
 // подключение шрифтов
 @import "fonts.scss";
 //
+
+
 //++++++++ Блоки +++++++++++
 @import "block/page.scss";
 // Header
@@ -40,9 +42,13 @@
 @import "block/profile.scss";
 @import "block/my-plans.scss";
 @import "block/add-plan.scss";
+@import "block/select-country.scss";
+@import "block/calendar.scss";
 
 //catalog
 @import "block/find-companion.scss";
+@import "block/search.scss";
+@import "block/filter.scss";
 
 // глобальные стили
 @import "global.scss";

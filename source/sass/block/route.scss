@@ -8,9 +8,11 @@
   background-color: $basic_yellow;
 
   @include tablet{
+    padding-top: 70px - $section_shift;
     padding-bottom: 101px;
   }
   @include desktop{
+    padding-top: 55px - $section_shift;
     padding-bottom: 56px;
   }
 }
@@ -63,5 +65,18 @@
     padding: 29px 64px 27px 37px;
     border-radius: 20px;
     align-self: start;
+  }
+  &:hover{
+    color: $white;
+    background-color: $special_dark_blue;
+    &::after{
+      background-image: url(../img/icon/icon-arrow-button-hover.svg);
+    }
+  }
+  &:active{
+    color: rgba($color: $white, $alpha: 0.3);
+    &::after{
+      background-image: url(../img/icon/icon-arrow-button-active.svg);
+    }
   }
 }

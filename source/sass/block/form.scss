@@ -1,26 +1,9 @@
-.form__destination-title{
-  position: relative;
-  margin: 0;
-  padding: 0 0 12px 0;
-  background-color: $special_dark_blue2;
-  text-align: center;
-
-  &::after{
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    display: block;
-    content:"";
-    margin-bottom: 3px;
-    height: 5px;
-    width: 214px;
-    background-color: $special_orange;
-    border-radius: 4px;
-  }
+.form{
+  color: $basic_blue_light;
 }
+
 .foto--form{
   height: 100px;
   width: 100px;
   border-radius: 50%;
 }
-

@@ -45,13 +45,31 @@
   color: $special_dark_blue;
   text-align: center;
 
+  &:hover{
+    color: $basic_yellow;
+  }
+  &:active{
+    opacity: 0.3;
+  }
+  @include tablet{
+    font-size: 60px;
+    line-height: 71px;
+    text-align: left;
+  }
   @include desktop{
     color: $white;
     font-size: 20px;
     line-height: 20px;
   }
 }
-
+.page-header--scroll{
+  .main-nav::before{
+    background-color: $special_dark_blue;
+  }
+  .main-nav__link{
+    color: $special_dark_blue;
+  }
+}
 
 
 // .main-nav__toogle::after {

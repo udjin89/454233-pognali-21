@@ -1,10 +1,21 @@
 .authorization {
   display: flex;
-  @include tablet{
-    display: none;
+
+  &--mobile{
+    @include tablet{
+      display: none;
+      // position: absolute;
+    }
   }
 }
-
+.menu--open .authorization{
+  // background: red;
+  @include tablet{
+    position: absolute;
+    right: 0;
+    top: 35px;
+    }
+}
 .authorization__phone,
 .authorization__mail {
   font-weight: bold;
@@ -59,4 +70,31 @@
 .authorization--header .authorization__phone,
 .authorization--header .authorization__mail{
   // display: none;
+}
+// ====== Отзывчивость======
+.authorization__phone{
+  &:hover{
+    background-color: $special_orange_dark;
+  }
+}
+.authorization__mail{
+  &:hover{
+    background-color: $special_orange;
+  }
+}
+.authorization__login{
+  &:hover{
+    background-color: $special_yellow_dark;
+  }
+}
+
+.authorization__login,
+.authorization__phone,
+.authorization__mail{
+  &:active{
+    img,
+    span {
+      opacity: 0.3;
+    }
+  }
 }

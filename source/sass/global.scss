@@ -23,10 +23,23 @@ img {
 }
 
 .container {
+  background: none;
   width: $mobile - 2*$mobilePaddind;
   margin: 0 auto;
   @include tablet{
     width: $tablet - 2*$tabletPaddind;
+  }
+  @include desktop{
+    width: $desktop - 2*$desktopPaddind;
+  }
+}
+.container-tablet{
+  background: none;
+  width: $mobile - 2*$mobilePaddind;
+  margin: 0 auto;
+  @include tablet{
+    width: $tablet - 2*$tabletPaddindBig;
+    margin: 0 auto;
   }
   @include desktop{
     width: $desktop - 2*$desktopPaddind;
@@ -44,11 +57,44 @@ img {
     font-size: 45px;
     line-height: 45px;
   }
+  @include desktop{
+    margin-bottom: 57px;
+  }
 }
 .main-title{
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
+  padding-bottom: 15px;
+  &--form{
+    // padding: 0;
+    margin: 0;
+    position: relative;
+    color: $white;
+
+    &::after{
+      bottom: -5px;
+      left: 0;
+      position: absolute;
+      display: block;
+      content:"";
+      margin-bottom: 3px;
+      height: 5px;
+      width: 214px;
+      background-color: $special_orange;
+      border-radius: 4px;
+    }
+    @include tablet{
+      padding-bottom: 84px;
+    }
+    @include desktop{
+      // padding-top: 130px;
+      padding-bottom: 68px;
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+
 }
 
 .radius-section{
@@ -62,4 +108,29 @@ img {
   content: "";
   display: table;
   clear: both;
+}
+.flag {
+  display: block;
+  width: 35px;
+  height: 24px;
+}
+.flag-shadow{
+  box-shadow: -30px 0px 5px 3px $white;
+}
+.page-main-title{
+  position: relative;
+  z-index: 40;
+  margin: 0;
+  padding:0;
+  background-color: $special_dark_blue2;
+
+  padding-top: 60px;
+  @include desktop{
+    padding-top: 124px;
+  }
+  // padding-bottom: 50px;
+
+}
+.foto{
+  transition: transform 0.3s;
 }

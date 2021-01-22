@@ -6,13 +6,23 @@
   padding-top: 37px - $section_shift;
   padding-bottom: 38px;
   background-color: $gray;
+  @include tablet{
+    padding-top: 74px - $section_shift;
+    padding-bottom: 63px;
+  }
+  @include desktop{
+    padding-top: 107px - $section_shift;
+    padding-bottom: 165px;
+  }
 }
 .tariff__padding-left{
   padding-left: 24px;
+  position: relative;
 }
 .title_tariff{
 
   @include tablet{
+    text-align: center;
     br{
     display: none;
     }
@@ -34,11 +44,50 @@
 
   counter-reset: my-awesome-counter;
 }
+.tariffs--usual{
+  position: relative;
+  z-index: 10;
+  @include tablet{
+    margin-top: 134px;
+    &::after{
+      position: absolute;
+      z-index: 0;
+      top: -41px;
+      right: -35px;
+      content: "";
+      width: 198px;
+      height: 285px;
+      background: $special_blue_lightest;
+      border-radius: 20px;
+    }
+  }
+  @include desktop{
+    &::after{
+      right: 184px;
+      width: 446px;
+      height: 300px;
+    }
+  }
+}
 .tariff__pic{
   float: right;
+  @include tablet{
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+  }
+  @include desktop{
+    width: 198px;
+    height: 198px;
+    bottom: 50%;
+    right: 80px;
+    transform: translateY(50%);
+  }
 }
 .tariffs__item{
   position: relative;
+  z-index: 10;
   padding-top: 13px;
   padding-bottom: 19px;
   border-top: 1px solid $special_grey_light;
@@ -46,7 +95,7 @@
     border-bottom: 1px solid $special_grey_light;
   }
   counter-increment: my-awesome-counter;
- &::before {
+  &::before {
     content: counter(my-awesome-counter);
     background: $special_orange;
     width: 2rem;
@@ -88,6 +137,10 @@
     display: flex;
     justify-content: space-between;
   }
+  @include desktop{
+    margin-right: 345px;
+    width: auto;
+  }
 }
 
 .tariff-name{
@@ -98,6 +151,7 @@
   margin: 0;
   margin-top: 6px;
   padding: 0;
+
 }
 .modal--business-tariff{
   max-width: 750px;
@@ -119,6 +173,7 @@
     margin-top: 47px;
     padding: 0 90px 0 90px;
     .tariffs__item{
+      margin: 0;
       padding: 14px 0;
       // display: flex;
       font-size: 22px;
@@ -139,12 +194,19 @@
   color: $basic_blue_light;
   background-color: #F3F4F8;
   border: none;
+  border-radius: 0 0 20px 20px;
   text-transform: uppercase;
   @include tablet{
     padding: 41px 0;
     font-size: 24px;
     line-height: 24px;
     text-transform: none;
+  }
+  &:hover{
+    background-color: $gray_light;
+  }
+  &:active{
+    color: rgba($color: $basic_blue_light, $alpha: 0.3);
   }
 }
 
@@ -165,6 +227,12 @@
     line-height: 20px;
     display: flex;
     align-items: center;
+  }
+  &:hover{
+    opacity: 0.7;
+  }
+  &:active{
+    opacity: 0.3;
   }
 }
 .icon-busnes{
