@@ -14,6 +14,7 @@
   @include retina{
     background-image:  url(../img/background/about-mobile@2x.png);
     background-size: 70%;
+    background-position-y: 60%;
   }
 
   @include tablet{
@@ -21,6 +22,10 @@
     background-image: url(../img/background/about-tablet.png);
     @include retina{
       background-image: url(../img/background/about-tablet@2x.png);
+      background-size: 90%;
+      background-position-x: 40%;
+      background-position-y: 60%;
+      // back
     }
 
     background-position-y: 100%;
@@ -32,6 +37,9 @@
     background-image: url(../img/background/about-desktop.png);
     @include retina{
       background-image: url(../img/background/about-desktop@2x.png);
+      background-position-x: 100%;
+      background-position-y: 60%;
+      background-size: 50%;
     }
   }
 
