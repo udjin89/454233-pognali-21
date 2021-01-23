@@ -37,11 +37,11 @@ img {
   background: none;
   width: $mobile - 2*$mobilePaddind;
   margin: 0 auto;
-  @include tablet{
+  @include tablet {
     width: $tablet - 2*$tabletPaddindBig;
     margin: 0 auto;
   }
-  @include desktop{
+  @include desktop {
     width: $desktop - 2*$desktopPaddind;
   }
 }
