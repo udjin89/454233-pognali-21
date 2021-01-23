@@ -5,30 +5,113 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+//
+const csso = require("postcss-csso");
+const rename = require("gulp-rename");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const htmlmin = require("gulp-htmlmin");
+const jsmin = require("gulp-uglify");
+const del = require("del")
 
-// Styles
+//Html - минифицируем
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"))
+}
 
-const styles = () => {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+exports.html = html;
+
+// Scripts
+const script = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(jsmin())
+    .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
 
-exports.styles = styles;
+exports.jsmin = script;
+
+// Styles - обработка scss
+const styles = () => {
+  return gulp.src("source/sass/style.scss")// берем стили
+    .pipe(plumber()) //обработка ошибок, и не дает уппасть
+    .pipe(sourcemap.init())// делает карту-дерево
+    .pipe(sass()) // sass -> css
+    .pipe(postcss([ // задача плагина postcss
+      autoprefixer(), // ставятся префиксы
+      csso()  // минификация
+    ]))
+    .pipe(sourcemap.write(".")) // сравнение ???
+    .pipe(rename("style.min.css")) // переименовываем
+    .pipe(gulp.dest("build/css")) //полученый файл складываем в css
+    .pipe(sync.stream()); // для обновления сервера
+}
+
+exports.styles = styles; // Обьявление, для запуска из консоли задачи: gulp styles
+
+// Images
+const images = () => {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(imagemin([
+      imagemin.mozjpeg({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.images = images; // Обьявление, для запуска из консоли задачи: gulp images
+
+// WepB
+const createWebp = () => {
+  return gulp.src("source/img/**/*.{jpg,png}")
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.createWebp = createWebp; // Обьявление, для запуска из консоли задачи: gulp styles
+
+// Sprite
+
+const sprite = () => {
+  return gulp.src("source/img/icon/*.svg")
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img/icon"))
+}
+
+exports.sprite = sprite;
+// Copy files
+const copy = () => {
+  // берем файлы указаные в массиве
+  return gulp.src([
+    "source/fonts/*.{woff2,woff}",
+    "source/*.ico",
+    "source/img/**/*.{jpg,png,svg}"
+  ],
+    {
+      base: "source" // Указываем базовый уровень, откуда копировать. Иначе скопирует весь путь: "source/fonts/*.{woff2,woff}", а нам нужен только: /fonts/*.{woff2,woff} положить в  build
+    })
+    .pipe(gulp.dest("build"));
+}
+
+exports.copy = copy;
+
+// Clean
+const clean = () => {
+  return del("build");
+}
+
+exports.clean = clean;
 
 // Server
-
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -37,15 +120,48 @@ const server = (done) => {
   done();
 }
 
-exports.server = server;
+exports.server = server; // Обьявление, для запуска из консоли задачи: gulp server
 
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/js/*.js", gulp.series(script));
+  gulp.watch("source/*.html", gulp.series(html, sync.reload));
+  // gulp.watch("source/*.html").on("change", sync.reload);
 }
 
+
+// Build
+// gulp.series - запускает последовательно задачи, которые внутри
+//gulp.parallel - запускает паралельно задачи, которые внутри
+//Внутри наши задачи, описанные выше
+const mybuild = gulp.series(
+  clean,
+  gulp.parallel(
+    styles,
+    html,
+    copy,
+    sprite,
+    images,
+    createWebp
+  )
+)
+// вешнее имя = наша функция
+exports.build = mybuild;
+
 exports.default = gulp.series(
-  styles, server, watcher
+  clean,
+  gulp.parallel(
+    styles,
+    html,
+    copy,
+    sprite,
+    // images,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
+  )
 );
