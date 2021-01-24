@@ -1,14 +1,15 @@
-.country-list{
+.country-list {
   margin: 0 auto;
   padding: 0;
   list-style: none;
   display: flex;
 }
-.country-item{
+
+.country-item {
   position: relative;
   margin-left: 20px;
 
-  &:nth-child(1){
+  &:nth-child(1) {
     margin: 0;
   }
 }

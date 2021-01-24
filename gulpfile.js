@@ -12,7 +12,7 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const htmlmin = require("gulp-htmlmin");
-const jsmin = require("gulp-uglify");
+const jsmin = require("gulp-uglify-es").default;
 const del = require("del")
 
 //Html - минифицируем

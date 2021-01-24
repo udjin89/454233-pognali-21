@@ -1,4 +1,5 @@
 .button {
+  display: block;
   text-decoration: none;
   color: $basic_blue_light;
   background-color: $basic_yellow;
@@ -6,15 +7,17 @@
   justify-self: start;
   border: none;
   cursor: pointer;
-  @include tablet{
+
+  @include tablet {
     font-size: 24px;
     line-height: 24px;
   }
 
-  &:hover{
+  &:hover {
     background-color: $special_yellow_dark;
   }
-  &:active{
+
+  &:active {
     color: rgba($color: $basic_blue_light, $alpha: 0.3);
   }
 }
@@ -30,7 +33,7 @@
   padding-bottom: 22px;
   padding-left: 23px;
 
-  &::after{
+  &::after {
     display: inline-block;
     position: absolute;
     right: 24px;
@@ -43,12 +46,14 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-  @include tablet{
+
+  @include tablet {
     font-size: 24px;
     line-height: 24px;
   }
-  &:active{
-    &::after{
+
+  &:active {
+    &::after {
       opacity: 0.3;
     }
   }
@@ -70,10 +75,10 @@
   // border: 1px solid brown;
 }
 
-.toggle--close::before {
+.toogle--close::before {
   position: absolute;
   display: block;
-  left: 0;
+  left: -2px;
   top: 0;
   width: 25px;
   height: 3px;
@@ -82,10 +87,10 @@
   border-radius: 1.5px;
 }
 
-.toggle--close::after {
+.toogle--close::after {
   position: absolute;
   display: block;
-  left: 0;
+  left: -2px;
   top: 0;
   width: 25px;
   height: 3px;
@@ -95,24 +100,27 @@
   // top: 100%;
   transform: translateY(6px);
 }
-.page-header--scroll{
-  .toggle--close::before,
-  .toggle--close::after{
+
+.page-header--scroll {
+
+  .toogle--close::before,
+  .toogle--close::after {
     background-color: $grey;
   }
 }
-.toggle--open{
+
+.toogle--open {
   height: 25px;
   float: right;
 
-  @include tablet{
+  @include tablet {
     float: none;
     display: inline;
     margin-left: 160px;
     top: -14px;
   }
 
-  &::before{
+  &::before {
     position: absolute;
     display: block;
     left: 0;
@@ -126,7 +134,8 @@
     box-shadow: none;
   }
 }
-.toggle--open::after{
+
+.toogle--open::after {
   position: absolute;
   display: block;
   left: 0;
@@ -138,8 +147,11 @@
   border-radius: 1.5px;
   transform: rotate(-45deg);
 }
-.button-next-step{
+
+.button-next-step {
   width: 100%;
+  display: inline-block;
+  text-align: center;
   padding: 7px 0;
   // margin-top: 22px;
   font-family: "Blogger Sans";
@@ -150,14 +162,19 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  @include tablet{
+
+  @include tablet {
     width: auto;
     padding: 29px 75px 27px 34px;
     font-size: 24px;
     line-height: 24px;
   }
 }
-.button-back-step{
+
+.button-back-step {
+  display: block;
+  text-align: center;
+  text-decoration: none;
   position: relative;
   font-family: "Blogger Sans";
   font-weight: bold;
@@ -170,12 +187,15 @@
   color: $basic_blue_light;
   margin-top: 15px;
   cursor: pointer;
-  @include tablet{
+
+  @include tablet {
     margin: 0;
     text-transform: none;
     font-size: 24px;
     line-height: 22px;
-    &::after{
+    padding: 30px 0 0 10px;
+
+    &::after {
       display: inline-block;
       position: absolute;
       left: -20px;
@@ -189,16 +209,20 @@
 
     }
   }
-  &:hover{
+
+  &:hover {
     opacity: 0.7;
   }
-  &:active{
+
+  &:active {
     opacity: 0.3;
   }
 }
-.return-button{
+
+.return-button {
   display: none;
-  @include tablet{
+
+  @include tablet {
     display: block;
     font-weight: bold;
     font-size: 20px;
@@ -213,10 +237,33 @@
     padding-bottom: 80px;
   }
 
-  &:hover{
+  &:hover {
     opacity: 0.6;
   }
-  &:active{
+
+  &:active {
     opacity: 0.3;
+  }
+}
+
+.button--show-all-companions {
+  margin-top: 20px;
+
+  @include tablet {
+    // margin: 81px 34px 0 34px;
+
+  }
+
+  @include desktop {
+    margin: 0;
+    padding: 29px 95px 27px 33px;
+  }
+}
+
+.button--show-all-destination {
+  margin-top: 25px;
+
+  @include desktop {
+    padding: 29px 103px 27px 32px;
   }
 }

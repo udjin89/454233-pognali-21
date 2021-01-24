@@ -117,8 +117,8 @@
   position: absolute;
   border: 4px;
   top:  125%;
-  right: 0;
-  transform: translateX(50%);
+  left: 50%;
+  transform: translateX(-50%);
 }
 .dropdown:before{
   content: "";

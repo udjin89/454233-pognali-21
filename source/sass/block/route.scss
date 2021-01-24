@@ -7,24 +7,28 @@
   padding-bottom: 35px;
   background-color: $basic_yellow;
 
-  @include tablet{
+  @include tablet {
     padding-top: 70px - $section_shift;
     padding-bottom: 101px;
   }
-  @include desktop{
+
+  @include desktop {
     padding-top: 55px - $section_shift;
     padding-bottom: 56px;
   }
 }
-.route__grid{
-  @include tablet{
+
+.route__grid {
+  @include tablet {
     padding: 0 35px;
   }
-  @include desktop{
+
+  @include desktop {
     display: flex;
     justify-content: end;
   }
 }
+
 .address {
   margin: 0;
   padding: 0;
@@ -37,28 +41,33 @@
   background-image: url(../img/icon/icon-map-mark.svg);
   background-repeat: no-repeat;
   overflow: auto;
-  @include tablet{
+
+  @include tablet {
     background-size: 68px;
     padding-left: 94px;
     padding-top: 22px;
     padding-bottom: 24px;
     font-size: 28px;
     line-height: 28px;
-    br{
+
+    br {
       display: none;
     }
   }
-  @include desktop{
+
+  @include desktop {
     background-size: 90px;
     padding-left: 121px;
     padding-top: 30px;
     padding-bottom: 35px;
   }
 }
-.button-route{
+
+.button-route {
   margin-top: 32px;
   border: 3px solid $special_dark_blue;
-  @include desktop{
+
+  @include desktop {
     margin: 0;
     margin-right: 75px;
     margin-left: 147px;
@@ -66,16 +75,20 @@
     border-radius: 20px;
     align-self: start;
   }
-  &:hover{
+
+  &:hover {
     color: $white;
     background-color: $special_dark_blue;
-    &::after{
+
+    &::after {
       background-image: url(../img/icon/icon-arrow-button-hover.svg);
     }
   }
-  &:active{
+
+  &:active {
     color: rgba($color: $white, $alpha: 0.3);
-    &::after{
+
+    &::after {
       background-image: url(../img/icon/icon-arrow-button-active.svg);
     }
   }

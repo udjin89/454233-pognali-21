@@ -7,28 +7,33 @@
   padding-bottom: 31px;
   background-color: $special_dark_blue;
 
-  @include tablet{
+  @include tablet {
     padding-bottom: 87px;
     padding-top: 141px - $section_shift;
   }
-  @include desktop{
+
+  @include desktop {
     padding-bottom: 134px;
   }
 }
-.companions__grid{
+
+.companions__grid {
   position: relative;
-  @include tablet{
+
+  @include tablet {
     padding-left: 34px;
     padding-right: 34px;
   }
-  @include desktop{
+
+  @include desktop {
     display: grid;
     grid-template-rows: min-content min-content min-content;
     grid-template-columns: 1fr 1fr;
     padding-left: 70px;
     padding-right: 0;
   }
-  &::before{
+
+  &::before {
     z-index: -1;
     position: absolute;
     content: "";
@@ -40,16 +45,19 @@
     background-size: contain;
     opacity: 0.14;
     border-radius: 10px;
-    @include tablet{
+
+    @include tablet {
       left: 0;
       top: 235px;
     }
-    @include desktop{
+
+    @include desktop {
       top: 0;
       left: 489px;
     }
   }
-  &::after{
+
+  &::after {
     z-index: -1;
     position: absolute;
     content: "";
@@ -62,22 +70,26 @@
     background-size: contain;
     opacity: 0.14;
     border-radius: 10px;
-    @include tablet{
+
+    @include tablet {
       left: 369px;
       top: -61px;
       width: 285px;
       height: 285px;
       border-radius: 20px;
     }
-    @include desktop{
+
+    @include desktop {
       top: 220px;
       left: 131px;
     }
   }
 }
-.companions__title{
+
+.companions__title {
   position: relative;
-  &::before{
+
+  &::before {
     z-index: -1;
     position: absolute;
     content: "";
@@ -89,43 +101,50 @@
     //$special_decoration_blue
     background-color: $special_decoration_blue;
     border-radius: 20px;
-    @include tablet{
+
+    @include tablet {
       width: 212px;
       height: 212px;
       top: -70px;
       left: -33px;
     }
-    @include desktop{
+
+    @include desktop {
       top: -60px;
       left: -69px;
     }
   }
 
 }
-.companions__description-block{
-  @include tablet{
+
+.companions__description-block {
+  @include tablet {
     width: 427px;
   }
-  @include desktop{
+
+  @include desktop {
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
   }
 }
-.button--show-all-companions{
-  @include desktop{
+
+.button--show-all-companions {
+  @include desktop {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 2;
   }
 }
+
 .companions__description {
   margin: 0;
   padding: 0;
   padding-top: 19px;
-  @include tablet{
+
+  @include tablet {
     font-size: 28px;
     line-height: 34px;
   }
@@ -136,7 +155,8 @@
   margin-top: 25px;
   padding: 0;
   font-weight: bold;
-  @include tablet{
+
+  @include tablet {
     font-size: 21px;
     line-height: 24px;
   }
@@ -148,11 +168,13 @@
   margin-top: 54px;
   padding: 0;
   list-style: none;
-  @include tablet{
+
+  @include tablet {
     display: flex;
     justify-content: space-between;
   }
-  @include desktop{
+
+  @include desktop {
     grid-row-start: 1;
     grid-row-end: -1;
     grid-column-start: 2;
@@ -161,16 +183,19 @@
     margin: 0;
   }
 }
-.companions__wrap-foto{
+
+.companions__wrap-foto {
   overflow: hidden;
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
   height: 270px;
   width: 270px;
-  @include tablet{
+
+  @include tablet {
     height: 285px;
     width: 285px;
   }
 }
+
 .companions__item {
   position: relative;
   background-color: $white;
@@ -179,59 +204,65 @@
   border-radius: 10px;
   width: 270px;
   overflow: hidden;
-  &:hover{
+
+  &:hover {
     box-shadow: (0px 4px 9px rgba(0, 0, 0, 0.16));
-    .foto{
+
+    .foto {
       // z-index: -1;
       outline: 5px solid red;
       transform: scale(1.2);
       overflow: hidden;
     }
   }
-  @include tablet{
+
+  @include tablet {
     width: 285px;
     border-radius: 20px;
-    .foto{
+
+    .foto {
       width: 100%
     }
   }
 }
-.companions__item .foto{
+
+.companions__item .foto {
   background-color: $special_dark_blue;
   border-radius: 10px 10px 0 0;
 }
+
 .level {
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
 }
-.companions__union-description{
+
+.companions__union-description {
   position: relative;
   padding-top: 27px;
 }
-.country-list{
-  position: absolute ;
+
+.country-list {
+  position: absolute;
   top: -15px;
   width: 100%;
   justify-content: center;
-  @include tablet{
+
+  @include tablet {
     // top: -15px;
   }
 }
+
 .user-name {
   position: relative;
   text-align: center;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 21px;
-  color: $basic_blue_light;
 
-  @include tablet{
+  @include tablet {
     font-size: 24px;
     line-height: 22px;
   }
 
-  &::before{
+  &::before {
     display: inline-block;
     transform: translateY(-50%);
     width: 6px;
@@ -240,19 +271,30 @@
     content: " ";
     border-radius: 50%;
     background-color: $special_grey;
-    @include tablet{
+
+    @include tablet {
       width: 8px;
       height: 8px;
     }
   }
 }
 
-.user-name--offline::before{
+.user-name__link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: $basic_blue_light;
+}
+
+.user-name--offline::before {
   background-color: #F97676;
 }
-.user-name--online::before{
+
+.user-name--online::before {
   background-color: #81E31E;
 }
+
 .companions__user-tags {
   margin-top: 15px;
   margin-right: auto;
@@ -262,19 +304,9 @@
   line-height: 18px;
   text-align: center;
   color: $special_grey;
-  @include tablet{
+
+  @include tablet {
     font-size: 20px;
     line-height: 23px;
-  }
-}
-.button--show-all-companions{
-  margin-top: 20px;
-  @include tablet{
-    // margin: 81px 34px 0 34px;
-
-  }
-  @include desktop{
-    margin: 0;
-    padding: 29px 95px 27px 33px;
   }
 }

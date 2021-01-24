@@ -4,63 +4,76 @@
   z-index: 50;
   background-color: $white;
   padding-top: 37px;
-  @include tablet{
+
+  @include tablet {
     padding-top: 46px;
   }
 }
-.page-footer__grid{
-  @include tablet{
+
+.page-footer__grid {
+  @include tablet {
     display: flex;
     justify-content: space-between;
   }
 }
-.page-footer__copy{
+
+.page-footer__copy {
   margin-top: 37px;
   color: $special_grey;
   border-top: 1px solid #F2F2F2;
   display: flex;
   justify-content: space-between;
 
-  @include tablet{
+  @include tablet {
     border: none;
     margin: 0;
     display: flex;
     align-items: center;
   }
-  &:hover{
+
+  &:hover {
     opacity: 0.6;
   }
-  &:active{
+
+  &:active {
     opacity: 0.3;
   }
 }
 
-.page-footer__logo{
+.page-footer__logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.copy-link{
+
+.copy-link {
   margin: auto 0 auto 0;
-  @include tablet{
+
+  @include tablet {
     margin: 0;
   }
 }
-.copy-txt{
+
+.copy-txt {
   font-size: 16px;
   line-height: 16px;
-  @include tablet{
+
+  @include tablet {
     margin-right: 23px;
     font-size: 20px;
     line-height: 20px;
     margin-top: 10px;
-  };
+  }
+
+  ;
 }
-.copy_img{
-    width: 27px;
-    height: 34px;
+
+.copy_img {
+  width: 27px;
+  height: 34px;
 
 }
-.page-footer-catalog{
+
+.page-footer-catalog {
   position: static;
 }

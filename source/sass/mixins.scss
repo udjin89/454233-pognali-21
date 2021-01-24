@@ -1,15 +1,17 @@
 @mixin tablet-only {
-  @media  (min-width: $tablet) and (max-width: $desktop){
+  @media (min-width: $tablet) and (max-width: $desktop - 1px) {
     @content;
   }
 }
+
 @mixin tablet {
-  @media screen and (min-width: $tablet){
+  @media screen and (min-width: $tablet) {
     @content;
   }
 }
+
 @mixin desktop {
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     @content;
   }
 }
@@ -19,21 +21,22 @@
   top: $section_shift;
   margin-bottom: $section_shift;
 }
+
 @mixin retina {
-  @media (min-resolution: 2dppx){
+  @media (min-resolution: 2dppx) {
     @content;
   }
 }
-@mixin hidden{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
 
+@mixin hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

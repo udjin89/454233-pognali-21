@@ -1,4 +1,4 @@
-.select-country{
+.select-country {
 
   position: absolute;
   z-index: 100;
@@ -16,7 +16,8 @@
   grid-template-columns: repeat(5, 1fr);
   // justify-items: center;
   display: none;
-  @include tablet{
+
+  @include tablet {
     grid-template-rows: repeat(5, 70px);
     grid-template-columns: repeat(5, 55px);
     padding: 35px 0 33px 27px;
@@ -24,16 +25,18 @@
     width: 107.5%;
     box-shadow: 0px 8px 16px rgba(54, 80, 148, 0.18);
   }
-  @include desktop{
+
+  @include desktop {
     grid-gap: 16px;
     padding: 32px 0 36px 26px;
   }
 }
 
-.select-country--active{
+.select-country--active {
   border: 1px solid red;
 }
-.select-country__list{
+
+.select-country__list {
   position: absolute;
   top: 100%;
   width: 100%;
@@ -45,7 +48,7 @@
   background: $white;
   border: 1px solid $gray_legend;
 
-  @include tablet{
+  @include tablet {
     top: 0;
     // right: -209px;
     right: 0;
@@ -58,29 +61,36 @@
     border-bottom: none;
     // box-shadow: 0px 8px 16px rgba(54, 80, 148, 0.18);
   }
-  @include desktop{
+
+  @include desktop {
     border-top: none;
   }
 }
-.select-country__item{
+
+.select-country__list-item {
   cursor: pointer;
-  @include tablet{
+
+  @include tablet {
     font-weight: normal;
     margin-bottom: 10px;
   }
-  &:hover{
+
+  &:hover {
     color: $basic_blue_light;
   }
-  &:active{
-    color:  rgba($color: $basic_blue_light, $alpha: 0.3);
+
+  &:active {
+    color: rgba($color: $basic_blue_light, $alpha: 0.3);
   }
 }
-.select-country__item--disable{
-  .select-country__list{
+
+.select-country__item--disable {
+  .select-country__list {
     display: none;
   }
 }
-.select-country__letter{
+
+.select-country__letter {
   display: block;
   // margin:  0 auto;
   text-align: center;
@@ -90,21 +100,26 @@
   text-transform: uppercase;
   background: $white;
   box-shadow: 0 0 0 1px $gray_legend;
-  &--active{
+
+  &--active {
     background: $basic_blue_lightest;
-    @include tablet{
+
+    @include tablet {
       color: $white;
       background: $basic_blue_light;
     }
   }
-  @include tablet{
+
+  @include tablet {
     line-height: 70px;
     font-size: 20px;
   }
-  &:hover{
+
+  &:hover {
     box-shadow: 0 0 0 1px #959BB2;
   }
-  &:active{
+
+  &:active {
     color: $white;
     background: $basic_blue_light;
   }

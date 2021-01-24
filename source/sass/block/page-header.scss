@@ -3,21 +3,26 @@
   margin: 0;
   padding: 0;
   background-color: $basic_blue;
-  @include tablet-only{
+
+  @include tablet-only {
     background-color: $special_dark_blue2;
   }
+
   &--catalog,
-  &--form{
+  &--form {
     background-color: $special_dark_blue2;
   }
-  &--open-menu{
+
+  &--open-menu,
+  .no-js {
     background-color: $white;
   }
 
-  &--light{
+  &--light {
     background-color: $special_dark_blue2;
   }
-  &--scroll{
+
+  &--scroll {
     background-color: $white;
     position: fixed;
     top: 0;
@@ -26,75 +31,90 @@
     z-index: 100;
   }
 }
-.page-header--style-light{
+
+.page-header--style-light {
   background-color: $special_dark_blue2;
 }
-.menu{
+
+.menu {
   padding-top: 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include desktop{
+
+  @include desktop {
     padding-top: 47px;
 
   }
 }
-.page-header--scroll{
-  .menu{
+
+.page-header--scroll {
+  .menu {
     padding-top: 17px;
     padding-bottom: 17px;
   }
 }
-.menu--close{
+
+.menu--close {
+
   .main-nav,
   .authorization--header,
   .authorization__phone,
   .authorization__login,
   .authorization__mail,
   .contacts,
-  .social{
+  .social {
     display: none;
   }
-  @include tablet{
+
+  @include tablet {
+
     .authorization--header,
-    .authorization__login{
+    .authorization__login {
       display: flex;
     }
   }
-  @include desktop{
+
+  @include desktop {
+
     .authorization__phone,
-    .authorization__mail{
+    .authorization__mail {
       display: flex;
     }
-    .main-nav{
+
+    .main-nav {
       display: block;
     }
-    .toogle{
+
+    .toogle {
       display: none;
     }
   }
 }
-.menu--open{
+
+.menu--open,
+.no-js {
   position: relative;
   background-color: $white;
   display: block;
 
   .authorization__phone,
-  .authorization__mail{
+  .authorization__mail {
     display: none;
   }
 
   .main-nav,
-  .contacts
-  {
+  .contacts {
     display: block;
   }
+
   .authorization--header .authorization__login,
-  .social{
+  .social {
     display: flex;
   }
 }
-.page-header__contacts{
+
+.page-header__contacts {
   margin-top: 50px;
   margin-bottom: 40px;
 }
@@ -121,9 +141,9 @@
   top: 100%;
   content: attr(data-hover);
   font-weight: 700;
-  -webkit-transform: translate3d(0,0,0);
-  -moz-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .cl-effect-5 a:hover span,

@@ -24,9 +24,9 @@ if (toggleButton) {
     evt.preventDefault();
     // console.log("Click toggleButton");
 
-    if (!toggleButton.classList.contains("toggle--close")) {
-      toggleButton.classList.remove("toggle--open");
-      toggleButton.classList.add("toggle--close");
+    if (!toggleButton.classList.contains("toogle--close")) {
+      toggleButton.classList.remove("toogle--open");
+      toggleButton.classList.add("toogle--close");
       head.classList.remove("page-header--open-menu");
       menu.classList.remove("menu--open");
       menu.classList.add("menu--close");
@@ -38,8 +38,8 @@ if (toggleButton) {
       // console.log("Close menu");
     }
     else { // Открываем меню
-      toggleButton.classList.remove("toggle--close");
-      toggleButton.classList.add("toggle--open");
+      toggleButton.classList.remove("toogle--close");
+      toggleButton.classList.add("toogle--open");
       head.classList.add("page-header--open-menu");
       menu.classList.remove("menu--close");
       menu.classList.add("menu--open");

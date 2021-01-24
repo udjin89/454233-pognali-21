@@ -27,7 +27,7 @@
 @import "block/promo.scss";
 @import "block/instructions.scss";
 @import "block/about-service.scss";
-@import "block/destination.scss";
+
 @import "block/companions.scss";
 @import "block/user-transport.scss";
 @import "block/tariff.scss";
@@ -52,3 +52,4 @@
 
 // глобальные стили
 @import "global.scss";
+@import "block/destination.scss";

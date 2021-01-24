@@ -6,28 +6,34 @@
   padding-top: 37px - $section_shift;
   padding-bottom: 38px;
   background-color: $gray;
-  @include tablet{
+
+  @include tablet {
     padding-top: 74px - $section_shift;
     padding-bottom: 63px;
   }
-  @include desktop{
+
+  @include desktop {
     padding-top: 107px - $section_shift;
     padding-bottom: 165px;
   }
 }
-.tariff__padding-left{
+
+.tariff__padding-left {
   padding-left: 24px;
   position: relative;
 }
-.title_tariff{
 
-  @include tablet{
+.title_tariff {
+
+  @include tablet {
     text-align: center;
-    br{
-    display: none;
+
+    br {
+      display: none;
     }
   }
 }
+
 .tariffs {
   margin: 0;
   margin-top: 31px;
@@ -38,18 +44,22 @@
   font-size: 16px;
   line-height: 16px;
   color: $special_grey;
-  @include tablet{
+
+  @include tablet {
     max-width: 100%;
   }
 
   counter-reset: my-awesome-counter;
 }
-.tariffs--usual{
+
+.tariffs--usual {
   position: relative;
   z-index: 10;
-  @include tablet{
+
+  @include tablet {
     margin-top: 134px;
-    &::after{
+
+    &::after {
       position: absolute;
       z-index: 0;
       top: -41px;
@@ -61,23 +71,27 @@
       border-radius: 20px;
     }
   }
-  @include desktop{
-    &::after{
+
+  @include desktop {
+    &::after {
       right: 184px;
       width: 446px;
       height: 300px;
     }
   }
 }
-.tariff__pic{
+
+.tariff__pic {
   float: right;
-  @include tablet{
+
+  @include tablet {
     position: absolute;
     z-index: 100;
     bottom: 0;
     right: 0;
   }
-  @include desktop{
+
+  @include desktop {
     width: 198px;
     height: 198px;
     bottom: 50%;
@@ -85,16 +99,20 @@
     transform: translateY(50%);
   }
 }
-.tariffs__item{
+
+.tariffs__item {
   position: relative;
   z-index: 10;
   padding-top: 13px;
   padding-bottom: 19px;
   border-top: 1px solid $special_grey_light;
-  &:last-of-type{
+
+  &:last-of-type {
     border-bottom: 1px solid $special_grey_light;
   }
+
   counter-increment: my-awesome-counter;
+
   &::before {
     content: counter(my-awesome-counter);
     background: $special_orange;
@@ -111,7 +129,8 @@
     position: absolute;
     left: 211px;
     top: 0;
-    @include tablet{
+
+    @include tablet {
       left: 0;
       width: 68px;
       height: 68px;
@@ -120,14 +139,16 @@
     }
 
   }
-  &:nth-child(2)::before{
+
+  &:nth-child(2)::before {
     background: $special_yellow_dark;
   }
-  &:nth-child(3)::before{
+
+  &:nth-child(3)::before {
     background: $basic_yellow;
   }
 
-  @include tablet{
+  @include tablet {
     padding-left: 90px;
     padding-top: 20px;
     padding-bottom: 18px;
@@ -137,42 +158,50 @@
     display: flex;
     justify-content: space-between;
   }
-  @include desktop{
+
+  @include desktop {
     margin-right: 345px;
     width: auto;
   }
 }
 
-.tariff-name{
+.tariff-name {
   margin: 0;
   padding: 0;
 }
-.tariff-price{
+
+.tariff-price {
   margin: 0;
   margin-top: 6px;
   padding: 0;
 
 }
-.modal--business-tariff{
+
+.modal--business-tariff {
   max-width: 750px;
   padding-top: 34px;
   text-align: center;
-  @include tablet{
+
+  @include tablet {
     padding: 54px 0 0 0;
   }
 }
+
 .tariffs--business {
   text-align: left;
   line-height: 22px;
   margin-left: 24px;
-  .tariffs__item::before{
+
+  .tariffs__item::before {
     content: none;
   }
-  @include tablet{
+
+  @include tablet {
     margin: 0;
     margin-top: 47px;
     padding: 0 90px 0 90px;
-    .tariffs__item{
+
+    .tariffs__item {
       margin: 0;
       padding: 14px 0;
       // display: flex;
@@ -196,16 +225,19 @@
   border: none;
   border-radius: 0 0 20px 20px;
   text-transform: uppercase;
-  @include tablet{
+
+  @include tablet {
     padding: 41px 0;
     font-size: 24px;
     line-height: 24px;
     text-transform: none;
   }
-  &:hover{
+
+  &:hover {
     background-color: $gray_light;
   }
-  &:active{
+
+  &:active {
     color: rgba($color: $basic_blue_light, $alpha: 0.3);
   }
 }
@@ -221,21 +253,25 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+
   // white-space: nowrap;
-  @include tablet{
+  @include tablet {
     font-size: 20px;
     line-height: 20px;
     display: flex;
     align-items: center;
   }
-  &:hover{
+
+  &:hover {
     opacity: 0.7;
   }
-  &:active{
+
+  &:active {
     opacity: 0.3;
   }
 }
-.icon-busnes{
+
+.icon-busnes {
   margin-right: 21px;
   padding-top: 20px;
   width: 68px;
@@ -244,7 +280,8 @@
   border-radius: 50%;
 
   display: none;
-  @include tablet{
+
+  @include tablet {
     display: block;
   }
 }

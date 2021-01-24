@@ -1,21 +1,24 @@
 .authorization {
   display: flex;
 
-  &--mobile{
-    @include tablet{
+  &--mobile {
+    @include tablet {
       display: none;
       // position: absolute;
     }
   }
 }
-.menu--open .authorization{
+
+.menu--open .authorization {
+
   // background: red;
-  @include tablet{
+  @include tablet {
     position: absolute;
     right: 0;
     top: 35px;
-    }
+  }
 }
+
 .authorization__phone,
 .authorization__mail {
   font-weight: bold;
@@ -30,14 +33,16 @@
   align-items: center;
   color: black;
 
-  @include desktop{
+  @include desktop {
     width: 50px;
     height: 50px;
   }
 }
+
 .authorization__phone {
   background-color: $special_orange;
 }
+
 .authorization__mail {
   background-color: $special_yellow_dark;
 }
@@ -54,44 +59,52 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @include tablet{
+
+  @include tablet {
     padding: 16px 28px 16px 28px;
   }
-  @include desktop{
+
+  @include desktop {
     height: 50px;
   }
 }
-.authorization--header .authorization__login{
+
+.authorization--header .authorization__login {
   // display: block;
   // margin-bottom: 60px;
   // padding-top: 12px;
   // padding-bottom: 8px;
 }
+
 .authorization--header .authorization__phone,
-.authorization--header .authorization__mail{
+.authorization--header .authorization__mail {
   // display: none;
 }
+
 // ====== Отзывчивость======
-.authorization__phone{
-  &:hover{
+.authorization__phone {
+  &:hover {
     background-color: $special_orange_dark;
   }
 }
-.authorization__mail{
-  &:hover{
+
+.authorization__mail {
+  &:hover {
     background-color: $special_orange;
   }
 }
-.authorization__login{
-  &:hover{
+
+.authorization__login {
+  &:hover {
     background-color: $special_yellow_dark;
   }
 }
 
 .authorization__login,
 .authorization__phone,
-.authorization__mail{
-  &:active{
+.authorization__mail {
+  &:active {
+
     img,
     span {
       opacity: 0.3;
