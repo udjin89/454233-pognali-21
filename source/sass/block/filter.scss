@@ -19,10 +19,6 @@
   grid-row: 1/-2;
 }
 
-.container-pagination {
-  grid-column: 1/4;
-  // grid-row: -2/-1;
-}
 
 ////----------------
 .filter__title {
@@ -80,57 +76,6 @@
 .filter-country__list-item--disable {
   @include desktop {
     display: block;
-  }
-}
-
-.button--open-filter {
-  // position: absolute;
-  background: none;
-  top: 30px;
-  right: 0;
-  background-color: transparent;
-  background-image: url(../img/icon/filter-expand-dots.svg);
-  background-repeat: no-repeat;
-  background-position-y: 50%;
-  height: 16px;
-  width: 18px;
-  border: none;
-
-  .text-button {
-    display: none;
-  }
-
-  @include tablet {
-    // position: relative;
-    order: 2;
-    height: auto;
-    width: auto;
-    padding-right: 55px;
-    background-position: 100% 50%;
-    background-size: 30px 6px;
-
-    .text-button {
-      font-family: "Blogger Sans";
-      font-style: normal;
-      display: block;
-      font-weight: bold;
-      font-size: 20px;
-      line-height: 20px;
-      text-transform: uppercase;
-    }
-
-    .text-button--open {
-      display: none;
-    }
-  }
-
-  &:hover {
-    background-color: transparent;
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
 
@@ -231,53 +176,6 @@
   &--active {
     color: $white;
     background-color: $basic_blue_light;
-  }
-}
-
-.button--close-filter-country {
-  font-family: "Blogger Sans";
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $special_dark_blue;
-  background-color: #D6DAED;
-  margin: 18px 0 0 0;
-  padding: 12px 0;
-  width: 100%;
-  border: none;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  svg {
-    margin-right: 10px;
-
-  }
-
-  @include tablet {
-    padding: 37px 0;
-    font-size: 20px;
-    line-height: 20px;
-
-    svg {
-      width: 22px;
-      height: 24px;
-    }
-  }
-
-  &:hover {
-    background-color: #C8CEE8;
-  }
-
-  &:active {
-    color: rgba($color: $special_dark_blue, $alpha: 0.3);
-
-    svg {
-      opacity: 0.3;
-    }
   }
 }
 

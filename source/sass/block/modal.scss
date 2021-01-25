@@ -17,3 +17,14 @@
     width: 688px;
   }
 }
+
+
+.modal--business-tariff {
+  max-width: 750px;
+  padding-top: 34px;
+  text-align: center;
+
+  @include tablet {
+    padding: 54px 0 0 0;
+  }
+}

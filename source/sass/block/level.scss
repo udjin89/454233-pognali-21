@@ -146,3 +146,25 @@
     }
   }
 }
+
+.level--form {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  @include desktop {
+    position: absolute;
+    top: -220px;
+    left: 980px;
+    z-index: 50;
+
+    .level__number {
+      color: $white;
+    }
+
+    .level__word {
+      color: $white;
+    }
+  }
+}

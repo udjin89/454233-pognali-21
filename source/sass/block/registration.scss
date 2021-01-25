@@ -47,13 +47,13 @@
   }
 }
 
-.registration-form {
+.registration__form {
   display: flex;
   position: relative;
 
 }
 
-.field-email {
+.registration__field-email {
   min-width: 220px;
   height: 62px;
   border-radius: 10px 0 0 10px;
@@ -103,7 +103,7 @@
 
 }
 
-.field-email::placeholder {
+.registration__field-email::placeholder {
   font-family: "Blogger Sans";
   font-weight: bold;
   font-size: 18px;
@@ -118,12 +118,12 @@
   }
 }
 
-.email-error::placeholder {
+.registration__field-email-error::placeholder {
   opacity: 0;
   color: rgba(#FF0000, $alpha: 0);
 }
 
-.link-autorization {
+.registration__link-autorization {
   color: $basic_yellow;
 
   &:hover {
@@ -132,48 +132,6 @@
 
   &:active {
     opacity: 0.3;
-  }
-}
-
-.button-registration {
-  align-self: auto;
-  font-family: "Blogger Sans";
-  font-style: normal;
-  font-weight: bold;
-  flex-shrink: 0;
-
-  &::after {
-    right: 22px;
-  }
-
-  margin: 0;
-  margin-left: -10px;
-  border: none;
-  width: 60px;
-
-  @include tablet {
-    width: 80px;
-    border-radius: 0 20px 20px 0;
-
-    &::after {
-      right: 33px;
-    }
-  }
-
-  @include desktop {
-    width: auto;
-    padding-left: 36px;
-    padding-right: 148px;
-    font-size: 24px;
-    line-height: 24px;
-  }
-}
-
-.button-registration__word {
-  display: none;
-
-  @include desktop {
-    display: block;
   }
 }
 
@@ -193,7 +151,7 @@
   }
 }
 
-.error-message {
+.registration__error-message {
 
   color: #FF0000;
   position: absolute;

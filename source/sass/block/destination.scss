@@ -17,11 +17,8 @@
     background-repeat: no-repeat;
     background-position-y: 120px;
     background-position-x: 92%;
-    // background-position-y: 120px;
-    // background-position-x: 530px;
     background-size: 288px 574px;
   }
-
 
   @include desktop {
     padding-top: 161px - $section_shift;

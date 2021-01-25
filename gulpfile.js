@@ -13,7 +13,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const htmlmin = require("gulp-htmlmin");
 const jsmin = require("gulp-uglify-es").default;
-const del = require("del")
+const del = require("del");
 
 //Html - минифицируем
 const html = () => {
@@ -44,8 +44,9 @@ const styles = () => {
       autoprefixer(), // ставятся префиксы
       csso()  // минификация
     ]))
-    .pipe(sourcemap.write(".")) // сравнение ???
+    // .pipe(gulp.dest("source/css"))
     .pipe(rename("style.min.css")) // переименовываем
+    .pipe(sourcemap.write(".")) // сравнение ???
     .pipe(gulp.dest("build/css")) //полученый файл складываем в css
     .pipe(sync.stream()); // для обновления сервера
 }
@@ -85,7 +86,7 @@ const sprite = () => {
 
 exports.sprite = sprite;
 // Copy files
-const copy = () => {
+const copy = (done) => {
   // берем файлы указаные в массиве
   return gulp.src([
     "source/fonts/*.{woff2,woff}",
@@ -96,6 +97,7 @@ const copy = () => {
       base: "source" // Указываем базовый уровень, откуда копировать. Иначе скопирует весь путь: "source/fonts/*.{woff2,woff}", а нам нужен только: /fonts/*.{woff2,woff} положить в  build
     })
     .pipe(gulp.dest("build"));
+  done();
 }
 
 exports.copy = copy;
@@ -121,13 +123,18 @@ const server = (done) => {
 }
 
 exports.server = server; // Обьявление, для запуска из консоли задачи: gulp server
+// Reload
 
+const reload = done => {
+  sync.reload();
+  done();
+}
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/js/*.js", gulp.series(script));
-  gulp.watch("source/*.html", gulp.series(html, sync.reload));
+  gulp.watch("source/*.html", gulp.series(html, reload));
   // gulp.watch("source/*.html").on("change", sync.reload);
 }
 
@@ -156,9 +163,10 @@ exports.default = gulp.series(
     styles,
     html,
     copy,
-    sprite,
+    //sprite,
+    script,
     // images,
-    createWebp
+    // createWebp
   ),
   gulp.series(
     server,

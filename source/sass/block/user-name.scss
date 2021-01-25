@@ -1,0 +1,41 @@
+.user-name {
+  position: relative;
+  text-align: center;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 22px;
+  }
+
+  &::before {
+    display: inline-block;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    margin-right: 10px;
+    content: " ";
+    border-radius: 50%;
+    background-color: $special_grey;
+
+    @include tablet {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+.user-name__link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: $basic_blue_light;
+}
+
+.user-name--offline::before {
+  background-color: #F97676;
+}
+
+.user-name--online::before {
+  background-color: #81E31E;
+}

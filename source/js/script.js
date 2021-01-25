@@ -54,9 +54,9 @@ if (toggleButton) {
 }
 // +++++++++ Модальное окно+++++++++
 const modalBusiness = document.querySelector(".modal--business-tariff");
-const showButtonTariff = document.querySelector(".show-business-tariff");
+const showButtonTariff = document.querySelector(".button-show-business-tariff");
 if (modalBusiness) {
-  const closeButtonTariff = modalBusiness.querySelector(".close-tariff");
+  const closeButtonTariff = modalBusiness.querySelector(".button--close-tariff");
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {

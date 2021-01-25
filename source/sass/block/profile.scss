@@ -6,7 +6,6 @@
   @include shift-section;
   position: relative;
 
-  // z-index: 10;
   @include desktop {
     padding-top: 113px;
   }
@@ -30,221 +29,14 @@
   }
 }
 
-.level--form {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 2;
-
-  @include desktop {
-    position: absolute;
-    top: -220px;
-    left: 980px;
-    z-index: 50;
-
-    .level__number {
-      color: $white;
-    }
-
-    .level__word {
-      color: $white;
-    }
-  }
-}
-
-.foto--form {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 3;
-
-  @include tablet {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    justify-self: end;
-    border-radius: 7px;
-  }
-
-  @include desktop {
-    grid-column-start: 2;
-    grid-column-end: 3;
-
-    width: 190px;
-    height: 190px;
-
-    position: absolute;
-    z-index: 50;
-    top: -263px;
-    right: 0;
-    border-radius: 10px 10px 0 0;
-  }
-}
-
-.change-foto {
+.profile__change-foto {
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: -1;
 }
 
-.tags-form {
-  padding: 0;
-  margin: 0;
-  position: relative;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  grid-column-start: 1;
-  grid-column-end: -1;
-  border: 1px solid $gray_legend;
-  border-radius: 10px;
-  margin-bottom: 25px;
-
-  @include desktop {
-    height: 105px;
-  }
-
-  legend {
-
-    padding: 0 20px;
-    margin: 0 auto;
-    // margin-top: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 18px;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: $basic_blue_light;
-    background-color: $basic_blue_lightest;
-
-    @include tablet {
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    @include desktop {
-      left: 60px;
-      // height: 105px;
-    }
-  }
-
-  .user-tags {
-    padding: 26px 0 26px 25px;
-    background: transparent;
-    border: none;
-    outline: none;
-    resize: none;
-    font-family: inherit;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
-    width: 100%;
-    height: 100%;
-    color: $special_grey;
-    opacity: 0.6;
-
-    @include tablet {
-      padding: 35px 0 10px 40px;
-      font-size: 20px;
-      line-height: 22px;
-    }
-
-    @include desktop {
-      // width: 732px;
-    }
-  }
-
-  @include desktop {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
-  &:hover {
-    border-color: #AEB4CB;
-    // border-color: seagreen;
-  }
-
-  &:active {
-    border-color: $basic_blue;
-
-    // background-color: salmon;
-    .user-tags {
-      //
-
-      &:active {
-        color: $special_grey;
-        opacity: 1;
-      }
-
-      &:focus {
-        //  color: $special_grey;
-        opacity: 1;
-      }
-    }
-  }
-
-  // &:focus{
-  //   background-color: salmon;
-  // }
-}
-
-.select-transport-form {
-  padding: 0;
-  margin: 0;
-  grid-row-start: 4;
-  grid-row-end: 5;
-  grid-column-start: 1;
-  grid-column-end: -1;
-
-  border: 1px solid $gray_legend;
-  border-radius: 10px;
-
-  legend {
-    margin: 0 auto;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: $basic_blue_light;
-    background-color: $basic_blue_lightest;
-    padding: 0 14px;
-  }
-
-  @include tablet {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    position: relative;
-
-    legend {
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 0 14px;
-    }
-  }
-
-  @include desktop {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 2;
-    grid-column-end: 3;
-
-    width: 384px;
-    height: 105px;
-    display: flex;
-    align-items: center;
-    // align-self: end;
-    justify-self: end;
-  }
-}
-
-.change-foto {
+.profile__change-foto {
   font-family: "Blogger Sans";
   font-weight: 500;
   font-size: 20px;
@@ -263,7 +55,7 @@
   }
 
   @include desktop {
-    .change-foto__word {
+    .profile__change-foto-word {
       display: none;
     }
 
