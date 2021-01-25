@@ -7,31 +7,34 @@
   padding-bottom: 34px;
   background-color: $gray_light;
 
-  @include tablet{
+  @include tablet {
     background-image: url(../img/background/destanation-flags.png);
-    @include retina{
+
+    @include retina {
       background-image: url(../img/background/destanation-flags@2x.png);
     }
+
     background-repeat: no-repeat;
     background-position-y: 120px;
     background-position-x: 92%;
-    // background-position-y: 120px;
-    // background-position-x: 530px;
     background-size: 288px 574px;
   }
 
-
-  @include desktop{
+  @include desktop {
     padding-top: 161px - $section_shift;
     padding-bottom: 138px;
     background-position-x: 95%;
   }
 }
-.destination__grid{
-  @include tablet-only{
+
+.destination__grid {
+
+
+  @include tablet-only {
     padding: 0 36px 0 36px;
   }
-  @include desktop{
+
+  @include desktop {
     display: grid;
     grid-template-rows: min-content min-content min-content;
     grid-template-columns: 560px 1fr;
@@ -39,27 +42,33 @@
     padding-left: 72px;
   }
 }
-.destination__title{
-  @include desktop{
+
+.destination__title {
+  padding: 0 30px 0 24px;
+
+  @include desktop {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
   }
 }
+
 .destination__description {
   margin: 0;
   margin-top: 19px;
-  padding: 0;
+  padding: 1px 50px 0 24px;
   color: $special_grey;
+  // width: 211px;
 
-  @include tablet{
+  @include tablet {
     font-size: 28px;
     line-height: 33px;
 
     width: 380px;
   }
-  @include desktop{
+
+  @include desktop {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
@@ -70,12 +79,13 @@
 
 .destination__list-country {
   margin: 0;
-  margin-top: 60px;
+  margin-top: 63px;
   padding: 0;
   list-style: none;
   position: relative;
-  @include tablet{
-    &::before{
+
+  @include tablet {
+    &::before {
       z-index: -1;
       position: absolute;
       content: "";
@@ -89,31 +99,34 @@
       border-radius: 20px;
     }
   }
-  @include desktop{
+
+  @include desktop {
     grid-row-start: 1;
     grid-row-end: -1;
     grid-column-start: 1;
     grid-column-end: 2;
     margin-top: 0;
 
-    &::before{
+    &::before {
       left: -70px;
       top: -71px;
     }
   }
 }
-.destination__item{
+
+.destination__item {
   margin-bottom: 9px;
 
-  @include tablet{
+  @include tablet {
     display: flex;
     flex-direction: row-reverse;
   }
 
-  @include desktop{
-    &:last-of-type{
+  @include desktop {
+    &:last-of-type {
       position: relative;
-      &::after{
+
+      &::after {
         position: absolute;
         content: "";
         width: 100%;
@@ -123,11 +136,13 @@
     }
   }
 }
-.destination__img{
+
+.destination__img {
   width: 270px;
   height: 110px;
   border-radius: 10px 10px 0 0;
-  @include tablet{
+
+  @include tablet {
     height: 140px;
     border-radius: 0 20px 20px 0;
     // object-fit: none;
@@ -136,7 +151,8 @@
     // transform: translateX(-150px);
   }
 }
-.destination__union-description{
+
+.destination__union-description {
   width: 100%;
   max-height: 89px;
   position: relative;
@@ -150,7 +166,7 @@
   padding-bottom: 24px;
   padding-left: 24px;
 
-  @include tablet{
+  @include tablet {
     margin: 0;
     max-height: 140px;
     flex-direction: column;
@@ -158,6 +174,7 @@
     border-radius: 20px 0 0 20px;
   }
 }
+
 .destination__country {
   order: 1;
   padding: 0;
@@ -166,7 +183,8 @@
   font-size: 21px;
   line-height: 21px;
   color: $black;
-  @include tablet{
+
+  @include tablet {
     font-size: 24px;
     line-height: 24px;
   }
@@ -181,7 +199,8 @@
   line-height: 18px;
   color: $special_grey;
   opacity: 0.3;
-  @include tablet{
+
+  @include tablet {
     font-size: 20px;
     line-height: 20px;
   }
@@ -205,7 +224,7 @@
   background-position-x: 0;
   background-position-y: center;
 
-  @include tablet{
+  @include tablet {
     padding-left: 32px;
     order: 3;
     font-size: 20px;
@@ -213,24 +232,20 @@
     background-size: 24px;
   }
 }
-.destination__picture{
+
+.destination__picture {
   position: absolute;
   top: -12px;
-  @include tablet{
+
+  @include tablet {
     right: -35px;
     top: 17px;
   }
-  .destination__flag{
-    @include tablet{
+
+  .destination__flag {
+    @include tablet {
       width: 70px;
       height: 47px;
     }
-  }
-}
-
-.button--show-all-destination{
-  margin-top: 25px;
-  @include desktop{
-    padding: 29px 103px 27px 32px;
   }
 }

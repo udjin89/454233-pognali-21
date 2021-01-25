@@ -1,6 +1,6 @@
 .contacts {}
 
-.contacts__icon{
+.contacts__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,26 +10,31 @@
   border-radius: 50%;
   background-color: $basic_blue_dark;
 
-  @include tablet{
+  @include tablet {
     width: 68px;
     height: 68px
   }
-  @include desktop{
+
+  @include desktop {
     width: 90px;
     height: 90px;
   }
 }
-.contacts__icon svg{
+
+.contacts__icon svg {
   fill: $basic_yellow;
-  @include tablet{
+
+  @include tablet {
     width: 27px;
     height: 25px;
   }
-  @include desktop{
+
+  @include desktop {
     width: 36px;
     height: 36px;
   }
 }
+
 .phone,
 .mail {
   display: flex;
@@ -40,35 +45,35 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $special_dark_blue;
-  &-reg{
+
+  &-reg {
     color: $basic_yellow;
   }
 
-  @include tablet{
+  @include tablet {
     font-size: 28px;
     line-height: 28px;
   }
 }
-// .phone-reg,
-// .mail-reg{
-//     color: $basic_yellow;
-// }
+
 .registration__phone,
-.registration__mail {
-  // color: $basic_yellow;
-}
+.registration__mail {}
+
 .phone-reg,
-.mail-reg{
-  &:hover{
+.mail-reg {
+  &:hover {
     color: $special_yellow_dark;
-    svg{
+
+    svg {
       fill: $special_yellow_dark;
     }
   }
-  &:active{
-    color: rgba($color: $special_yellow_dark, $alpha: 0.3) ;
-    svg{
-      fill: rgba($color: $special_yellow_dark, $alpha: 0.3) ;
+
+  &:active {
+    color: rgba($color: $special_yellow_dark, $alpha: 0.3);
+
+    svg {
+      fill: rgba($color: $special_yellow_dark, $alpha: 0.3);
     }
   }
 }

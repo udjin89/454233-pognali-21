@@ -1,9 +1,11 @@
 .main-nav {
   margin: 0;
   position: relative;
-  @include desktop{
+
+  @include desktop {
     transform: translateX(-75px);
-    &::before{
+
+    &::before {
       position: absolute;
       width: 60px;
       height: 2px;
@@ -22,14 +24,15 @@
   margin-bottom: 50px;
   padding: 0;
   list-style: none;
-  @include desktop{
+
+  @include desktop {
     display: flex;
     margin: 0;
   }
 }
 
 .main-nav__item {
-  @include desktop{
+  @include desktop {
     margin-right: 34px;
   }
 }
@@ -45,33 +48,33 @@
   color: $special_dark_blue;
   text-align: center;
 
-  &:hover{
+  &:hover {
     color: $basic_yellow;
   }
-  &:active{
+
+  &:active {
     opacity: 0.3;
   }
-  @include tablet{
+
+  @include tablet {
     font-size: 60px;
     line-height: 71px;
     text-align: left;
   }
-  @include desktop{
+
+  @include desktop {
     color: $white;
     font-size: 20px;
     line-height: 20px;
   }
 }
-.page-header--scroll{
-  .main-nav::before{
+
+.page-header--scroll {
+  .main-nav::before {
     background-color: $special_dark_blue;
   }
-  .main-nav__link{
+
+  .main-nav__link {
     color: $special_dark_blue;
   }
 }
-
-
-// .main-nav__toogle::after {
-//   bottom: -20px;
-// }

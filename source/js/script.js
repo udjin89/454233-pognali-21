@@ -24,9 +24,9 @@ if (toggleButton) {
     evt.preventDefault();
     // console.log("Click toggleButton");
 
-    if (!toggleButton.classList.contains("toggle--close")) {
-      toggleButton.classList.remove("toggle--open");
-      toggleButton.classList.add("toggle--close");
+    if (!toggleButton.classList.contains("toogle--close")) {
+      toggleButton.classList.remove("toogle--open");
+      toggleButton.classList.add("toogle--close");
       head.classList.remove("page-header--open-menu");
       menu.classList.remove("menu--open");
       menu.classList.add("menu--close");
@@ -38,8 +38,8 @@ if (toggleButton) {
       // console.log("Close menu");
     }
     else { // Открываем меню
-      toggleButton.classList.remove("toggle--close");
-      toggleButton.classList.add("toggle--open");
+      toggleButton.classList.remove("toogle--close");
+      toggleButton.classList.add("toogle--open");
       head.classList.add("page-header--open-menu");
       menu.classList.remove("menu--close");
       menu.classList.add("menu--open");
@@ -54,9 +54,9 @@ if (toggleButton) {
 }
 // +++++++++ Модальное окно+++++++++
 const modalBusiness = document.querySelector(".modal--business-tariff");
-const showButtonTariff = document.querySelector(".show-business-tariff");
+const showButtonTariff = document.querySelector(".button-show-business-tariff");
 if (modalBusiness) {
-  const closeButtonTariff = modalBusiness.querySelector(".close-tariff");
+  const closeButtonTariff = modalBusiness.querySelector(".button--close-tariff");
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
@@ -87,6 +87,7 @@ if (modalBusiness) {
 
 // ++++ Скрол меню+++
 // Cобытие scroll
+/*
 window.addEventListener('scroll', function () {
 
   const scrolled = window.pageYOffset; // смещение окна браузера
@@ -109,3 +110,4 @@ window.addEventListener('scroll', function () {
   }
   // console.log("heightScroll = " + heightHeader);
 });
+*/

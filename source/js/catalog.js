@@ -1,6 +1,6 @@
 const filter = document.querySelector(".filter");
 const filterClickZone = filter.querySelector(".button--open-filter");
-const buttonCloseFilter = filter.querySelector(".filter-country--close-button");
+const buttonCloseFilter = filter.querySelector(".button--close-filter-country");
 
 if (filterClickZone) {
 

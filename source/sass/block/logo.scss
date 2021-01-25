@@ -1,12 +1,13 @@
-.logo{
-  @include tablet{
-    img{
+.logo {
+  @include tablet {
+    img {
       width: 166px;
       height: 42px;
     }
   }
-  @include desktop{
-    img{
+
+  @include desktop {
+    img {
       width: 200px;
       height: 52px;
     }

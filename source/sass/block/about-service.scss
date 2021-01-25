@@ -2,40 +2,45 @@
   @include shift-section;
   position: relative;
   z-index: 70;
-  padding-top: 33px;
+  padding-top: 70px;
   padding-bottom: 82px;
   background-color: $special_dark_blue;
   background-image: url(../img/background/about-mobile.png);
   background-repeat: no-repeat;
   background-position-x: center;
+  background-position-y: 40px;
 
 
 
-  @include retina{
-    background-image:  url(../img/background/about-mobile@2x.png);
-    background-size: 70%;
-    background-position-y: 60%;
+  @include retina {
+    background-image: url(../img/background/about-mobile@2x.png);
+    background-size: 292px 353px;
+    background-position-y: 40px;
+    background-position-x: center;
+
   }
 
-  @include tablet{
+  @include tablet {
     padding-top: 136px;
     background-image: url(../img/background/about-tablet.png);
-    @include retina{
+
+    @include retina {
       background-image: url(../img/background/about-tablet@2x.png);
       background-size: 90%;
       background-position-x: 40%;
       background-position-y: 60%;
-      // back
     }
 
     background-position-y: 100%;
     background-position-x: 80%;
     background-size: auto;
   }
-  @include desktop{
+
+  @include desktop {
 
     background-image: url(../img/background/about-desktop.png);
-    @include retina{
+
+    @include retina {
       background-image: url(../img/background/about-desktop@2x.png);
       background-position-x: 100%;
       background-position-y: 60%;
@@ -43,38 +48,45 @@
     }
   }
 
-  @include tablet{
+  @include tablet {
     font-size: 28px;
     line-height: 33px;
   }
 
-  @include desktop{
+  @include desktop {
     padding-top: 172px;
     padding-bottom: 163px;
   }
 }
-.about-service-grid{
-  @include tablet{
+
+.about-service-grid {
+  padding-left: 24px;
+
+  @include tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-left: 33px;
   }
-  @include desktop{
+
+  @include desktop {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-left: 73px;
   }
 }
-.about-service__title{
+
+.about-service__title {
   position: relative;
   padding: 0;
   padding-top: 33px;
   margin-bottom: 19px;
 
-  @include tablet{
+  @include tablet {
     grid-column-start: 1;
     grid-column-end: 2;
   }
-  @include desktop{
-    &::before{
+
+  @include desktop {
+    &::before {
       z-index: -1;
       position: absolute;
       content: "";
@@ -89,16 +101,27 @@
     }
   }
 }
+
 .about-service__description {
   padding: 0;
   margin: 0;
-  margin-top: 19px;
-  margin-bottom: 19px;
-  @include tablet{
+  margin-top: 21px;
+  margin-bottom: 21px;
+  // width: 211px;
+
+  @include tablet {
     grid-column-start: 1;
     grid-column-end: 2;
+    margin-top: 43px;
+    width: 308px;
+    margin-bottom: 30px;
+
+    .about-service__br-mobile {
+      display: none;
+    }
   }
-  @include desktop{
+
+  @include desktop {
     font-size: 28px;
     line-height: 34px;
     grid-column-start: 1;
@@ -109,33 +132,20 @@
 .about-service__appeal {
   padding: 0;
   margin: 0;
+  width: 235px;
   // margin-bottom: 82px;
   font-weight: bold;
-  @include tablet{
+
+  @include tablet {
     font-size: 21px;
     line-height: 25px;
     grid-column-start: 1;
     grid-column-end: 2;
   }
-  @include desktop{
+
+  @include desktop {
     line-height: 24px;
     grid-column-start: 1;
     grid-column-end: 3;
-  }
-}
-.about-service--button{
-
-  display: none;
-
-  @include tablet{
-    display: block;
-    margin-top: 52px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    padding-right: 127px;
-  }
-  @include desktop{
-    margin-top: 85px;
-    padding: 29px 127px 27px 32px;
   }
 }

@@ -1,4 +1,4 @@
-.add-plan{
+.add-plan {
   background-color: $special_blue_medium;
 
   @include shift-section;
@@ -6,82 +6,96 @@
   z-index: 30;
   padding-bottom: 73px;
 }
-.add-plan__head{
+
+.add-plan__head {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.title-plan-step{
-  @include tablet{
+
+.title-plan-step {
+  @include tablet {
     font-size: 36px;
     line-height: 36px;
   }
-  @include desktop{
+
+  @include desktop {
     margin-top: 0;
   }
 }
-.title-plan-step__new-line{
+
+.title-plan-step__new-line {
   display: block;
 }
-.add-plan__step{
+
+.add-plan__step {
   margin-bottom: 10px;
   padding: 24px 24px 23px 25px;
   background-color: $white;
   border-radius: 10px;
 
-  .points{
+  .points {
     display: none;
   }
 
-  @include tablet{
+  @include tablet {
     padding: 48px 40px 56px 40px;
   }
-  @include desktop{
-    .points{
+
+  @include desktop {
+    .points {
       display: flex;
     }
+
     padding: 101px 160px 106px 160px;
     position: relative;
     border-radius: 60px;
     margin-bottom: 44px;
   }
 }
-.wrap-title{
+
+.wrap-title {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
-  @include tablet-only{
+
+  @include tablet-only {
     margin: 0;
     padding: 26px 0 24px 0;
     border-top: 1px solid #E1E3E9;
 
-    &--day{
+    &--day {
       order: 3;
       margin-top: 34px;
     }
   }
-  @include desktop{
+
+  @include desktop {
     width: 50%;
     margin-bottom: 66px;
-    &--day{
+
+    &--day {
       order: 3;
     }
   }
 }
-.add-plan__title{
+
+.add-plan__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  @include desktop{
+
+  @include desktop {
     font-weight: 500;
     font-size: 20px;
     line-height: 18px;
     text-transform: uppercase;
   }
 }
-.add_plan__title-brief{
+
+.add_plan__title-brief {
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
@@ -89,7 +103,8 @@
   text-align: right;
   letter-spacing: 0.07em;
   opacity: 0.3;
-  @include desktop{
+
+  @include desktop {
     font-weight: 500;
     font-size: 20px;
     line-height: 18px;
@@ -97,12 +112,14 @@
     opacity: 1;
   }
 }
-.add-plan__info-date{
-  @include tablet{
+
+.add-plan__info-date {
+  @include tablet {
     display: flex;
     flex-direction: column;
   }
-  @include desktop{
+
+  @include desktop {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -114,140 +131,60 @@
   }
 
 }
-.input-count-people{
+
+.input-count-people {
   order: 1;
-  @include desktop{
+
+  @include desktop {
     position: absolute;
     left: 222px;
     top: 30px;
   }
 }
-.input-count-day{
+
+.input-count-day {
   order: 3;
-  @include desktop{
+
+  @include desktop {
     position: absolute;
     left: 222px;
     top: 114px;
   }
 }
-.child-check{
-  position: relative;
-  order: 2;
 
-  font-size: 15px;
-  line-height: 15px;
-  padding-left: 40px;
-  padding-top: 8px;
-  &::before{
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 0;
-    width: 26px;
-    height: 26px;
-    background-color: $white;
-    border: 1px solid $gray_legend;
-    border-radius: 4px;
-  }
-  @include tablet{
-    order: 2;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-  &:hover{
-    &::before{
-      border-color: $special_grey;
-    }
-  }
-  &:active{
-    &::before{
-      border: none;
-      background-color: #E2E5F1;
-    }
-  }
-}
-.child-checkbox:checked + .child-check::before{
-  background-image: url(/img/icon/icon-checkbox.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.child-checkbox:checked:active + .child-check::before{
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-image: url(/img/icon/icon-checkbox-active.svg);
-}
-.control-buttons{
+.control-buttons {
   display: flex;
   flex-direction: column;
-  @include tablet{
+
+  @include tablet {
     flex-direction: row;
     justify-content: space-between;
   }
-  @include desktop{
+
+  @include desktop {
     margin-top: 55px;
   }
 }
-.points{
-  padding: 0;
-  margin: 0;
-  display: flex;
 
-  @include desktop{
-    position: absolute;
-    top: 107px;
-    right: 200px;
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: normal;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-}
-.points__item{
-  margin-right: 16px;
-  background: $basic_blue_light;
-  opacity: 0.3;
-
-  &--active{
-    opacity: 1;
-  }
-
-  span{
-    display: none;
-
-    @include desktop{
-      display: block;
-
-    }
-  }
-  @include desktop{
-    background-color: transparent;
-    color: $basic_blue_light;
-    margin-bottom: 27px;
-  }
-}
-.add-plan__description{
+.add-plan__description {
   font-size: 16px;
   line-height: 22px;
   color: $special_grey;
-  @include tablet{
+
+  @include tablet {
     font-size: 20px;
     line-height: 24px;
     width: 505px;
   }
-  @include desktop{
+
+  @include desktop {
     width: 581px;
     margin-bottom: 55px;
   }
 }
+
 .input-minus,
-.input-plus{
+.input-plus {
   width: 14px;
   height: 14px;
   color: $gray;
@@ -258,25 +195,31 @@
   border: none;
   cursor: pointer;
   opacity: 0.3;
-  @include tablet{
+
+  @include tablet {
     width: 20px;
     height: 20px;
   }
-  &:hover{
+
+  &:hover {
     opacity: 0.5;
   }
-  &:active{
+
+  &:active {
     opacity: 0.1;
   }
 }
-.input-minus{
+
+.input-minus {
   background-image: url(../img/icon/icon-minus.svg);
 }
-.input-plus{
+
+.input-plus {
   background-image: url(../img/icon/icon-plus.svg);
 
 }
-.input-number{
+
+.input-number {
   width: inherit;
   margin: 0;
   margin-bottom: 20px;
@@ -286,22 +229,25 @@
   align-items: center;
   border: 1px solid $gray_legend;
   border-radius: 4px;
-  @include desktop{
+
+  @include desktop {
     width: 180px;
   }
-  &:hover{
+
+  &:hover {
     border-color: #959BB2;
     // .input-minus,
     // .input-plus{
     //   opacity: 0.5;
     // }
   }
-  &:active{
+
+  &:active {
     border-color: $basic_blue_light;
   }
 }
 
-.number{
+.number {
   flex-grow: 2;
   border: none;
   padding: 16px 0 13px 0;
@@ -311,95 +257,111 @@
   font-size: 14px;
   line-height: 14px;
   color: $basic_blue_light;
-  &::placeholder{
+
+  &::placeholder {
     text-align: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 14px;
     color: $basic_blue_light;
-    @include tablet{
+
+    @include tablet {
       font-size: 20px;
       line-height: 20px;
     }
   }
-  @include tablet{
+
+  @include tablet {
     padding: 26px 0 26px 0;
     font-size: 20px;
     line-height: 20px;
   }
-  @include desktop{
+
+  @include desktop {
     width: 100px;
   }
 }
-.travel-dates{
+
+.travel-dates {
   margin-top: 28px;
-  @include desktop{
+
+  @include desktop {
     margin-top: 0;
   }
 }
-.travel-dates__control{
+
+.travel-dates__control {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid $gray_lighter;
   border-bottom: 1px solid $gray_lighter;
 }
-.travel-dates__buttons{
+
+.travel-dates__buttons {
   margin: 0;
   padding: 0;
   background: none;
   border: none;
 }
-.month{
+
+.month {
   padding: 11px 0;
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
-  @include tablet{
+
+  @include tablet {
     font-size: 36px;
     line-height: 36px;
     padding: 27px 0 23px 0;
   }
 }
-.arrow{
+
+.arrow {
   cursor: pointer;
   color: $black;
   opacity: 0.3;
 
-  @include tablet{
+  @include tablet {
     width: 19px;
     height: 34px;
   }
 
-  &--left{
+  &--left {
     transform: rotate(-180deg);
   }
-  &:hover{
+
+  &:hover {
     opacity: 0.5;
   }
-  &:active{
+
+  &:active {
     opacity: 0.1;
   }
 }
-.add-plan__country{
+
+.add-plan__country {
   position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
 
-  &:not(:nth-child(3)){
-    .special-arrow{
+  &:not(:nth-child(3)) {
+    .special-arrow {
       display: block;
       position: absolute;
       bottom: -10px;
       background: red;
     }
   }
-  @include tablet{
+
+  @include tablet {
     padding-top: 42px;
     border-top: 1px solid #E1E3E9;
     margin-bottom: 50px;
-    &::before{
-      position:absolute;
+
+    &::before {
+      position: absolute;
       content: "";
       z-index: 0;
       width: 1px;
@@ -409,20 +371,22 @@
       background-color: #E1E3E9;
     }
   }
-  @include desktop{
-    &::before{
+
+  @include desktop {
+    &::before {
       right: 219px;
-      height: 540px ;
+      height: 540px;
     }
   }
 }
-.add-plan__item{
+
+.add-plan__item {
   margin-bottom: 22px;
   position: relative;
   display: flex;
   justify-content: space-between;
 
-  &::before{
+  &::before {
     position: absolute;
     z-index: 10;
     content: "";
@@ -433,101 +397,70 @@
     transform: translateY(-50%);
     background-color: $basic_blue_light;
     border-radius: 50%;
-    @include tablet{
+
+    @include tablet {
       width: 14px;
       height: 14px;
       right: 133px;
     }
-    @include desktop{
+
+    @include desktop {
       right: 212px;
     }
   }
-  &--select{
-    &::before{
+
+  &--select {
+    &::before {
       background-color: $white;
       border: 1px solid $gray_legend;
     }
-    // .country-name{
-    //   &::before {
-    //     top: 50%;
-    //     left: 193px;
-    //   }
-    //   &::after {
-    //     left: 193px;
-    //     top: 50%;
-    //   }
-    //   @include tablet{
-    //     &::before {
-    //       top: 50%;
-    //       left: 320px;
-    //     }
-    //     &::after {
-    //       top: 50%;
-    //       left: 320px;
-    //     }
-    //   }
-    //   @include desktop{
-    //     &::before {
-    //       top: 50%;
-    //       left: 680px;
-    //     }
-    //     &::after {
-    //       top: 50%;
-    //       left: 680px;
-    //     }
-    //   }
-    // }
+
   }
-  &--select-active{
+
+  &--select-active {
     border-radius: 4px;
-    .remove-country{
+
+    .remove-country {
       display: none;
-      @include tablet{
+
+      @include tablet {
         display: block;
       }
     }
-    &::before{
+
+    &::before {
       display: none;
-      @include tablet{
+
+      @include tablet {
         display: block;
       }
-  }
-  .country-name{
-    color: $white;
-    background: $basic_blue_light;
-    // &::before {
-    //   width: 16px;
-    //   height: 1.7px;
-    //   top: 50%;
-    //   left: 193px;
-    //   transform: rotate(45deg);
-    // }
-    // &::after {
-    //   width: 16px;
-    //   height: 1.7px;
-    //   left: 193px;
-    //   top: 50%;
-    //   margin: 0;
-    //   transform: rotate(135deg);
-    // }
-      @include tablet{
+    }
+
+    .country-name {
+      color: $white;
+      background: $basic_blue_light;
+
+      @include tablet {
 
         &::before {
           // transform: translateY(-50%);
           left: 326px;
         }
+
         &::after {
           // transform: translateY(-50%);
           left: 326px;
         }
       }
-      @include tablet{
+
+      @include tablet {
 
         &::before {
           // transform: translateY(-50%);
           width: 22px;
           left: 681px;
         }
+
         &::after {
           // transform: translateY(-50%);
           width: 22px;
@@ -535,33 +468,42 @@
         }
       }
     }
-    .select-country{
+
+    .select-country {
       display: grid;
-      @include desktop{
+
+      @include desktop {
         width: 730px;
       }
 
     }
-    .spesial-shadow{
+
+    .spesial-shadow {
       background: none;
     }
-    .country-name__action{
-      &::before{
+
+    .country-name__action {
+      &::before {
         width: 24px;
         background-color: rgba($color: $white, $alpha: 0.3);
       }
-      &::after{
+
+      &::after {
         background-color: rgba($color: $white, $alpha: 0.3);
         right: 15px;
         width: 24px;
       }
-      &:hover{
+
+      &:hover {
+
         &::before,
         &::after {
-          background-color:$white;
+          background-color: $white;
         }
       }
-      &:active{
+
+      &:active {
+
         &::before,
         &::after {
           background-color: rgba($color: $white, $alpha: 0.1);
@@ -569,10 +511,12 @@
       }
     }
   }
-  &--new-country{
-    .country-name{
+
+  &--new-country {
+    .country-name {
       background: $basic_blue_lightest;
       border: none;
+
       // &::before {
       //   height: 2px;
       //   top: 50%;
@@ -608,26 +552,29 @@
       //     left: 680px;
       //   }
       // }
-      &:hover{
+      &:hover {
         background-color: $special_blue_light;
       }
 
-      .spesial-shadow{
+      .spesial-shadow {
         background: none;
       }
     }
+
     background: $basic_blue_lightest;
-    &::before{
+
+    &::before {
       background-color: $basic_blue_lightest;
       border: 1px solid $gray_legend;
     }
-    @include tablet{
+
+    @include tablet {
       background: none;
 
     }
   }
 
-  &:not(:last-of-type)::after{
+  &:not(:last-of-type)::after {
     position: absolute;
     z-index: 10;
     content: "";
@@ -636,26 +583,32 @@
     width: 8px;
     height: 11px;
     background-image: url(../img/icon/icon-special-arrow.svg);
-    @include tablet{
+
+    @include tablet {
       display: none;
     }
   }
 }
-.country-name__action{
-  &:hover{
+
+.country-name__action {
+  &:hover {
+
     &::before,
-    &::after{
+    &::after {
       background-color: rgba($color: $black, $alpha: 0.3);
     }
   }
-  &:active{
+
+  &:active {
+
     &::before,
-    &::after{
+    &::after {
       background-color: rgba($color: $black, $alpha: 0.1);
     }
   }
 }
-.country-name{
+
+.country-name {
   position: relative;
   white-space: nowrap;
   overflow: hidden;
@@ -672,41 +625,47 @@
   border-radius: 4px;
   // box-shadow: inset -50px 0px 6px -10px red;
 
-  @include tablet{
+  @include tablet {
     width: 369px;
     flex-grow: 0;
     padding: 27px 0 23px 25px;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
+
     &::before {
       top: 27px;
       left: 320px;
     }
-    &::after{
+
+    &::after {
       top: 27px;
       left: 320px;
     }
   }
-  @include desktop{
+
+  @include desktop {
     width: 730px;
+
     &::before {
       top: 27px;
       left: 680px;
     }
-    &::after{
+
+    &::after {
       top: 27px;
       left: 680px;
     }
   }
-  &:hover{
+
+  &:hover {
     border-color: #959BB2;
   }
-  &:active{
 
-  }
+  &:active {}
 }
-.country-flag{
+
+.country-flag {
   display: inline-table;
   position: relative;
   z-index: 0;
@@ -717,22 +676,25 @@
   border: 1px solid $gray_legend;
   border-radius: 4px;
 
-  @include tablet{
+  @include tablet {
     width: auto;
     border: none;
     margin-right: 44px;
     padding: 0;
-    .flag{
+
+    .flag {
       width: 70px;
       height: 47px;
     }
   }
-  @include desktop{
+
+  @include desktop {
     margin-right: 109px;
   }
 
 }
-.remove-country{
+
+.remove-country {
   position: absolute;
   padding: 0;
   top: -10.5px;
@@ -745,37 +707,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @include tablet{
+
+  @include tablet {
     background: none;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
   }
-  svg{
+
+  svg {
     fill: $black;
     opacity: 0.1;
-    @include tablet{
+
+    @include tablet {
       width: 22px;
       height: 22px;
     }
 
-    &:hover{
+    &:hover {
       opacity: 0.3;
     }
-    &:active{
+
+    &:active {
       opacity: 0.05;
     }
   }
-  // background-image: url(../img/icon/icon-remove-country.svg);
-  // background-size: 9px 9px;
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-color: $basic_blue_lightest;
-  // opacity: 0.1;
 }
-.wrap-action-plan{
+
+.wrap-action-plan {
   position: relative;
-  &:nth-child(4):before{
+
+  &:nth-child(4):before {
     position: absolute;
     content: "";
     top: 12px;
@@ -784,28 +746,33 @@
     width: 2px;
     background: $basic_blue_light;
   }
-  @include tablet{
+
+  @include tablet {
     padding-top: 27px;
     padding-right: 33px;
-    &:nth-child(4):before{
+
+    &:nth-child(4):before {
       top: 45px;
       bottom: -75px;
       left: 525px;
     }
   }
-  @include desktop{
-    &:nth-child(4):before{
+
+  @include desktop {
+    &:nth-child(4):before {
       top: 100px;
       bottom: -70px;
       left: 786px;
     }
-    &:first-of-type{
+
+    &:first-of-type {
       padding-top: 80px;
       border-top: 1px solid #E1E3E9;
     }
   }
 }
-.action-plan{
+
+.action-plan {
   width: 100%;
   height: 220px;
   resize: none;
@@ -819,28 +786,35 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  &::placeholder{
+
+  &::placeholder {
     color: rgba($color: $special_grey, $alpha: 0.3);
-    &:focus{
+
+    &:focus {
       color: red;
     }
   }
-  @include tablet{
+
+  @include tablet {
     width: 500px;
     height: 140px;
   }
-  @include desktop{
+
+  @include desktop {
     width: 730px;
     height: 142px;
     margin: 0;
   }
-  &:hover{
+
+  &:hover {
     border-color: #959BB2;
   }
-  &:active{
+
+  &:active {
     border-color: red;
   }
-  &:focus{
+
+  &:focus {
     font-family: "Blogger Sans";
     font-style: normal;
     font-weight: normal;
@@ -851,26 +825,23 @@
   }
 
 }
-// .error{
 
-//   border-color: $special_red;
-//   + .action-plan-error{
-//     display: block;
-//   }
-// }
-.action-plan.error:invalid{
+.action-plan.error:invalid {
   border-color: $special_red;
-  + .action-plan-error{
+
+  +.action-plan-error {
     display: block;
-    }
+  }
 }
-.wrap-textarea{
+
+.wrap-textarea {
   position: relative;
   display: flex;
   // height: min-content;
   margin-bottom: 23px;
 }
-.action-plan-error{
+
+.action-plan-error {
   display: none;
   color: #FF0000;
   background: #FFEFEF;
@@ -882,18 +853,21 @@
   border-radius: 0 0 4px 4px;
   padding-left: 21px;
   font-weight: normal;
-  @include tablet{
+
+  @include tablet {
     width: 498px;
     height: 56px;
     padding-top: 20px;
     // bottom: 4px;
   }
-  @include desktop{
+
+  @include desktop {
     width: 728px;
     // bottom: 2px;
   }
 }
-.label-country{
+
+.label-country {
   position: relative;
   white-space: nowrap;
   display: flex;
@@ -904,7 +878,8 @@
   font-size: 18px;
   line-height: 18px;
   letter-spacing: 0.01em;
-  &::before{
+
+  &::before {
     position: absolute;
     content: "";
     top: 50%;
@@ -914,7 +889,8 @@
     height: 2px;
     background: $basic_blue_light;
   }
-  &::after{
+
+  &::after {
     position: absolute;
     content: "";
     top: 50%;
@@ -925,42 +901,50 @@
     border-radius: 50%;
     background: $basic_blue_light;
   }
-  @include tablet{
+
+  @include tablet {
     font-size: 30px;
     line-height: 47px;
     margin-bottom: 30px;
-    .flag{
+
+    .flag {
       width: 70px;
       height: 47px;
     }
-    &::before{
+
+    &::before {
       display: none;
     }
-    &::after{
+
+    &::after {
 
       left: 519px;
       width: 14px;
       height: 14px;
     }
   }
-  @include desktop{
+
+  @include desktop {
     // margin-bottom: 30px;
     padding-left: 0;
     font-weight: bold;
-    &::after{
+
+    &::after {
 
       left: 780px;
 
     }
   }
 }
-.country-name__action{
+
+.country-name__action {
   position: absolute;
   top: 0;
   right: 0;
   // height: 40px;
   height: 100%;
   width: 50px;
+
   &::before {
     position: absolute;
     // top: 20px;
@@ -975,6 +959,7 @@
     display: inline-block;
     transform: rotate(-45deg);
   }
+
   &::after {
     position: absolute;
     // left: 141px;
@@ -992,14 +977,13 @@
   }
 
 }
-.spesial-shadow{
+
+.spesial-shadow {
   // position: absolute;
   display: block;
   top: 0;
   right: 0;
   background: linear-gradient(90deg, transparent 0%, $white 30%);
-  // background: -webkit-linear-gradient(90deg, transparent 0%, $white 30%);
-  // background: -moz-linear-gradient(90deg, transparent 0%, $white 30%);
   height: 40px;
   width: 50px;
 

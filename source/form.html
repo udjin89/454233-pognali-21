@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 
 </head>
 
@@ -31,7 +31,7 @@
               width="100" height="15">
           </picture>
         </a>
-        <button class="toogle toggle--close" type="button"><span class="hidden">Открыть меню</span></button>
+        <button class="toogle toogle--close" type="button"><span class="hidden">Открыть меню</span></button>
 
         <nav class="main-nav">
           <ul class="main-nav__list ">
@@ -101,6 +101,7 @@
         </div>
       </header>
       <section class="profile">
+        <h2 class="hidden">Профайл</h2>
         <div class="container-tablet profile__grid">
           <div class="level level--form">
 
@@ -115,14 +116,15 @@
           <img class="foto foto--form" src="./img/foto-user/foto-demin.jpg" alt="Фото попутчика" width="270"
             height="270">
 
-          <button class="change-foto" type="button"><span class="change-foto__word">сменить</span> фото</button>
+          <button class="profile__change-foto" type="button"><span class="profile__change-foto-word">сменить</span>
+            фото</button>
 
-          <fieldset class="tags--form">
+          <fieldset class="tags-form">
             <legend>Тэги</legend>
             <label class="hidden" for="user-tags">Список тегов</label>
             <textarea class="user-tags" name="user-tags" id="user-tags">#бургер #бар #футбол #концерт #крафт</textarea>
           </fieldset>
-          <fieldset class="select-transport--form">
+          <fieldset class="select-transport-form">
             <legend>транспорт</legend>
             <ul class="user-transport user-transport--select">
               <li class="user-transport-item">
@@ -231,7 +233,7 @@
               <li class="points__item "><span>Развлечения</span></li>
             </ul>
           </div>
-          <div class="add-plan__step">
+          <div class="add-plan__step" id="step1">
             <h3 class="title-plan-step">
               <span class="title-plan-step__new-line">Шаг 1.</span> Даты пребывания
             </h3>
@@ -246,7 +248,7 @@
             <div class="add-plan__info-date">
               <div class="wrap-title">
                 <div class="add-plan__title">ищу попутчиков:</div>
-                <span class="add_plan__title-brief">чел.</span>
+                <span class="add-plan__title-brief">чел.</span>
               </div>
               <fieldset class="input-number input-count-people">
 
@@ -256,7 +258,7 @@
               </fieldset>
               <div class="wrap-title wrap-title--day">
                 <div class="add-plan__title">длителтность:</div>
-                <span class="add_plan__title-brief">дн.</span>
+                <span class="add-plan__title-brief">дн.</span>
               </div>
               <fieldset class="input-number input-count-day">
                 <!-- <legend>длительность:</legend> -->
@@ -357,9 +359,9 @@
 
             </div>
 
-            <button class="button button-next-step" type="button">Следующий шаг</button>
+            <a class="button button-next-step" href="#step2">Следующий шаг</a>
           </div>
-          <div class="add-plan__step">
+          <div class="add-plan__step" id="step2">
             <h3 class="title-plan-step">
               <span class="title-plan-step__new-line">Шаг 2.</span>
               Маршрут
@@ -411,7 +413,6 @@
                 </button>
 
               </li>
-              <!-- add-plan__item--select-active -->
               <li class="add-plan__item add-plan__item--select add-plan__item--select-active">
                 <p class="country-name"> выберите страну
                   <span class="country-name__action">
@@ -435,16 +436,16 @@
                     <span class="select-country__letter select-country__letter--active">а</span>
 
                     <ul class="select-country__list">
-                      <li class="select-country__item">Австралия</li>
-                      <li class="select-country__item">Австрия</li>
-                      <li class="select-country__item">Азербайджан</li>
-                      <li class="select-country__item">Албания</li>
-                      <li class="select-country__item">Алжир</li>
-                      <li class="select-country__item">Ангола</li>
-                      <li class="select-country__item">Андорра</li>
-                      <li class="select-country__item">Антигуа и Барбуда</li>
-                      <li class="select-country__item">Армения</li>
-                      <li class="select-country__item">Афганистан</li>
+                      <li class="select-country__list-item">Австралия</li>
+                      <li class="select-country__list-item">Австрия</li>
+                      <li class="select-country__list-item">Азербайджан</li>
+                      <li class="select-country__list-item">Албания</li>
+                      <li class="select-country__list-item">Алжир</li>
+                      <li class="select-country__list-item">Ангола</li>
+                      <li class="select-country__list-item">Андорра</li>
+                      <li class="select-country__list-item">Антигуа и Барбуда</li>
+                      <li class="select-country__list-item">Армения</li>
+                      <li class="select-country__list-item">Афганистан</li>
                     </ul>
 
                   </li>
@@ -452,23 +453,23 @@
 
                     <span class="select-country__letter ">б</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -476,23 +477,23 @@
 
                     <span class="select-country__letter ">в</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -500,23 +501,23 @@
 
                     <span class="select-country__letter ">г</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -524,23 +525,23 @@
 
                     <span class="select-country__letter ">д</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -548,7 +549,7 @@
 
                     <span class="select-country__letter ">е</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
                     </ul>
 
                   </li>
@@ -556,8 +557,8 @@
 
                     <span class="select-country__letter ">з</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
                     </ul>
 
                   </li>
@@ -565,23 +566,23 @@
 
                     <span class="select-country__letter ">и</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -589,23 +590,23 @@
 
                     <span class="select-country__letter ">к</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -613,23 +614,23 @@
 
                     <span class="select-country__letter ">л</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -637,23 +638,23 @@
 
                     <span class="select-country__letter ">м</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -661,23 +662,23 @@
 
                     <span class="select-country__letter ">н</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -685,8 +686,8 @@
 
                     <span class="select-country__letter ">о</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
                     </ul>
 
                   </li>
@@ -694,23 +695,23 @@
 
                     <span class="select-country__letter ">п</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -718,9 +719,9 @@
 
                     <span class="select-country__letter ">р</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
                     </ul>
 
                   </li>
@@ -728,23 +729,23 @@
 
                     <span class="select-country__letter ">с</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -752,23 +753,23 @@
 
                     <span class="select-country__letter ">т</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -776,10 +777,10 @@
 
                     <span class="select-country__letter ">у</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
                     </ul>
 
                   </li>
@@ -787,10 +788,10 @@
 
                     <span class="select-country__letter ">ф</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
                     </ul>
 
                   </li>
@@ -798,7 +799,7 @@
 
                     <span class="select-country__letter ">х</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
                     </ul>
 
                   </li>
@@ -806,10 +807,10 @@
 
                     <span class="select-country__letter">ч</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
                     </ul>
 
                   </li>
@@ -817,9 +818,9 @@
 
                     <span class="select-country__letter ">ш</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
                     </ul>
 
                   </li>
@@ -827,23 +828,23 @@
 
                     <span class="select-country__letter ">щ</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -851,23 +852,23 @@
 
                     <span class="select-country__letter ">э</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -875,23 +876,23 @@
 
                     <span class="select-country__letter ">ю</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
-                      <li class="select-country__item">Бахрейн </li>
-                      <li class="select-country__item">Белоруссия </li>
-                      <li class="select-country__item">Белиз</li>
-                      <li class="select-country__item">Бельгия</li>
-                      <li class="select-country__item">Бенин</li>
-                      <li class="select-country__item">Болгария</li>
-                      <li class="select-country__item">Боливия</li>
-                      <li class="select-country__item">Босния и Герцеговина</li>
-                      <li class="select-country__item">Ботсвана</li>
-                      <li class="select-country__item">Бразилия</li>
-                      <li class="select-country__item">Бруней</li>
-                      <li class="select-country__item">Буркина-Фасо</li>
-                      <li class="select-country__item">Бурунди</li>
-                      <li class="select-country__item">Бутан</li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
+                      <li class="select-country__list-item">Бахрейн </li>
+                      <li class="select-country__list-item">Белоруссия </li>
+                      <li class="select-country__list-item">Белиз</li>
+                      <li class="select-country__list-item">Бельгия</li>
+                      <li class="select-country__list-item">Бенин</li>
+                      <li class="select-country__list-item">Болгария</li>
+                      <li class="select-country__list-item">Боливия</li>
+                      <li class="select-country__list-item">Босния и Герцеговина</li>
+                      <li class="select-country__list-item">Ботсвана</li>
+                      <li class="select-country__list-item">Бразилия</li>
+                      <li class="select-country__list-item">Бруней</li>
+                      <li class="select-country__list-item">Буркина-Фасо</li>
+                      <li class="select-country__list-item">Бурунди</li>
+                      <li class="select-country__list-item">Бутан</li>
                     </ul>
 
                   </li>
@@ -899,9 +900,9 @@
 
                     <span class="select-country__letter ">я</span>
                     <ul class="select-country__list">
-                      <li class="select-country__item">Багамские Острова</li>
-                      <li class="select-country__item">Бангладеш </li>
-                      <li class="select-country__item">Барбадос </li>
+                      <li class="select-country__list-item">Багамские Острова</li>
+                      <li class="select-country__list-item">Бангладеш </li>
+                      <li class="select-country__list-item">Барбадос </li>
                     </ul>
 
                   </li>
@@ -916,12 +917,12 @@
               </li>
             </ul>
             <div class="control-buttons">
-              <button class="button button-next-step " type="button">Следующий шаг</button>
-              <button class="button-back-step" type="button">На шаг назад</button>
+              <a class="button button-next-step " href="#step3">Следующий шаг</a>
+              <a class="button-back-step" href="#step1">На шаг назад</a>
             </div>
           </div>
 
-          <div class="add-plan__step">
+          <div class="add-plan__step" id="step3">
             <h3 class="title-plan-step">
               <span class="title-plan-step__new-line">Шаг 3.</span>
               Развлечения
@@ -954,14 +955,13 @@
             </div>
             <div class="control-buttons">
               <button class="button button-next-step button-submit" type="submit">Отправить</button>
-              <button class="button-back-step" type="button">На шаг назад</button>
+              <a class="button-back-step" href="#step2">На шаг назад</a>
             </div>
           </div>
         </div>
       </section>
     </form>
   </main>
-
   <footer class="page-footer radius-section-up">
     <div class="container page-footer__grid">
       <a class="page-footer__logo logo">
@@ -974,19 +974,29 @@
         </picture>
       </a>
       <ul class="page-footer__social social">
-        <li class="social__item"><a class="social__link social__link--page-footer" href="#" aria-label="фейсбук"><img
-              class="facebook_img" src="./img/icon/icon-facebook.svg" alt="фейсбук" width="11" height="21"></a></li>
+        <li class="social__item">
+          <a class="social__link social__link--page-footer" href="#" aria-label="фейсбук">
+            <img class="social__icon social__icon_facebook" src="./img/icon/icon-facebook.svg" alt="фейсбук" width="11"
+              height="21">
+          </a>
+        </li>
         <li class="social__item"><a class="social__link social__link--page-footer" href="#" aria-label="вконтакте"><img
-              class="vkontakte_img" src="./img/icon/icon-vkontakte.svg" alt="вконтакте" width="23" height="12"></a>
+              class="social__icon social__icon_vkontakte" src="./img/icon/icon-vkontakte.svg" alt="вконтакте" width="23"
+              height="12"></a>
         </li>
         <li class="social__item"><a class="social__link social__link--page-footer" href="#" aria-label="инстаграм">
-            <img class="instagram_img" src="./img/icon/icon-instagram.svg" alt="инстаграм" width="18" height="18"></a>
+            <img class="social__icon social__icon_instagram" src="./img/icon/icon-instagram.svg" alt="инстаграм"
+              width="18" height="18"></a>
         </li>
       </ul>
       <div class="page-footer__copy">
-        <p class="copy-txt">Разработано</p>
-        <a class="copy-link" href="#">
-          <img class="copy_img" src="./img/icon/htmlacademy.svg" alt="Логотип HTML академии" width="27" height="33">
+        <p class="page-footer__copy-txt">Разработано</p>
+        <a class="page-footer__copy-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.6426 0.101368L13.5 0.0859375L0 1.46443V25.5657L13.5 33.3892L27 25.5657V1.46443L13.6426 0.101368ZM25.2344 24.5885L13.5 31.3883L1.76561 24.5885V14.7093L13.4507 21.4834L13.4701 22.711L5.45351 18.0646L5.44295 19.2648L13.4894 23.9747L13.5088 25.2348L5.46408 20.5747L5.45351 21.7749L13.5 26.4847L21.6239 21.7509V20.5507V16.6484L25.2432 14.543L25.2344 24.5885ZM25.2344 13.2622L22.0147 15.1036L20.5325 15.9609L13.4666 11.8597L13.456 13.0599L19.4957 16.5593L19.4429 16.5901L19.3126 16.6638L18.4536 17.1456L13.4666 14.2583L13.456 15.4585L17.3921 17.7389L16.4591 18.3355L16.438 18.3475L13.4666 16.6416L13.456 17.8417L15.4029 18.9528L13.4155 20.1152L1.7973 13.3839L13.4349 6.56862L25.2344 13.2622ZM25.2344 12.062L13.4401 5.28786L1.76561 12.0552V3.01438L13.5 1.8142L25.2344 3.01438V12.062Z"
+              fill="#192144" />
+          </svg>
         </a>
       </div>
     </div>
