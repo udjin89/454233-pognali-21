@@ -8,7 +8,7 @@
   grid-column-end: -1;
   border: 1px solid $gray_legend;
   border-radius: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 13px;
 
   @include desktop {
     height: 105px;
@@ -41,7 +41,7 @@
   }
 
   .user-tags {
-    padding: 26px 0 26px 25px;
+    padding: 19px 0 23px 25px;
     background: transparent;
     border: none;
     outline: none;

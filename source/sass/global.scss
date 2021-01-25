@@ -67,6 +67,11 @@ img {
   @include desktop {
     margin-bottom: 57px;
   }
+
+  &.title--tariff {
+    margin-top: 11px;
+    display: inline-block;
+  }
 }
 
 .main-title {
@@ -139,7 +144,7 @@ img {
   padding: 0;
   background-color: $special_dark_blue2;
 
-  padding-top: 60px;
+  padding-top: 52px;
 
   @include desktop {
     padding-top: 124px;

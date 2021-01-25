@@ -489,8 +489,9 @@
 }
 
 .button-route {
-  margin-top: 32px;
+  margin-top: 30px;
   border: 3px solid $special_dark_blue;
+  padding: 18px 0 20px 20px;
 
   @include desktop {
     margin: 0;
@@ -599,5 +600,24 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+
+.button-about-service {
+
+  display: none;
+
+  @include tablet {
+    display: block;
+    margin-top: 52px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-right: 127px;
+  }
+
+  @include desktop {
+    margin-top: 85px;
+    padding: 29px 127px 27px 32px;
   }
 }

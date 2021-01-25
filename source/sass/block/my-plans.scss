@@ -1,8 +1,8 @@
 .my-plans {
   background-color: $special_blue_light;
-  padding-top: 28px;
+  padding-top: 8px;
   padding-bottom: 60px;
-  @include shift-section;
+  top: -30px;
   position: relative;
   z-index: 20;
 
@@ -28,6 +28,7 @@
 .my-plans__list {
   padding: 0;
   margin: 0;
+  margin-top: 30px;
   list-style: none;
 }
 

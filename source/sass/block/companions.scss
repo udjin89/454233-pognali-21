@@ -118,6 +118,8 @@
 }
 
 .companions__description-block {
+  padding: 5px 29px 0 24px;
+
   @include tablet {
     width: 427px;
   }
@@ -135,6 +137,7 @@
   margin: 0;
   padding: 0;
   padding-top: 19px;
+  width: 217px;
 
   @include tablet {
     font-size: 28px;
@@ -157,7 +160,7 @@
 
 .companions__list {
   margin: 0;
-  margin-top: 54px;
+  margin-top: 55px;
   padding: 0;
   list-style: none;
 
@@ -192,7 +195,7 @@
   position: relative;
   background-color: $white;
   margin-bottom: 9px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
   border-radius: 10px;
   width: 270px;
   overflow: hidden;

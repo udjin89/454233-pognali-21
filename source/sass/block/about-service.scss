@@ -14,8 +14,10 @@
 
   @include retina {
     background-image: url(../img/background/about-mobile@2x.png);
-    background-size: 70%;
-    background-position-y: 60%;
+    background-size: 292px 353px;
+    background-position-y: 40px;
+    background-position-x: center;
+
   }
 
   @include tablet {
@@ -63,6 +65,7 @@
   @include tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-left: 33px;
   }
 
   @include desktop {
@@ -104,10 +107,18 @@
   margin: 0;
   margin-top: 21px;
   margin-bottom: 21px;
+  // width: 211px;
 
   @include tablet {
     grid-column-start: 1;
     grid-column-end: 2;
+    margin-top: 43px;
+    width: 308px;
+    margin-bottom: 30px;
+
+    .about-service__br-mobile {
+      display: none;
+    }
   }
 
   @include desktop {
@@ -136,23 +147,5 @@
     line-height: 24px;
     grid-column-start: 1;
     grid-column-end: 3;
-  }
-}
-
-.button-about-service {
-
-  display: none;
-
-  @include tablet {
-    display: block;
-    margin-top: 52px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    padding-right: 127px;
-  }
-
-  @include desktop {
-    margin-top: 85px;
-    padding: 29px 127px 27px 32px;
   }
 }
