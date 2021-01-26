@@ -13,7 +13,7 @@
   }
 
   @include desktop {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: minmax(315px, 1fr) minmax(345px, 1fr) minmax(345px, 1fr) minmax(315px, 1fr);
     width: 100%;
     margin: 0;
   }
@@ -79,8 +79,8 @@
     @include desktop {
       font-size: 24px;
       line-height: 24px;
-      top: 28px;
-      right: 38px;
+      top: 24px;
+      right: 35px;
     }
   }
 }
@@ -95,7 +95,7 @@
 
 .instructions__item:not(:nth-child(4)) {
   .instructions__description {
-    padding-bottom: 42px;
+    padding-bottom: 40px;
 
   }
 }

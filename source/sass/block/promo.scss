@@ -25,7 +25,7 @@
     @include retina {
       background-image: url(../img/background/traveller-tablet@2x.png),
         url(../img/background/promo-tablet@2x.png);
-      background-position-y: 60%, 250px;
+      background-position-y: 50%, 250px;
     }
 
     background-position-y: 310px,
@@ -114,7 +114,9 @@
     }
 
     @include desktop {
-      margin-bottom: 40px;
+      margin-top: 24px;
+      margin-bottom: 45px;
+      line-height: 32px;
     }
   }
 

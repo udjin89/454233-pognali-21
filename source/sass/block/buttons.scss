@@ -612,6 +612,10 @@
     align-items: center;
   }
 
+  @include desktop {
+    padding-left: 72px;
+  }
+
   &:hover {
     opacity: 0.7;
   }

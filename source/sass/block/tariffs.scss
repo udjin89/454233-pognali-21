@@ -8,12 +8,15 @@
   font-size: 16px;
   line-height: 16px;
   color: $special_grey;
+  counter-reset: my-awesome-counter;
 
   @include tablet {
     max-width: 100%;
   }
 
-  counter-reset: my-awesome-counter;
+  @include desktop {
+    padding-left: 72px;
+  }
 }
 
 .tariffs--usual {

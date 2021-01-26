@@ -15,6 +15,11 @@
   // padding-bottom: 9px;
   background-color: rgba($color: $black, $alpha: 0.6);
   border-radius: 50%;
+
+  @include desktop {
+    top: 21px;
+    left: 21px;
+  }
 }
 
 .level__word {

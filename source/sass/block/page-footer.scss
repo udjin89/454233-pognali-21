@@ -80,4 +80,8 @@
     margin: 0;
     padding: 0;
   }
+
+  @include desktop {
+    margin-right: 40px;
+  }
 }

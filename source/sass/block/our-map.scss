@@ -1,8 +1,12 @@
-.our-map iframe {
-  @include shift-section;
-  position: relative;
-  z-index: 10;
+  .our-map iframe {
+    @include shift-section;
+    position: relative;
+    z-index: 10;
 
-  min-width: 320px;
-  width: 100%;
-}
+    min-width: 320px;
+    width: 100%;
+
+    @include desktop {
+      height: 485px;
+    }
+  }

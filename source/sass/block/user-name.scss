@@ -6,9 +6,26 @@
     font-size: 24px;
     line-height: 22px;
   }
+}
+
+.user-name__link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: $basic_blue_light;
+  position: relative;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 22px;
+  }
 
   &::before {
     display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: -15px;
     transform: translateY(-50%);
     width: 6px;
     height: 6px;
@@ -18,18 +35,11 @@
     background-color: $special_grey;
 
     @include tablet {
+      left: -22px;
       width: 8px;
       height: 8px;
     }
   }
-}
-
-.user-name__link {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 21px;
-  color: $basic_blue_light;
 }
 
 .user-name--offline::before {

@@ -29,12 +29,13 @@
   @include desktop {
     display: flex;
     margin: 0;
+    margin-right: 25px;
   }
 }
 
 .main-nav__item {
   @include desktop {
-    margin-right: 34px;
+    margin-right: 26px;
   }
 }
 
