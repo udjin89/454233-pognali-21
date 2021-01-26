@@ -155,6 +155,10 @@
 
   margin-left: 15px;
 
+  @include tablet {
+    margin-left: 0;
+  }
+
   @include desktop {
     position: absolute;
     top: -220px;

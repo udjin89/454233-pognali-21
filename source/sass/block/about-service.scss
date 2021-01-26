@@ -21,7 +21,11 @@
   }
 
   @include tablet {
-    padding-top: 136px;
+    top: -80px;
+    margin-bottom: -100px;
+    z-index: 56;
+    padding-top: 180px;
+    padding-bottom: 90px;
     background-image: url(../img/background/about-tablet.png);
 
     @include retina {
@@ -31,13 +35,14 @@
       background-position-y: 60%;
     }
 
-    background-position-y: 100%;
+    background-position-y: 140px;
     background-position-x: 80%;
     background-size: auto;
   }
 
   @include desktop {
-
+    background-position-y: 160px;
+    background-position-x: 750px;
     background-image: url(../img/background/about-desktop.png);
 
     @include retina {
@@ -54,7 +59,7 @@
   }
 
   @include desktop {
-    padding-top: 172px;
+    padding-top: 205px;
     padding-bottom: 163px;
   }
 }
@@ -126,6 +131,9 @@
     line-height: 34px;
     grid-column-start: 1;
     grid-column-end: 3;
+    width: 619px;
+    margin-top: 5px;
+    margin-bottom: 38px;
   }
 }
 
@@ -141,11 +149,13 @@
     line-height: 25px;
     grid-column-start: 1;
     grid-column-end: 2;
+    width: 265px;
   }
 
   @include desktop {
     line-height: 24px;
     grid-column-start: 1;
     grid-column-end: 3;
+    width: 425px;
   }
 }

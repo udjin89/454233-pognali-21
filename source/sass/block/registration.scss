@@ -9,11 +9,14 @@
   background-color: $special_dark_blue;
 
   @include tablet {
-    padding-bottom: 80px;
+    padding-top: 135px;
+    padding-bottom: 65px;
   }
 
   @include desktop {
-    padding-top: 109px - $section_shift;
+
+    padding-top: 129px - $section_shift;
+
     padding-bottom: 103px;
   }
 }
@@ -22,6 +25,11 @@
   @include tablet {
     padding-left: 36px;
     padding-right: 36px;
+  }
+
+  @include desktop {
+    padding-left: 75px;
+    padding-right: 75px;
   }
 }
 
@@ -37,6 +45,8 @@
   @include tablet {
     font-size: 28px;
     line-height: 32px;
+    margin-top: 59px;
+    margin-bottom: 65px;
 
     br {
       display: none;
@@ -52,6 +62,20 @@
 
 .registration__description-down {
   margin-top: 30px;
+
+  @include tablet {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    margin-top: 60px;
+    margin-bottom: 40px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .registration__form {
@@ -149,6 +173,7 @@
   @include desktop {
     display: flex;
     padding-left: 150px;
+    margin-top: 50px;
 
     .contacts__phone {
       padding-right: 110px;

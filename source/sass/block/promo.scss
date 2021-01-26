@@ -1,5 +1,5 @@
 .promo {
-
+  position: relative;
   padding-bottom: 39px;
   background-color: $basic_blue;
   background-image: url("../img/background/traveller-mobile.png"),
@@ -17,6 +17,7 @@
   }
 
   @include tablet {
+    z-index: 60;
     background-color: $special_dark_blue2;
     background-image: url(../img/background/traveller-tablet.png),
       url(../img/background/promo-tablet.png);
@@ -85,7 +86,8 @@
   }
 
   @include desktop {
-    margin: 110px 0 101px 72px;
+    text-align: left;
+    margin: 100px 0 101px 72px;
     padding: 0;
   }
 }
@@ -109,6 +111,10 @@
       font-size: 28px;
       line-height: 33px;
       margin-bottom: 45px;
+    }
+
+    @include desktop {
+      margin-bottom: 40px;
     }
   }
 
@@ -136,6 +142,6 @@
   }
 
   @include desktop {
-    margin: 122px 23px 0 0;
+    margin: 90px 23px 119px 0;
   }
 }

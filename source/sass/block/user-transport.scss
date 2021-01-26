@@ -5,6 +5,13 @@
   list-style: none;
   display: flex;
 
+
+}
+
+.user-transport--index {
+  @include tablet {
+    margin-top: 25px;
+  }
 }
 
 .user-transport-item {

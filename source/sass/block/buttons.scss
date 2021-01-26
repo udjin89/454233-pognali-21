@@ -50,12 +50,19 @@
   @include tablet {
     font-size: 24px;
     line-height: 24px;
+
   }
 
   &:active {
     &::after {
       opacity: 0.3;
     }
+  }
+
+  @include tablet {
+    padding-top: 29px;
+    padding-bottom: 27px;
+    padding-left: 32px;
   }
 }
 
@@ -152,7 +159,7 @@
   width: 100%;
   display: inline-block;
   text-align: center;
-  padding: 7px 0;
+  padding: 5px 0;
   // margin-top: 22px;
   font-family: "Blogger Sans";
   font-weight: bold;
@@ -251,7 +258,8 @@
 
   @include tablet {
     // margin: 81px 34px 0 34px;
-
+    margin-top: 76px;
+    border-radius: 20px;
   }
 
   @include desktop {
@@ -262,6 +270,11 @@
 
 .button--show-all-destination {
   margin-top: 25px;
+
+  @include tablet {
+    margin-top: 40px;
+    border-radius: 20px;
+  }
 
   @include desktop {
     padding: 29px 103px 27px 32px;
@@ -493,13 +506,18 @@
   border: 3px solid $special_dark_blue;
   padding: 18px 0 20px 20px;
 
+  @include tablet {
+    margin-top: 45px;
+    border-radius: 20px;
+    padding: 25px 64px 25px 35px;
+  }
+
   @include desktop {
     margin: 0;
-    margin-right: 75px;
-    margin-left: 147px;
-    padding: 29px 64px 27px 37px;
-    border-radius: 20px;
-    align-self: start;
+    // margin-right: 75px;
+    // margin-left: 147px;
+    padding: 29px 64px 26px 35px;
+
   }
 
   &:hover {
@@ -614,6 +632,7 @@
     grid-column-start: 1;
     grid-column-end: 2;
     padding-right: 127px;
+    border-radius: 20px;
   }
 
   @include desktop {

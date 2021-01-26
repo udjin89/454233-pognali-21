@@ -8,6 +8,8 @@
   background-color: $gray;
 
   @include tablet {
+    top: -100px;
+    margin-bottom: -130px;
     padding-top: 74px - $section_shift;
     padding-bottom: 63px;
   }
@@ -21,6 +23,14 @@
 .tariff__padding-left {
   padding-left: 24px;
   position: relative;
+
+  @include tablet {
+    padding-left: 0;
+  }
+
+  @include desktop {
+    padding-left: 72px;
+  }
 }
 
 .title--tariff {
@@ -41,13 +51,13 @@
     position: absolute;
     z-index: 100;
     bottom: 0;
-    right: 0;
+    right: 35px;
   }
 
   @include desktop {
     width: 198px;
     height: 198px;
-    bottom: 50%;
+    bottom: 40%;
     right: 80px;
     transform: translateY(50%);
   }

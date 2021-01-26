@@ -18,6 +18,13 @@
     color: $basic_blue_light;
     background-color: $basic_blue_lightest;
     padding: 0 14px;
+
+    @include tablet {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 0.08em;
+    }
   }
 
   @include tablet {
