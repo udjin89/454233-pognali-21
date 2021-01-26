@@ -71,50 +71,21 @@ img {
   &.title--tariff {
     margin-top: 11px;
     display: inline-block;
-  }
-}
-
-.main-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 36px;
-  padding-bottom: 15px;
-
-  &--form {
-    // padding: 0;
-    margin: 0;
-    position: relative;
-    color: $white;
-
-    &::after {
-      bottom: -5px;
-      left: 0;
-      position: absolute;
-      display: block;
-      content: "";
-      margin-bottom: 3px;
-      height: 5px;
-      width: 214px;
-      background-color: $special_orange;
-      border-radius: 4px;
-    }
 
     @include tablet {
-      padding-bottom: 84px;
-    }
-
-    @include desktop {
-      // padding-top: 130px;
-      padding-bottom: 68px;
-      font-size: 60px;
-      line-height: 60px;
+      display: block;
     }
   }
-
 }
+
+
 
 .radius-section {
   border-radius: 0 0 25px 25px;
+
+  @include tablet {
+    border-radius: 0 0 70px 70px;
+  }
 }
 
 .radius-section-up {
@@ -156,4 +127,51 @@ img {
 
 .foto {
   transition: transform 0.3s;
+}
+
+.main-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  padding-bottom: 15px;
+
+  &--form {
+    // padding: 0;
+    margin: 0;
+    position: relative;
+    color: $white;
+
+    &::after {
+      bottom: -5px;
+      left: 0;
+      position: absolute;
+      display: block;
+      content: "";
+      margin-bottom: 3px;
+      height: 5px;
+      width: 214px;
+      background-color: $special_orange;
+      border-radius: 4px;
+    }
+
+    @include tablet {
+      padding-bottom: 84px;
+      font-size: 60px;
+      line-height: 60px;
+      margin-top: 70px;
+
+      &::after {
+        width: 360px;
+        height: 8px;
+      }
+
+    }
+
+    @include desktop {
+      // padding-top: 130px;
+      padding-bottom: 68px;
+
+    }
+  }
+
 }

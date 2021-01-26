@@ -8,12 +8,14 @@
   background-color: $basic_yellow;
 
   @include tablet {
-    padding-top: 70px - $section_shift;
-    padding-bottom: 101px;
+    top: -100px;
+    margin-bottom: -120px;
+    padding-top: 100px - $section_shift;
+    padding-bottom: 84px;
   }
 
   @include desktop {
-    padding-top: 55px - $section_shift;
+    padding-top: 120px - $section_shift;
     padding-bottom: 56px;
   }
 }
@@ -25,7 +27,9 @@
 
   @include desktop {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    padding-left: 225px;
+    padding-right: 75px;
   }
 }
 

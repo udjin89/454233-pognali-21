@@ -8,8 +8,9 @@
   background-color: $special_dark_blue;
 
   @include tablet {
+    top: -80px;
     padding-bottom: 87px;
-    padding-top: 141px - $section_shift;
+    padding-top: 176px - $section_shift;
   }
 
   @include desktop {
@@ -48,7 +49,7 @@
 
     @include tablet {
       left: 0;
-      top: 235px;
+      top: 290px;
     }
 
     @include desktop {
@@ -115,6 +116,9 @@
     }
   }
 
+  @include desktop {
+    margin-bottom: 25px;
+  }
 }
 
 .companions__description-block {
@@ -122,6 +126,7 @@
 
   @include tablet {
     width: 427px;
+    padding: 0;
   }
 
   @include desktop {
@@ -142,6 +147,12 @@
   @include tablet {
     font-size: 28px;
     line-height: 34px;
+    width: 427px;
+    padding-top: 55px;
+  }
+
+  @include desktop {
+    padding-top: 0;
   }
 }
 
@@ -151,9 +162,19 @@
   padding: 0;
   font-weight: bold;
 
+  .companions__appeal-br {
+    display: none;
+  }
+
   @include tablet {
     font-size: 21px;
     line-height: 24px;
+    margin-top: 40px;
+    // width: 255px;
+
+    .companions__appeal-br {
+      display: inline;
+    }
   }
 
 }
@@ -165,6 +186,7 @@
   list-style: none;
 
   @include tablet {
+    margin-top: 60px;
     display: flex;
     justify-content: space-between;
   }
@@ -214,6 +236,7 @@
   @include tablet {
     width: 285px;
     border-radius: 20px;
+    padding-bottom: 28px;
 
     .foto {
       width: 100%
@@ -256,5 +279,7 @@
   @include tablet {
     font-size: 20px;
     line-height: 23px;
+    max-width: 233px;
+    margin-top: 25px;
   }
 }

@@ -35,6 +35,11 @@
     line-height: 24px;
     padding: 31px 0 22px 32px;
   }
+
+  @include desktop {
+    padding: 28px 0 20px 34px;
+    height: 107px;
+  }
 }
 
 .instructions__item {

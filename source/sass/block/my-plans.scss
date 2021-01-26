@@ -1,12 +1,13 @@
 .my-plans {
   background-color: $special_blue_light;
-  padding-top: 8px;
+  padding-top: 30px;
   padding-bottom: 60px;
   top: -30px;
   position: relative;
   z-index: 20;
 
   @include tablet {
+    top: -20px;
     padding-bottom: 114px;
   }
 }
@@ -16,6 +17,7 @@
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
+    margin-top: 40px;
 
   }
 
@@ -28,14 +30,14 @@
 .my-plans__list {
   padding: 0;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 53px;
   list-style: none;
 }
 
 .my-plans__item {
   background-color: $white;
   border-radius: 10px;
-  padding: 24px 0 23px 24px;
+  padding: 24px 0 19px 24px;
   margin-bottom: 10px;
 
   @include tablet {
@@ -43,7 +45,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 40px 40px 15px 40px;
+    padding: 40px 40px 10px 40px;
 
     &::after {
       position: absolute;
@@ -118,7 +120,7 @@
 }
 
 .my-plans__change {
-  margin-top: 24px;
+  margin-top: 22px;
   font-family: "Blogger Sans";
   font-weight: 500;
   font-size: 14px;
@@ -152,6 +154,10 @@
 }
 
 .add-plan__head {
+  @include tablet {
+    padding-top: 25px;
+  }
+
   .points {
     @include desktop {
       display: none;

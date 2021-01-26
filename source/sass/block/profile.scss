@@ -6,6 +6,10 @@
   @include shift-section;
   position: relative;
 
+  @include tablet {
+    padding-top: 93px;
+  }
+
   @include desktop {
     padding-top: 113px;
   }
@@ -52,11 +56,14 @@
   @include tablet {
     border-radius: 10px;
     padding: 20px 0;
+    margin-top: 45px;
+    margin-bottom: 55px;
   }
 
   @include desktop {
     .profile__change-foto-word {
       display: none;
+      letter-spacing: 0.09em
     }
 
     margin: 0;

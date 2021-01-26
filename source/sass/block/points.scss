@@ -2,6 +2,12 @@
   padding: 0;
   margin: 0;
   display: flex;
+  justify-content: space-between;
+
+  @include tablet {
+    width: 80px;
+    font-size: 20px;
+  }
 
   @include desktop {
     position: absolute;
@@ -18,7 +24,8 @@
 }
 
 .points__item {
-  margin-right: 16px;
+  margin-right: 10px;
+  margin-left: 13px;
   background: $basic_blue_light;
   opacity: 0.3;
 

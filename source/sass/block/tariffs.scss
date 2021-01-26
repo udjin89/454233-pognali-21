@@ -21,13 +21,13 @@
   z-index: 10;
 
   @include tablet {
-    margin-top: 134px;
+    margin-top: 75px;
 
     &::after {
       position: absolute;
       z-index: 0;
       top: -41px;
-      right: -35px;
+      right: 0;
       content: "";
       width: 198px;
       height: 285px;
@@ -37,6 +37,8 @@
   }
 
   @include desktop {
+    margin-top: 125px;
+
     &::after {
       right: 184px;
       width: 446px;
@@ -95,6 +97,7 @@
       line-height: 68px;
     }
 
+
   }
 
   &:nth-child(2)::before {
@@ -108,17 +111,19 @@
   @include tablet {
     padding-left: 90px;
     padding-top: 20px;
-    padding-bottom: 18px;
+    padding-bottom: 17px;
     width: 100%;
     font-size: 28px;
     line-height: 28px;
     display: flex;
     justify-content: space-between;
+    padding-right: 35px;
   }
 
   @include desktop {
     margin-right: 345px;
     width: auto;
+    padding-right: 0;
   }
 }
 
