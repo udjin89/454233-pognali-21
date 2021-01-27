@@ -7,11 +7,11 @@
   position: relative;
 
   @include tablet {
-    padding-top: 93px;
+    padding-top: 100px;
   }
 
   @include desktop {
-    padding-top: 113px;
+    padding-top: 117px;
   }
 }
 
@@ -56,8 +56,12 @@
   @include tablet {
     border-radius: 10px;
     padding: 20px 0;
-    margin-top: 45px;
+    margin-top: 51px;
     margin-bottom: 55px;
+
+    .profile__change-foto-word {
+      letter-spacing: 2px;
+    }
   }
 
   @include desktop {

@@ -50,7 +50,7 @@
 .menu--open .authorization {
 
   // background: red;
-  @include tablet {
+  @include tablet-only {
     position: absolute;
     right: 0;
     top: 35px;
@@ -59,27 +59,50 @@
 
 .menu--open,
 .no-js {
-  position: relative;
-  background-color: $white;
-  display: block;
-
-  .authorization__phone,
-  .authorization__mail {
-    display: none;
+  @include tablet {
+    .logo--light {
+      // padding-left: 80px;
+    }
   }
 
-  .main-nav,
-  .contacts {
+  @include mobile-only {
+    position: relative;
+    background-color: $white;
     display: block;
+
+    .logo--dark {
+      display: none;
+    }
+
+    .authorization__phone,
+    .authorization__mail {
+      display: none;
+    }
+
+    .main-nav,
+    .contacts {
+      display: block;
+    }
+
+    .authorization--header .authorization__login,
+    .social {
+      display: flex;
+    }
   }
 
-  .authorization--header .authorization__login,
-  .social {
-    display: flex;
-  }
-}
+  @include desktop {
 
-.page-header__contacts {
-  margin-top: 50px;
-  margin-bottom: 40px;
+    .contacts,
+    .social {
+      display: none;
+    }
+
+    .logo--dark {
+      display: block;
+    }
+
+    .logo--light {
+      display: none;
+    }
+  }
 }

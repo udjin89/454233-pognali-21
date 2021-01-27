@@ -12,6 +12,7 @@
 
   @include desktop {
     margin-bottom: 57px;
+    margin-top: 16px;
   }
 }
 
@@ -35,6 +36,11 @@
       display: inline;
       text-transform: none;
     }
+  }
+
+  @include desktop {
+    text-align: left;
+    padding-left: 18px;
   }
 }
 
@@ -109,13 +115,5 @@
     padding-top: 9px;
     // bottom: 15px;
     // left: 18px;
-  }
-}
-
-.name-month {
-  display: none;
-
-  @include desktop {
-    display: inline;
   }
 }

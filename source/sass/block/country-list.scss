@@ -5,15 +5,6 @@
   display: flex;
 }
 
-.country-item {
-  position: relative;
-  margin-left: 20px;
-
-  &:nth-child(1) {
-    margin: 0;
-  }
-}
-
 .country-list {
   position: absolute;
   top: -15px;
@@ -54,6 +45,7 @@
 
     @include desktop {
       margin-bottom: 7px;
+      margin-bottom: 14px;
     }
   }
 
@@ -72,12 +64,8 @@
     border: none;
     flex-direction: column;
     padding: 0;
+    padding-left: 10px;
     margin: 0;
     margin-top: 49px;
   }
-}
-
-.country-item__wrap-flag {
-  position: relative;
-  height: 24px;
 }

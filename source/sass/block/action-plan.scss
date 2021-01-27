@@ -24,6 +24,14 @@
   @include tablet {
     width: 500px;
     height: 140px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 18px 18px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
   @include desktop {
@@ -41,11 +49,6 @@
   }
 
   &:focus {
-    font-family: "Blogger Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
     color: $special_grey;
     border-color: $basic_blue;
   }

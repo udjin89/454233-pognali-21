@@ -4,17 +4,24 @@
   top: -70px;
   position: relative;
   z-index: 30;
-  padding-bottom: 103px;
+  padding-bottom: 98px;
   margin-bottom: -100px;
+
+  @include tablet {
+    padding-bottom: 88px;
+  }
+
+  @include desktop {
+    padding-bottom: 100px;
+  }
 }
 
 .add-plan__head {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 3px;
 }
-
-
 
 .add-plan__step--pad {
   padding-bottom: 10px;
@@ -27,7 +34,7 @@
 
 .add-plan__step {
   margin-bottom: 10px;
-  padding: 24px 24px 23px 25px;
+  padding: 24px 24px 16px 25px;
   background-color: $white;
   border-radius: 10px;
 
@@ -37,7 +44,7 @@
 
   @include tablet {
     padding: 48px 40px 56px 40px;
-    margin-top: 30px;
+    margin-top: 15px;
     border-radius: 30px;
 
     &--2 {
@@ -57,6 +64,7 @@
       display: flex;
     }
 
+    margin-top: 0;
     padding: 101px 160px 106px 160px;
     position: relative;
     border-radius: 60px;
@@ -84,6 +92,7 @@
     font-size: 20px;
     line-height: 18px;
     text-transform: uppercase;
+    letter-spacing: initial;
   }
 }
 
@@ -126,7 +135,7 @@
     justify-content: space-between;
     border-top: 1px solid $gray_lighter;
 
-    padding: 57px 0 0px 0;
+    padding: 40px 0 0px 0;
     position: relative;
   }
 
@@ -186,6 +195,8 @@
   }
 
   @include desktop {
+    padding-top: 59px;
+
     &::before {
       right: 219px;
       height: 540px;
@@ -403,24 +414,6 @@
 
     @include tablet {
       display: none;
-    }
-  }
-}
-
-.country-name__action {
-  &:hover {
-
-    &::before,
-    &::after {
-      background-color: rgba($color: $black, $alpha: 0.3);
-    }
-  }
-
-  &:active {
-
-    &::before,
-    &::after {
-      background-color: rgba($color: $black, $alpha: 0.1);
     }
   }
 }

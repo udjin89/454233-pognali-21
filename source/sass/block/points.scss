@@ -11,7 +11,7 @@
 
   @include desktop {
     position: absolute;
-    top: 90px;
+    top: 104px;
     right: 300px;
     display: flex;
     flex-direction: column;
@@ -33,8 +33,12 @@
     opacity: 1;
   }
 
-  span {
+  a {
     display: none;
+    text-decoration: none;
+    color: $basic_blue_light;
+    cursor: pointer;
+    margin-left: 20px;
 
     @include desktop {
       display: block;
@@ -45,6 +49,6 @@
   @include desktop {
     background-color: transparent;
     color: $basic_blue_light;
-    margin-bottom: 27px;
+    margin-bottom: 20px;
   }
 }
