@@ -47,6 +47,16 @@
   }
 }
 
+.menu--open .authorization {
+
+  // background: red;
+  @include tablet {
+    position: absolute;
+    right: 0;
+    top: 35px;
+  }
+}
+
 .menu--open,
 .no-js {
   position: relative;

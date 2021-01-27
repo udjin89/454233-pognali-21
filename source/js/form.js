@@ -3,7 +3,7 @@ const addArrow = document.querySelectorAll(".button-next-step");
 // +++++++++++++ Проверка размера экрана
 let sizeWindow = window.innerWidth;
 // console.log("Size Window =" + sizeWindow);
-if (sizeWindow > 768) {
+if (sizeWindow >= 768) {
   // console.log("Size Window =" + sizeWindow);
   for (let i = 0; i < addArrow.length; i++) {
     addArrow[i].classList.add("button-arrow");

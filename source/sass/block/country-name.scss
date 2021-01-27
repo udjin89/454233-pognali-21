@@ -1,0 +1,56 @@
+.country-name {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  flex-grow: 1;
+  align-self: center;
+  margin: 0;
+  padding: 12px 0 12px 11px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid $gray_legend;
+  border-radius: 4px;
+  // box-shadow: inset -50px 0px 6px -10px red;
+
+  @include tablet {
+    width: 369px;
+    flex-grow: 0;
+    padding: 23px 0 23px 25px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+
+    &::before {
+      top: 27px;
+      left: 320px;
+    }
+
+    &::after {
+      top: 27px;
+      left: 320px;
+    }
+  }
+
+  @include desktop {
+    width: 730px;
+
+    &::before {
+      top: 27px;
+      left: 680px;
+    }
+
+    &::after {
+      top: 27px;
+      left: 680px;
+    }
+  }
+
+  &:hover {
+    border-color: #959BB2;
+  }
+
+  &:active {}
+}

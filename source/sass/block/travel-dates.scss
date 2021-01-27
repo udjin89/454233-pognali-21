@@ -1,0 +1,73 @@
+.travel-dates {
+  margin-top: 28px;
+
+  @include desktop {
+    margin-top: 0;
+  }
+}
+
+.travel-dates__control {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $gray_lighter;
+  border-bottom: 1px solid $gray_lighter;
+}
+
+.travel-dates__buttons {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.month {
+  padding: 11px 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 27px 0 23px 0;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  color: $black;
+  opacity: 0.3;
+
+
+
+  &--left {
+    transform: rotate(-180deg);
+    // margin-left: 10px;
+  }
+
+  &--right {
+    // margin-right: 10px;
+  }
+
+  @include tablet {
+    width: 29px;
+    height: 36px;
+
+    &--left {
+      transform: rotate(-180deg);
+      margin-left: 10px;
+    }
+
+    &--right {
+      margin-right: 10px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}

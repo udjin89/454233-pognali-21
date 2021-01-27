@@ -13,17 +13,26 @@
 }
 
 .title-plan {
+  margin-top: 24px;
+  margin-bottom: 30px;
+
+}
+
+.title-plan {
+  margin: 0;
+  padding: 0;
+
   @include tablet {
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
     margin-top: 40px;
-
+    margin-bottom: 30px;
   }
 
   @include desktop {
     margin: 0;
-    padding: 55px 0 54px 129px;
+    padding: 5px 0 0 70px;
   }
 }
 
@@ -32,6 +41,10 @@
   margin: 0;
   margin-top: 53px;
   list-style: none;
+
+  @include desktop {
+    padding-left: 65px;
+  }
 }
 
 .my-plans__item {
@@ -61,7 +74,8 @@
   }
 
   @include desktop {
-    padding-bottom: 40px;
+    padding-top: 38px;
+    padding-bottom: 35px;
 
     &::after {
       display: none;
@@ -87,6 +101,8 @@
       position: absolute;
       top: 43px;
       right: 32px;
+      font-size: 20px;
+      line-height: 20px;
     }
   }
 
@@ -95,6 +111,14 @@
     line-height: 24px;
     width: 50%;
     margin-bottom: 0;
+
+    // padding-left: 20px;
+    span {
+      font-size: 20px;
+      line-height: 20px;
+      position: relative;
+      margin-right: 35px;
+    }
   }
 }
 

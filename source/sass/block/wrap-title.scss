@@ -1,0 +1,25 @@
+.wrap-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+
+  @include tablet-only {
+    margin: 0;
+    padding: 26px 0 24px 0;
+    border-top: 1px solid #E1E3E9;
+
+    &--day {
+      order: 3;
+      margin-top: 34px;
+    }
+  }
+
+  @include desktop {
+    width: 50%;
+    margin-bottom: 66px;
+
+    &--day {
+      order: 3;
+    }
+  }
+}

@@ -85,6 +85,7 @@
   }
 
   @include desktop {
+
     .level__word::before {
       background-color: $white;
       opacity: 0.3;
@@ -119,6 +120,9 @@
   width: 45px;
   height: 45px;
   background: none;
+
+  top: 0;
+  left: 0;
 
   @include tablet {
     width: 60px;
@@ -166,8 +170,8 @@
 
   @include desktop {
     position: absolute;
-    top: -220px;
-    left: 980px;
+    top: -225px;
+    left: 890px;
     z-index: 50;
 
     .level__number {

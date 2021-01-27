@@ -90,6 +90,10 @@ img {
 
 .radius-section-up {
   border-radius: 25px 25px 0 0;
+
+  @include tablet {
+    border-radius: 45px 45px 0 0;
+  }
 }
 
 .clearfix::after {
@@ -118,7 +122,7 @@ img {
   padding-top: 52px;
 
   @include desktop {
-    padding-top: 124px;
+    // padding-top: 124px;
   }
 
   // padding-bottom: 50px;
@@ -159,9 +163,10 @@ img {
       font-size: 60px;
       line-height: 60px;
       margin-top: 70px;
+      margin-left: 30px;
 
       &::after {
-        width: 360px;
+        width: 290px;
         height: 8px;
       }
 
@@ -170,6 +175,7 @@ img {
     @include desktop {
       // padding-top: 130px;
       padding-bottom: 68px;
+      margin-left: 65px;
 
     }
   }

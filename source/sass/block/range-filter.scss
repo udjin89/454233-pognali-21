@@ -25,11 +25,19 @@
   .scale {
     height: 2px;
     background-color: rgba($color: $basic_blue_light, $alpha: 0.2);
+
+    @include tablet {
+      height: 3px;
+    }
   }
 
   .bar {
     height: 2px;
     background-color: $basic_blue_light;
+
+    @include tablet {
+      height: 3px;
+    }
   }
 
   .toggle {
@@ -42,6 +50,11 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;
+
+    @include tablet {
+      width: 13px;
+      height: 13px;
+    }
 
     &:hover {
       width: 19px;
