@@ -46,6 +46,7 @@
 
   @include desktop {
     padding: 0;
+    grid-template-columns: 339px auto auto;
   }
 
   &:hover {

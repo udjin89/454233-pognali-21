@@ -1,6 +1,6 @@
 .my-plans {
   background-color: $special_blue_light;
-  padding-top: 30px;
+  padding-top: 1px;
   padding-bottom: 60px;
   top: -30px;
   position: relative;
@@ -19,27 +19,23 @@
 }
 
 .title-plan {
-  margin: 0;
-  padding: 0;
-
   @include tablet {
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
     margin-top: 40px;
-    margin-bottom: 30px;
+
   }
 
   @include desktop {
     margin: 0;
-    padding: 5px 0 0 70px;
+    padding: 55px 0 54px 129px;
   }
 }
 
 .my-plans__list {
   padding: 0;
   margin: 0;
-  margin-top: 53px;
   list-style: none;
 
   @include desktop {
@@ -144,7 +140,8 @@
 }
 
 .my-plans__change {
-  margin-top: 22px;
+  margin-top: 20px;
+  padding-left: 0;
   font-family: "Blogger Sans";
   font-weight: 500;
   font-size: 14px;

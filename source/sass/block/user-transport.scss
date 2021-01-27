@@ -71,6 +71,13 @@
     padding: 0;
     align-self: center;
   }
+
+  @include desktop {
+    .user-transport-icon {
+      width: 22px;
+      height: 22px;
+    }
+  }
 }
 
 .user-transport--find {

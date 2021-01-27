@@ -88,26 +88,27 @@ if (modalBusiness) {
 // ++++ Скрол меню+++
 // Cобытие scroll
 
-window.addEventListener('scroll', function () {
+// window.addEventListener('scroll', function () {
 
-  const scrolled = window.pageYOffset; // смещение окна браузера
-  const heightHeader = head.clientHeight;
+//   const scrolled = window.pageYOffset; // смещение окна браузера
+//   const heightHeader = head.clientHeight;
 
-  if (scrolled > heightHeader) {
-    head.classList.add("page-header--scroll");
-    if (!head.classList.contains("page-header--open-menu")) {
-      logoDark.classList.add("hidden");
-      logoLight.classList.remove("hidden");
-    }
+//   if (scrolled > heightHeader) {
+//     head.classList.add("page-header--scroll");
+//     if (!head.classList.contains("page-header--open-menu")) {
+//       logoDark.classList.add("hidden");
+//       logoLight.classList.remove("hidden");
+//     }
 
-  }
-  if (scrolled < heightHeader) {
-    head.classList.remove("page-header--scroll");
-    if (!head.classList.contains("page-header--open-menu")) {
-      logoDark.classList.remove("hidden");
-      logoLight.classList.add("hidden");
-    }
-  }
-  // console.log("heightScroll = " + heightHeader);
-});
+//   }
+//   if (scrolled < heightHeader) {
+//     head.classList.remove("page-header--scroll");
+//     if (!head.classList.contains("page-header--open-menu")) {
+//       logoDark.classList.remove("hidden");
+//       logoLight.classList.add("hidden");
+//     }
+//   }
+//   // console.log("heightScroll = " + heightHeader);
+// });
+
 

@@ -15,7 +15,9 @@
 
   &--open-menu,
   .no-js {
-    background-color: $white;
+    @include mobile-only {
+      background-color: $white;
+    }
   }
 
   &--light {

@@ -15,4 +15,8 @@
   @include tablet {
     grid-row: 3/4;
   }
+
+  @include desktop {
+    margin-top: 10px;
+  }
 }
