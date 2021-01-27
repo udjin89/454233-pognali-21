@@ -93,7 +93,7 @@
 
 .destination__list-country {
   margin: 0;
-  margin-top: 63px;
+  margin-top: 60px;
   padding: 0;
   list-style: none;
   position: relative;
@@ -179,7 +179,7 @@
   background-color: $white;
   border-radius: 10px;
   margin-top: -15px;
-  padding-top: 26px;
+  padding-top: 24px;
   padding-bottom: 24px;
   padding-left: 24px;
 
@@ -190,6 +190,12 @@
     flex-wrap: nowrap;
     border-radius: 20px 0 0 20px;
   }
+
+  @include desktop {
+    padding-top: 23px;
+    padding-left: 30px;
+  }
+
 }
 
 .destination__country {
@@ -216,10 +222,17 @@
   line-height: 18px;
   color: $special_grey;
   opacity: 0.3;
+  max-width: 165px;
 
   @include tablet {
     font-size: 20px;
     line-height: 20px;
+    max-width: 200px;
+  }
+
+  @include desktop {
+    margin-bottom: auto;
+    max-width: initial;
   }
 }
 

@@ -175,6 +175,7 @@
     padding: 29px 75px 27px 34px;
     font-size: 24px;
     line-height: 24px;
+    text-transform: none;
   }
 }
 
@@ -241,7 +242,8 @@
     background-repeat: no-repeat;
     background-position-x: 100%;
     padding-right: 60px;
-    padding-bottom: 80px;
+    padding-bottom: 10px;
+    margin-right: 30px;
   }
 
   &:hover {
@@ -315,6 +317,7 @@
     padding-right: 55px;
     background-position: 100% 50%;
     background-size: 30px 6px;
+    margin-right: 30px;
 
     .text-button {
       font-family: "Blogger Sans";
@@ -560,6 +563,17 @@
     color: rgba($color: $basic_blue_light, $alpha: 0.3);
     background-color: #F3C72B;
   }
+
+  @include tablet {
+    margin-top: 36px;
+    padding: 17px 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+    border-radius: 25px;
+  }
 }
 
 .button--close-tariff {
@@ -612,6 +626,10 @@
     align-items: center;
   }
 
+  @include desktop {
+    padding-left: 72px;
+  }
+
   &:hover {
     opacity: 0.7;
   }
@@ -638,5 +656,12 @@
   @include desktop {
     margin-top: 85px;
     padding: 29px 127px 27px 32px;
+  }
+}
+
+.button-submit {
+  @include tablet {
+    min-width: 286px;
+    text-align: left;
   }
 }

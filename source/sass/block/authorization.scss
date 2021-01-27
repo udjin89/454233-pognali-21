@@ -9,16 +9,6 @@
   }
 }
 
-.menu--open .authorization {
-
-  // background: red;
-  @include tablet {
-    position: absolute;
-    right: 0;
-    top: 35px;
-  }
-}
-
 .authorization__phone,
 .authorization__mail {
   font-weight: bold;

@@ -14,11 +14,6 @@
   }
 }
 
-.find-companion__list {
-  grid-column: 1/4;
-  grid-row: 1/-2;
-}
-
 
 ////----------------
 .filter__title {
@@ -57,11 +52,11 @@
   justify-content: space-between;
 
   @include tablet {
-    padding: 60px 0 56px 0;
+    padding: 50px 0 55px 0;
 
   }
 
-  @include tablet {
+  @include desktop {
     padding: 62px 0 74px 0;
 
   }
@@ -90,6 +85,7 @@
     display: flex;
     order: 1;
     margin: 0;
+    margin-left: 30px;
   }
 }
 
@@ -136,6 +132,12 @@
   border: 1px solid green;
   border-collapse: collapse;
   margin-bottom: 14px;
+
+  @include tablet {
+    margin-left: 25px;
+  }
+
+  @include desktop {}
 }
 
 .filter-country__list {
@@ -143,6 +145,11 @@
   padding: 0;
   list-style: none;
 
+  @include tablet {
+    margin-right: 20px;
+  }
+
+  @include desktop {}
 }
 
 .filter-country__letter {

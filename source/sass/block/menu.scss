@@ -1,5 +1,5 @@
 .menu {
-  padding-top: 28px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,6 +44,16 @@
     .toogle {
       display: none;
     }
+  }
+}
+
+.menu--open .authorization {
+
+  // background: red;
+  @include tablet {
+    position: absolute;
+    right: 0;
+    top: 35px;
   }
 }
 

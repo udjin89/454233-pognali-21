@@ -1,0 +1,155 @@
+.label-country {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-left: 12px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: -13px;
+    width: 14px;
+    height: 2px;
+    background: $basic_blue_light;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: -3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $basic_blue_light;
+  }
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 47px;
+    margin-bottom: 30px;
+
+    .flag {
+      width: 70px;
+      height: 47px;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+
+      left: 519px;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  @include desktop {
+    // margin-bottom: 30px;
+    padding-left: 0;
+    font-weight: bold;
+
+    &::after {
+
+      left: 780px;
+
+    }
+  }
+}
+
+.wrap-action-plan {
+  position: relative;
+
+  &:nth-child(4):before {
+    position: absolute;
+    content: "";
+    top: 12px;
+    bottom: -35px;
+    left: -13px;
+    width: 2px;
+    background: $basic_blue_light;
+  }
+
+  @include tablet {
+    padding-top: 27px;
+    padding-right: 33px;
+
+    &:nth-child(4):before {
+      top: 45px;
+      bottom: -75px;
+      left: 525px;
+    }
+  }
+
+  @include desktop {
+    &:nth-child(4):before {
+      top: 100px;
+      bottom: -70px;
+      left: 786px;
+    }
+
+    &:first-of-type {
+      padding-top: 80px;
+      border-top: 1px solid #E1E3E9;
+    }
+  }
+}
+
+.wrap-textarea {
+  position: relative;
+  display: flex;
+  // height: min-content;
+  margin-bottom: 23px;
+}
+
+.country-name__action {
+  position: absolute;
+  top: 0;
+  right: 0;
+  // height: 40px;
+  height: 100%;
+  width: 50px;
+
+  &::before {
+    position: absolute;
+    // top: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    // left: 141px;
+    right: 15px;
+    content: "";
+    width: 12px;
+    height: 2px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    display: inline-block;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    position: absolute;
+    // left: 141px;
+    // top: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 23px;
+    content: "";
+    width: 12px;
+    height: 2px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    display: inline-block;
+    transform: rotate(45deg);
+    margin-left: -7px;
+  }
+
+}
