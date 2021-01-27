@@ -14,13 +14,17 @@
   font-size: 21px;
   line-height: 21px;
   color: $basic_blue_light;
-  position: relative;
+  // position: relative;
 
   @include tablet {
     font-size: 30px;
     line-height: 30px;
   }
 
+
+}
+
+.user-name__link--index {
   &::before {
     display: inline-block;
     position: absolute;
@@ -43,7 +47,7 @@
 }
 
 .user-name__link--find {
-
+  // position: relative;
   text-decoration: none;
   font-weight: bold;
   font-size: 21px;
@@ -85,6 +89,7 @@
       position: relative;
       // top: 45%;
       // right: -33px;
+      margin-left: -8px;
       width: 8px;
       height: 8px;
       top: 0;

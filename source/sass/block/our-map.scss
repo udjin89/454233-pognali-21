@@ -5,6 +5,11 @@
 
     min-width: 320px;
     width: 100%;
+    height: 424px;
+
+    @include tablet {
+      height: 581px;
+    }
 
     @include desktop {
       height: 485px;
