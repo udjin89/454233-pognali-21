@@ -15,8 +15,10 @@
   }
 
   @include desktop {
-    width: 50%;
-    margin-bottom: 66px;
+
+    width: 48%;
+    margin-bottom: 58px;
+    margin-top: 10px;
 
     &--day {
       order: 3;

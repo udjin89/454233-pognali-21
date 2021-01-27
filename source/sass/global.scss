@@ -121,6 +121,10 @@ img {
 
   padding-top: 52px;
 
+  @include tablet {
+    padding-top: 45px;
+  }
+
   @include desktop {
     // padding-top: 124px;
   }
@@ -159,14 +163,14 @@ img {
     }
 
     @include tablet {
-      padding-bottom: 84px;
+      padding-bottom: 72px;
       font-size: 60px;
       line-height: 60px;
-      margin-top: 70px;
+      margin-top: 75px;
       margin-left: 30px;
 
       &::after {
-        width: 290px;
+        width: 355px;
         height: 8px;
       }
 

@@ -10,26 +10,9 @@
     top: -20px;
     padding-bottom: 114px;
   }
-}
-
-.title-plan {
-  margin-top: 24px;
-  margin-bottom: 30px;
-
-}
-
-.title-plan {
-  @include tablet {
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 36px;
-    margin-top: 40px;
-
-  }
 
   @include desktop {
-    margin: 0;
-    padding: 55px 0 54px 129px;
+    padding-bottom: 96px;
   }
 }
 
@@ -105,7 +88,7 @@
   @include desktop {
     font-size: 24px;
     line-height: 24px;
-    width: 50%;
+    width: 46%;
     margin-bottom: 0;
 
     // padding-left: 20px;
@@ -162,7 +145,7 @@
 
   @include desktop {
     letter-spacing: 0.08em;
-    margin-left: 121px;
+    margin-left: 78px;
   }
 
   &:hover {

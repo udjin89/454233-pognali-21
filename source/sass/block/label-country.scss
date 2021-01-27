@@ -37,6 +37,7 @@
     font-size: 30px;
     line-height: 47px;
     margin-bottom: 30px;
+    padding-left: 0;
 
     .flag {
       width: 70px;
@@ -62,8 +63,12 @@
 
     &::after {
 
-      left: 780px;
+      left: 767px;
 
+    }
+
+    .flag {
+      margin-right: 82px;
     }
   }
 }

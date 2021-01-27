@@ -26,6 +26,16 @@
     }
   }
 
+  @include desktop {
+    &--left {
+      margin-left: 0;
+    }
+
+    &--right {
+      margin-right: 0;
+    }
+  }
+
   &:hover {
     opacity: 0.5;
   }
