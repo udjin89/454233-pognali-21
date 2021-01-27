@@ -87,7 +87,7 @@ if (modalBusiness) {
 
 // ++++ Скрол меню+++
 // Cобытие scroll
-/*
+
 window.addEventListener('scroll', function () {
 
   const scrolled = window.pageYOffset; // смещение окна браузера
@@ -110,4 +110,4 @@ window.addEventListener('scroll', function () {
   }
   // console.log("heightScroll = " + heightHeader);
 });
-*/
+
