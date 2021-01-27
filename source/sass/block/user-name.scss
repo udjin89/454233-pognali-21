@@ -49,50 +49,65 @@
   font-size: 21px;
   line-height: 21px;
   color: $basic_blue_light;
-  position: relative;
+
 
   @include tablet {
     font-size: 30px;
     line-height: 30px;
+    position: relative;
   }
 
   &::before {
     display: inline-block;
     position: absolute;
     top: 50%;
+    top: 12px;
     // left: -15px;
-    right: -75px;
+    right: 22px;
     transform: translateY(-50%);
     width: 6px;
     height: 6px;
-    margin-right: 10px;
+    // margin-right: 10px;
     content: " ";
     border-radius: 50%;
     background-color: $special_grey;
 
     @include tablet {
       // left: -22px;
-      right: -22px;
+      top: 45%;
+      right: -33px;
       width: 8px;
       height: 8px;
     }
-  }
 
-  &::before {
-    position: absolute;
-    // left: 130px;
-    top: 12px;
-    margin: 0;
-  }
-
-  @include tablet {
-    &::before {
-      position: absolute;
-      // left: 200px;
-      top: 12px;
-      margin: 0;
+    @include desktop {
+      // left: -22px;
+      position: relative;
+      // top: 45%;
+      // right: -33px;
+      width: 8px;
+      height: 8px;
+      top: 0;
+      right: 0;
+      left: -18px;
     }
   }
+
+  // &::before {
+  //   position: absolute;
+  //   // left: 130px;
+  //   top: 12px;
+  //   margin: 0;
+  // }
+
+  // @include tablet {
+  //   &::before {
+  //     position: absolute;
+  //     // left: 200px;
+  //     top: 12px;
+  //     margin: 0;
+  //   }
+  // }
 }
 
 .user-name--find {

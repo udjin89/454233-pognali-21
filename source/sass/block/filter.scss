@@ -132,6 +132,12 @@
   border: 1px solid green;
   border-collapse: collapse;
   margin-bottom: 14px;
+
+  @include tablet {
+    margin-left: 25px;
+  }
+
+  @include desktop {}
 }
 
 .filter-country__list {
@@ -139,6 +145,11 @@
   padding: 0;
   list-style: none;
 
+  @include tablet {
+    margin-right: 20px;
+  }
+
+  @include desktop {}
 }
 
 .filter-country__letter {
