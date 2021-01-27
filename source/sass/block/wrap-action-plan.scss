@@ -1,0 +1,37 @@
+.wrap-action-plan {
+  position: relative;
+
+  &:nth-child(4):before {
+    position: absolute;
+    content: "";
+    top: 12px;
+    bottom: -35px;
+    left: -13px;
+    width: 2px;
+    background: $basic_blue_light;
+  }
+
+  @include tablet {
+    padding-top: 27px;
+    padding-right: 33px;
+
+    &:nth-child(4):before {
+      top: 45px;
+      bottom: -75px;
+      left: 525px;
+    }
+  }
+
+  @include desktop {
+    &:nth-child(4):before {
+      top: 100px;
+      bottom: -70px;
+      left: 786px;
+    }
+
+    &:first-of-type {
+      padding-top: 80px;
+      border-top: 1px solid #E1E3E9;
+    }
+  }
+}

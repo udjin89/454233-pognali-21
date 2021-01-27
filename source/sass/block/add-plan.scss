@@ -406,21 +406,3 @@
     }
   }
 }
-
-.country-name__action {
-  &:hover {
-
-    &::before,
-    &::after {
-      background-color: rgba($color: $black, $alpha: 0.3);
-    }
-  }
-
-  &:active {
-
-    &::before,
-    &::after {
-      background-color: rgba($color: $black, $alpha: 0.1);
-    }
-  }
-}

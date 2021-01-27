@@ -14,8 +14,8 @@
   }
 
   @include desktop {
-    padding-bottom: 134px;
-    padding-top: 170px - $section_shift;
+    padding-bottom: 124px;
+    padding-top: 179px - $section_shift;
   }
 }
 
@@ -138,7 +138,6 @@
   }
 }
 
-
 .companions__description {
   margin: 0;
   padding: 0;
@@ -257,6 +256,13 @@
 
   @include desktop {
     padding-top: 30px;
+  }
+
+  @include desktop {
+    .user-name__link {
+      font-size: 24px;
+      line-height: 22px;
+    }
   }
 }
 

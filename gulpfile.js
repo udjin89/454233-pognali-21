@@ -41,10 +41,13 @@ const styles = () => {
     .pipe(sourcemap.init())// делает карту-дерево
     .pipe(sass()) // sass -> css
     .pipe(postcss([ // задача плагина postcss
-      autoprefixer(), // ставятся префиксы
-      csso()  // минификация
+      autoprefixer()// ставятся префиксы
     ]))
-    // .pipe(gulp.dest("source/css"))
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("build/css"))
+    .pipe(postcss([ // задача плагина postcss
+      csso()
+    ]))
     .pipe(rename("style.min.css")) // переименовываем
     .pipe(sourcemap.write(".")) // сравнение ???
     .pipe(gulp.dest("build/css")) //полученый файл складываем в css

@@ -10,8 +10,6 @@
   background-position-x: center;
   background-position-y: 40px;
 
-
-
   @include retina {
     background-image: url(../img/background/about-mobile@2x.png);
     background-size: 292px 353px;
@@ -61,21 +59,6 @@
   @include desktop {
     padding-top: 205px;
     padding-bottom: 163px;
-  }
-}
-
-.about-service-grid {
-  padding-left: 24px;
-
-  @include tablet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-left: 33px;
-  }
-
-  @include desktop {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding-left: 73px;
   }
 }
 

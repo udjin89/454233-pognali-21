@@ -267,6 +267,7 @@
   @include desktop {
     margin: 0;
     padding: 29px 95px 27px 33px;
+    align-self: center;
   }
 }
 
@@ -627,6 +628,7 @@
   }
 
   @include desktop {
+    margin-top: 35px;
     padding-left: 72px;
   }
 

@@ -33,8 +33,11 @@
     opacity: 1;
   }
 
-  span {
+  a {
     display: none;
+    text-decoration: none;
+    color: $basic_blue_light;
+    cursor: pointer;
 
     @include desktop {
       display: block;

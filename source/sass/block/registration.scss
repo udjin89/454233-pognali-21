@@ -76,6 +76,10 @@
       display: none;
     }
   }
+
+  @include desktop {
+    margin-top: 71px;
+  }
 }
 
 .registration__form {

@@ -111,11 +111,3 @@
     // left: 18px;
   }
 }
-
-.name-month {
-  display: none;
-
-  @include desktop {
-    display: inline;
-  }
-}

@@ -40,7 +40,7 @@
   }
 
   @include desktop {
-    margin-top: 125px;
+    margin-top: 134px;
 
     &::after {
       right: 184px;
@@ -126,7 +126,7 @@
   @include desktop {
     margin-right: 345px;
     width: auto;
-    padding-right: 0;
+    padding: 20px 0 11px 90px;
   }
 }
 

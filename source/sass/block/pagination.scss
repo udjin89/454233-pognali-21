@@ -1,24 +1,3 @@
-.container-pagination {
-  grid-column: 1/4;
-}
-
-.wrap-pagination {
-  background: $white;
-  margin-bottom: 46px;
-  border-radius: 20px;
-
-  @include tablet {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 28px;
-  }
-
-  @include desktop {
-    margin-bottom: 75px;
-  }
-}
-
 .pagination {
   margin: 0;
   padding: 0;
@@ -28,23 +7,6 @@
   @include tablet {
     display: flex;
 
-  }
-}
-
-.pagination-control {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-
-  .pagination-control__item {
-    width: 100%;
-    height: 100%;
-
-    @include tablet {
-      // width: auto;
-
-    }
   }
 }
 
@@ -76,36 +38,5 @@
   &--active {
     background-color: $basic_yellow;
     border-radius: 50%;
-  }
-}
-
-.pagination-control__link {
-  display: block;
-  width: 100%;
-  height: 51px;
-  background-image: url(../img/icon/icon-page-arrow.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
-  @include tablet {
-    width: 40px;
-
-  }
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.pagination-control__link--next {
-  transform: rotate(180deg);
-  border-right: 2px solid $basic_blue_lightest;
-
-  @include tablet {
-    border: none;
   }
 }
